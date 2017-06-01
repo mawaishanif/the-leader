@@ -44,26 +44,29 @@ function the_leader_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-	                          'menu-1' => esc_html__( 'Primary', 'the_leader' ),
-	                          ) );
+		'menu-1' => esc_html__( 'Primary', 'the_leader' ),
+	) );
+	register_nav_menus( array(
+		'menu-2' => esc_html__( 'Footer Menu', 'the_leader' ),
+	) );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
 	 */
 	add_theme_support( 'html5', array(
-	                                  'search-form',
-	                                  'comment-form',
-	                                  'comment-list',
-	                                  'gallery',
-	                                  'caption',
-	                                  ) );
+      'search-form',
+      'comment-form',
+      'comment-list',
+      'gallery',
+      'caption',
+      ) );
 
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'the_leader_custom_background_args', array(
-	                                                                                                  'default-color' => 'ffffff',
-	                                                                                                  'default-image' => '',
-	                                                                                                  ) ) );
+      'default-color' => 'ffffff',
+      'default-image' => '',
+      ) ) );
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
@@ -90,14 +93,14 @@ add_action( 'after_setup_theme', 'the_leader_content_width', 0 );
  */
 function the_leader_widgets_init() {
 	register_sidebar( array(
-	                        'name'          => esc_html__( 'Sidebar', 'the_leader' ),
-	                        'id'            => 'sidebar-1',
-	                        'description'   => esc_html__( 'Add widgets here.', 'the_leader' ),
-	                        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-	                        'after_widget'  => '</section>',
-	                        'before_title'  => '<h2 class="widget-title">',
-	                        'after_title'   => '</h2>',
-	                        ) );
+	    'name'          => esc_html__( 'Sidebar', 'the_leader' ),
+	    'id'            => 'sidebar-1',
+	    'description'   => esc_html__( 'Add widgets here.', 'the_leader' ),
+	    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+	    'after_widget'  => '</section>',
+	    'before_title'  => '<h2 class="widget-title">',
+	    'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'the_leader_widgets_init' );
 
@@ -110,6 +113,14 @@ function the_leader_scripts() {
 	wp_enqueue_script( 'the_leader-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'the_leader-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	/**
+	 * Adding script for live reload for styling purposes.
+	 * @todo This script should be removed when shipping out the theme
+	 **/
+	wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true);
+
+	wp_enqueue_script('livereload');
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -182,7 +193,7 @@ require get_template_directory() . '/inc/jetpack.php';
 
 new Leader_Portfolio;
 
-if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
-	wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true);
-	wp_enqueue_script('livereload');
-}
+// if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
+// 	wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true);
+// 	wp_enqueue_script('livereload');
+// }
