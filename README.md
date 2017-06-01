@@ -1,2 +1,2 @@
 # the-leader
-> `Testing purpose`` 
+> Testing purpose
