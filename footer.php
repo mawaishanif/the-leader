@@ -19,6 +19,10 @@
 			<span class="sep"> | </span>
 			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'the_leader' ), 'the_leader', '<a href="https://automattic.com/" rel="designer">Inject Themes</a>' ); ?>
 		</div><!-- .site-info -->
+		<div class="site-menu">
+			<p>Navigation menu in footer Showing Blog Posts</p>
+			<?php wp_nav_menu( array( 'theme_location' => 'menu-2', 'menu_id' => 'secondary-menu' ) ); ?>
+		</div><!-- .site-menu -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
