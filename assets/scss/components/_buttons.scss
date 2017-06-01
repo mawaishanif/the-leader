@@ -1,0 +1,118 @@
+/*
+
+Buttons
+
+Buttons and their variations
+
+Markup:
+<button class="button {{modifier_class}}">Button</a>
+<a href="#" class="button {{modifier_class}}">Button</a>
+
+.button       - A link that's sized like a button
+
+*/
+
+
+.button {
+	background-color: $primary;
+	border-radius: .2rem;
+	font-family: $base-font;
+	box-sizing: border-box;
+	color: $white;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1rem;
+	line-height: 2.6rem;
+	max-width: 100%;
+	transition-property: all;
+	transition-duration: 200ms;
+	margin: 0 auto;
+	padding: 0 1.8rem;
+	text-align: center;
+	user-select: none;
+	width: auto;
+	text-decoration: none;
+	min-height: 40px;
+	border: 1px solid transparent;
+	vertical-align: middle;
+	-webkit-appearance: none; 
+
+	i, .icon {
+		position: relative;
+		top: 1px;
+		margin: 0 6px; 
+	}
+	&:link,
+	&:visited{
+		color: $white;
+		text-decoration: none;
+	}
+
+	&:focus,
+	&:hover {
+		background-color: $primary-light;
+		color: $white;
+	}
+
+	&:focus{
+		outline: .1rem dotted $color-midgray;
+	}
+	&:active{
+		background-color: $primary;
+	}
+	&.small, &.large, &.huge{
+		line-height: 220%;
+	}
+	&.large-btn{
+		padding: .7rem 1.8rem
+	}
+	&.uppercase{
+		font-size: .95rem;
+	}
+}
+[type=button],
+[type=submit],
+button{
+	@extend .button;
+}
+
+.button.outline {
+	background: transparent;
+	border-width: 2px;
+	border-color: $primary-dark;
+	color: $primary-dark;
+	&:hover {
+		background: transparent;
+		color: $primary-light;
+		border-color:  $primary-light; 
+	}
+	&:active{
+		color: darken($primary-dark, 10%);
+		border-color: darken($primary-dark, 10%);
+	}
+}
+
+.button.round {
+	border-radius: 56px; 
+}
+
+.button.raised {
+	box-shadow: 1px 11px 20px 1px rgba(0, 0, 0, 0.4)
+}
+
+.button.block {
+	display: block;
+	width: 100%;
+	padding-top: .2rem;
+	padding-bottom: .2rem;
+}
+
+// Secondary
+.button.secondary {
+	@include button($white, $secondary);
+}
+
+// Inverted
+.button.inverted {
+	@include button($black, $white);
+}

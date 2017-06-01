@@ -1,0 +1,42 @@
+.breadcrumbs {
+	font-size: .95rem;
+	margin-bottom: 1.5rem;
+	@media (max-width: 520px) {
+		display: none;
+	}
+
+	& ul {
+		display: flex;
+		align-items: center;
+	}
+	&.push-center ul {
+		justify-content: center;
+	}
+	& span,
+	& a {
+		font-style: normal;
+		padding: 0 10px;
+		display: inline-block;
+		white-space: nowrap;
+	}
+	& li {
+		margin-left: 0px;
+		&:after {
+			display: inline-block;
+			content: '/';
+			color: rgba(0, 0, 0, .3);
+		}
+		&:last-child:after {
+			display: none;
+		}
+		&:first-child span,
+		&:first-child a {
+			padding-left: 0;
+		}
+		&.active a {
+			color: $color-text;
+			text-decoration: none;
+			cursor: text;
+		}
+	}
+}

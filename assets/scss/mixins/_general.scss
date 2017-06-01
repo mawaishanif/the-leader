@@ -1,0 +1,24 @@
+// blur
+@mixin blur($radius) {
+    -webkit-filter: blur($radius);
+    -moz-filter: blur($radius);
+    -ms-filter: blur($radius);
+    filter: blur($radius);
+}
+
+
+// Buttons
+@mixin buttons-font($font) {
+    button, .button {
+        font-family: #{$font};
+    }
+}
+
+
+
+// Inputs
+@mixin inputs-font($font) {
+    input, textarea, select {
+        font-family: #{$font};
+    }
+}

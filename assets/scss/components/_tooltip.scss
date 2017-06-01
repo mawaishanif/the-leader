@@ -1,0 +1,12 @@
+#tooltip_container{ 
+	color: #fff; 
+	position: absolute; 
+	padding: 12px 16px;
+	max-width: 200px;
+	background: rgba(3, 3, 3, 0.85);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	display: none;
+	font-size: 1rem;
+}
