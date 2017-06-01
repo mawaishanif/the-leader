@@ -192,13 +192,3 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 new Leader_Portfolio;
-
-/**
- * This commented out code is still here incase the above one does not work it can used inplace of it.
- * @todo Also remove this code when shipping out the theme.
- **/
-
-// if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
-// 	wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true);
-// 	wp_enqueue_script('livereload');
-// }
