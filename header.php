@@ -25,7 +25,6 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
-		<a href="#">This is anchor tag to test theme customizer</a>
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
