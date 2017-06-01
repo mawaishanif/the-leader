@@ -10,7 +10,7 @@ class Leader_Portfolio
     public function __construct()
     {
     	// Registers the custom post type portfolio on initlization of the theme.
-        add_action( 'init', array($this, 'the_leader_portfolio_cpt'));
+        add_action( 'init', array($this, 'portfolio'));
         
         // Registers Portfolio Categories Custom Taxonamy on Wordpress init
 		add_action( 'init', array( $this, 'the_leader_portfolio_taxonamy' ) );
@@ -21,7 +21,7 @@ class Leader_Portfolio
      * @param none
      * @return registers the custom post type portfolio.
      */
-    public function the_leader_portfolio_cpt()
+    public function portfolio()
     {
     	// arguments for custom post type portfolio.
     	$arguments = array(
@@ -39,7 +39,7 @@ class Leader_Portfolio
 			'menu_icon' 		=> 'dashicons-portfolio'
 		);
     	// registering the custom post type.
-		register_post_type( 'the_leader_portfolio', $arguments );
+		register_post_type( 'portfolio', $arguments );
     }
 
     /**
@@ -74,7 +74,7 @@ class Leader_Portfolio
 		);
 
 		// register taxonomy - Portfolio Categories
-		register_taxonomy( 'the_leader_portfolio_cats', array( 'the_leader_portfolio' ), $arguments );
+		register_taxonomy( 'the_leader_portfolio_cats', array( 'portfolio' ), $arguments );
     }
 }
 
@@ -188,7 +188,7 @@ class The_leader_Widget extends WP_Widget
 
 			// loop through portfolio posts
 			$portfolio = new WP_Query(array(
-				'post_type' 	 => 'the_leader_portfolio',
+				'post_type' 	 => 'portfolio',
 				'posts_per_page' => $posts_number,
 				'orderby'		 => $orderby
 			));
