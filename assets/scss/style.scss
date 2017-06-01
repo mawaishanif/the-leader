@@ -1,14 +1,14 @@
-// contains all variables
+// Contains all variables
 @import "variables"; 
 
-// mixins Folder
+// Mixins Folder
 @import "mixins";
 
-// base and normalizer here
+// Base and normalizer here
 @import "support/_base";
 
-// all components separately
+// All components separately
 @import "components";
 
-// small utilities classes
+// Small utilities classes
 @import "support"; 
