@@ -12,11 +12,7 @@
 <a href="<?php echo esc_url( get_permalink() ); ?>">
 	<header class="post-header">
 	<?php
-		if ( is_single() ) :
-			the_title( '<h1 class="post-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="post-title">', '</h2>' );
-		endif;
+		the_title( '<h2 class="post-title">', '</h2>' );
 	?>
 	</header><!-- .post-header -->
 
