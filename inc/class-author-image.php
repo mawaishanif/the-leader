@@ -59,40 +59,29 @@ function base_profile_image_admin_enqueue_scripts() {
 		);
 
 	}
-function show_the_leader_profile_image( $avatar, $identifier, $size, $alt ) {
-	if ( $user = cupp_get_user_by_id_or_email( $identifier ) ) {
-		if ( $custom_avatar = get_cupp_meta( $user->ID, 'thumbnail' ) ) {
-			return "<img alt='{$alt}' src='{$custom_avatar}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}' />";
-		}
-	}
-
-	return $avatar;
-}
 
 function my_custom_avatar( $avatar, $id_or_email, $size, $default, $alt ) {
-
 		if (isset($id_or_email->comment_author_email)) {
 			$user = get_user_by( 'email', $id_or_email->comment_author_email );
 			$imageId = get_user_option( 'the_leader_author_profile_image', $user->ID );
 			$url = wp_get_attachment_url( $imageId );
 
 			if ($imageId) {
-				return $avatar = "<img alt='{$alt}' src='{$url}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}' />";
+				return "<img alt='{$alt}' src='{$url}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}' />";
 			}
 			else
 			{
 				$url = get_avatar_url($id_or_email->comment_author_email);
 				
-				return $avatar = "<img alt='{$alt}' src='{$url}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}' />";
+				return "<img alt='{$alt}' src='{$url}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}' />";
 			}
 		}
 
 		$imageId = get_user_option( 'the_leader_author_profile_image', $id_or_email );
 		$url = wp_get_attachment_url( $imageId );
-
-		$avatar = "<img alt='{$alt}' src='{$url}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}' />";
-	    return $avatar;
+		return "<img alt='{$alt}' src='{$url}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}' />";
 	}
+
 function checkingSomething(){
 	?> 
 	<p class="description">

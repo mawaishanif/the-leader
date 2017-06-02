@@ -33,11 +33,8 @@ function the_leader_posted_on() {
 		esc_html_x( 'by %s', 'post author', 'beast-theme' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
-
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline2"> ' . $byline . '</span>'; // WPCS: XSS OK.
-	echo "<br>And author facebook URL is ";
-	echo "<a href="."https://" . get_the_author_meta("facebook") . ">FaceBook Link</a>";
-	echo get_avatar(the_author_meta( 'ID' ));
+	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline2"> ' . $byline . '</span>'; // WPCS: XSS 
+	echo get_avatar(get_the_author_meta('ID'));
 
 }
 endif;
