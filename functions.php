@@ -55,7 +55,7 @@ function the_leader_setup() {
 	/*
 	 * Adding theme support for post formats.
 	 */
-	add_theme_support( 'post-formats', array('aside','gallery','link','image','quote','status','video') );
+	add_theme_support( 'post-formats', array('gallery','link','quote' ,'video') );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments

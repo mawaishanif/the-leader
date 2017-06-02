@@ -25,16 +25,17 @@ function the_leader_posted_on() {
 	);
 	
 	$posted_on = sprintf(
-		esc_html_x( 'Posted %s', 'post date', 'beast-theme' ),
+		esc_html_x( 'Posted %s', 'post date', 'the_leader' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'beast-theme' ),
+		esc_html_x( 'by %s', 'post author', 'the_leader' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline2"> ' . $byline . '</span>'; // WPCS: XSS 
 	echo get_avatar(get_the_author_meta('ID'));
+	echo wp_list_categories();
 
 }
 endif;
