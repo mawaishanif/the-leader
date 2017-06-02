@@ -2,6 +2,7 @@
 
 ### Extending your TODOs
 
+- [x] Remove comments footer and change the position of post meta in content.php
 - [ ] In *__template-parts/content.php__*, make new file of *__content-single.php__* for single post and remove all code of single post from content.php
 - [ ] In *__template-parts/content.php__*, make whole post wraps in *<a>* tag, right after the *<article>* tag.
 - [ ] Make a new file as named *__postslist.php__* on *__template-parts__* folder and call that file in *__index.php__*
