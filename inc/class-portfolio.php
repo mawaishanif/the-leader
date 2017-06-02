@@ -10,7 +10,7 @@ class Leader_Portfolio
     public function __construct()
     {
     	// Registers the custom post type portfolio on initlization of the theme.
-        add_action( 'init', array($this, 'portfolio'));
+        add_action( 'init', array($this, 'the_leader_portfolio'));
         
         // Registers Portfolio Categories Custom Taxonamy on Wordpress init
 		add_action( 'init', array( $this, 'the_leader_portfolio_taxonamy' ) );
@@ -21,7 +21,7 @@ class Leader_Portfolio
      * @param none
      * @return registers the custom post type portfolio.
      */
-    public function portfolio()
+    public function the_leader_portfolio()
     {
     	// arguments for custom post type portfolio.
     	$arguments = array(
@@ -29,14 +29,18 @@ class Leader_Portfolio
 				'name' 				 => __( 'Portfolio', 'the_leader' ),
 				'singular_name' 	 => __( 'Portfolio Item', 'the_leader' ),
 				'all_items'			 => __( 'All Items', 'the_leader' ),
-				'add_new_item'		 => __( 'Add New Item', 'the_leader' )
+				'add_new_item'		 => __( 'Add New Item', 'the_leader' ),
+				'add_new'			 => __('Add Item', 'the_leader'),
+				'edit_item' 		 => __('Edit Item', 'the_leader'),
+				'new_item'			 => __('Add New Item', 'the_leader')
 			),
 			'public' 			=> true,
 			'capability_type' 	=> 'post',
 			'rewrite' 			=> array( 'slug' => 'portfolio/items' ),
 			'supports' 			=> array( 'title', 'editor', 'post-formats', 'thumbnail', 'comments', 'excerpt' ),
 			'menu_position' 	=> 2,
-			'menu_icon' 		=> 'dashicons-portfolio'
+			'menu_icon' 		=> 'dashicons-portfolio',
+			'has_archive' 		=> true,
 		);
     	// registering the custom post type.
 		register_post_type( 'portfolio', $arguments );
