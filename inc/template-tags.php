@@ -46,7 +46,7 @@ if ( ! function_exists( 'the_leader_entry_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */
-function the_leader_entry_footer() {
+function the_leader_post_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
