@@ -22,6 +22,7 @@
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the_leader' ),
 				'after'  => '</div>',
 			) );
+			wp_list_pages(array('child_of' => $post->ID, 'title_li' => ''));
 		?>
 	</div><!-- .entry-content -->
 
