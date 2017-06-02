@@ -20,10 +20,7 @@
 		<?php
 			
 			the_post_thumbnail('the_leader_column');
-			echo '<p>Showing the post thumbnail url after this line</p>';
-			$thumb_id = get_post_thumbnail_id();
-			$thumb_url = wp_get_attachment_image_src($thumb_id,'the_leader_column', true);
-			echo $thumb_url[0];
+			echo the_post_thumbnail_url( 'the_leader_column' );
 
 			the_excerpt( sprintf(
 				/* translators: %s: Name of current post. */
