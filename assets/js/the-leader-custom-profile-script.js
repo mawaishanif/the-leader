@@ -39,6 +39,8 @@ jQuery(function($){
       // imgContainer.append( '<img src="'+attachment.url+'" alt="" style="max-width:100%;"/>' );
       imgContainer.attr('src', attachment.url);
 
+      imgContainer.css('objectFit', 'cover');
+
       // Send the attachment id to our hidden input
       imgIdInput.val( attachment.id );
 
