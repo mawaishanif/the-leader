@@ -10,23 +10,23 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<header class="post-header">
 		<?php
 		if ( is_single() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h1 class="post-title">', '</h1>' );
 		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title( '<h2 class="post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
 		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
+		<div class="post-meta">
 			<?php the_leader_posted_on(); ?>
-		</div><!-- .entry-meta -->
+		</div><!-- .post-meta -->
 		<?php
 		endif; ?>
-	</header><!-- .entry-header -->
+	</header><!-- .post-header -->
 
-	<div class="entry-content">
+	<div class="post-content">
 		<?php
 			if (is_single()) {
 				the_post_thumbnail('the_leader_single');
@@ -44,9 +44,9 @@
 				'after'  => '</div>',
 			) );
 		?>
-	</div><!-- .entry-content -->
+	</div><!-- .post-content -->
 
-	<footer class="entry-footer">
-		<?php the_leader_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	<footer class="post-footer">
+		<?php the_leader_post_footer(); ?>
+	</footer><!-- .post-footer -->
 </article><!-- #post-## -->
