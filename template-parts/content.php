@@ -47,6 +47,6 @@
 	</div><!-- .post-content -->
 
 	<footer class="post-footer">
-		<?php the_leader_postss_footer(); ?>
+		<?php the_leader_post_footer(); ?>
 	</footer><!-- .post-footer -->
 </article><!-- #post-## -->
