@@ -72,6 +72,21 @@ function the_leader_setup() {
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
+
+	// Adding theme support for different image sizes.
+
+		if ( function_exists('add_image_size' ) ) {
+
+			add_image_size('the_leader_background_large', 1920);
+			add_image_size('the_leader_background', 1680);
+			add_image_size('the_leader_background_small', 1240);
+			add_image_size('the_leader_single', 860);
+			add_image_size('the_leader_opengraph', 680);
+			add_image_size('the_leader_column', 500);
+			add_image_size('the_leader_sidebar', 400);
+			add_image_size('the_leader_thumbnail', 200);
+			add_image_size('the_leader_thumbnail_small', 50);
+	}
 }
 endif;
 add_action( 'after_setup_theme', 'the_leader_setup' );
