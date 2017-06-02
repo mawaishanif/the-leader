@@ -53,9 +53,20 @@ function the_leader_setup() {
 	) );
 
 	/*
-	 * Adding theme support for post formats.
+	 * Theme support for post formats.
 	 */
 	add_theme_support( 'post-formats', array('gallery','link','quote' ,'video') );
+
+	/*
+	 * Theme support for custom logo.
+	 */
+	add_theme_support( 'custom-logo', array(
+		'height' 	  => 'the_leader_thumbnail_small',
+		'width'       => 'the_leader_thumbnail_small',
+		'flex-height' => true,
+		'flex-width'  => true,
+		'header-text' => array( 'site-title', 'site-description' ) 
+	));
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
