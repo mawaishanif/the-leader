@@ -42,10 +42,12 @@ function the_leader_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
+	// This First nav menu would be the primary menu in the header of every page.
 	register_nav_menus( array(
 		'menu-1' => esc_html__( 'Primary', 'the_leader' ),
 	) );
+
+	// Second nav menu for footer of the web pages.
 	register_nav_menus( array(
 		'menu-2' => esc_html__( 'Footer Menu', 'the_leader' ),
 	) );
