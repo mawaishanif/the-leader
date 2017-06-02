@@ -3,19 +3,19 @@
 // Styleguide
 
 // primary colors
-$primary:       #f26522 !default;
-$primary-light:  lighten($primary, 10%) !default;
-$primary-dark:  darken($primary, 5%) !default;
+$primary:       #576774 !default;
+$primary-light:  lighten($primary, 8%) !default;
+$primary-dark:  darken($primary, 8%) !default;
 
-$secondary:       #fff !default;
-$secondary-light:  lighten($secondary, 5%) !default;
-$secondary-dark:  darken($secondary, 5%) !default;
+$secondary:       rgba(68, 78, 127, 1) !default;
+$secondary-light:  lighten($secondary, 8%) !default;
+$secondary-dark:  darken($secondary, 8%) !default;
 
 
-$link:          #4076D4 !default;
+$link:          #4084D1 !default;
 $link--visited: #9140D4 !default;
 $link--hover:   darken($link, 5%) !default;
-$link--active:  #1c86f2 !default;
+$link--active:  $link--hover !default;
 
 
 // light shades
@@ -34,8 +34,7 @@ $white: #fff;
 $color-black: #333 !default;
 $black: $color-black;
 $color-text: $color-black;
-
-$black2: #323339 !default;
+$blacklight: #323339 !default;
 
 $color-nearblack: #373737 !default;
 $color-darkgray: #505050 !default;
