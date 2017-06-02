@@ -28,7 +28,11 @@
 
 	<div class="entry-content">
 		<?php
-			the_post_thumbnail();
+			if (is_single()) {
+				the_post_thumbnail('the_leader_single');
+			}else{
+				the_post_thumbnail('the_leader_thumbnail');
+			}
 			the_excerpt( sprintf(
 				/* translators: %s: Name of current post. */
 				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'the_leader' ), array( 'span' => array( 'class' => array() ) ) ),
