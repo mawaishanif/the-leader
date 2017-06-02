@@ -11,19 +11,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="post-header">
-		<?php
+	<?php
 		if ( is_single() ) :
 			the_title( '<h1 class="post-title">', '</h1>' );
 		else :
 			the_title( '<h2 class="post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
-
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="post-meta">
-			<?php the_leader_posted_on(); ?>
-		</div><!-- .post-meta -->
-		<?php
-		endif; ?>
+	?>
 	</header><!-- .post-header -->
 
 	<div class="post-content">
@@ -47,6 +41,10 @@
 	</div><!-- .post-content -->
 
 	<footer class="post-footer">
-		<?php the_leader_post_footer(); ?>
+	<?php
+		if ( 'post' === get_post_type() ) : 
+			the_leader_posted_on(); 
+		endif; 
+	?>
 	</footer><!-- .post-footer -->
 </article><!-- #post-## -->
