@@ -208,4 +208,11 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+/**
+ * Load Author Custom Profile Image File.
+ */
+require get_template_directory() . '/inc/class-author-image.php';
+
+new Author_Image_Class;
+
 new Leader_Portfolio;

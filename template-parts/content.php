@@ -31,7 +31,7 @@
 			if (is_single()) {
 				the_post_thumbnail('the_leader_single');
 			}else{
-				the_post_thumbnail('the_leader_thumbnail');
+				the_post_thumbnail('the_leader_column');
 			}
 			the_excerpt( sprintf(
 				/* translators: %s: Name of current post. */
