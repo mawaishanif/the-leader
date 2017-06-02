@@ -18,58 +18,23 @@
   color: #fff; }
 
 /* raleway-200 - latin */
+/* droid-sans-regular - latin */
 @font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 200;
-  src: url("./assets/fonts/raleway/raleway-v11-latin-200.eot");
-  /* IE9 Compat Modes */
-  src: local("Raleway ExtraLight"), local("Raleway-ExtraLight"), url("./assets/fonts/raleway/raleway-v11-latin-200.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/raleway/raleway-v11-latin-200.woff2") format("woff2"), url("./assets/fonts/raleway/raleway-v11-latin-200.woff") format("woff"), url("./assets/fonts/raleway/raleway-v11-latin-200.ttf") format("truetype"), url("./assets/fonts/raleway/raleway-v11-latin-200.svg#Raleway") format("svg");
-  /* Legacy iOS */ }
-/* raleway-300 - latin */
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 300;
-  src: url("./assets/fonts/raleway/raleway-v11-latin-300.eot");
-  /* IE9 Compat Modes */
-  src: local("Raleway Light"), local("Raleway-Light"), url("./assets/fonts/raleway/raleway-v11-latin-300.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/raleway/raleway-v11-latin-300.woff2") format("woff2"), url("./assets/fonts/raleway/raleway-v11-latin-300.woff") format("woff"), url("./assets/fonts/raleway/raleway-v11-latin-300.ttf") format("truetype"), url("./assets/fonts/raleway/raleway-v11-latin-300.svg#Raleway") format("svg");
-  /* Legacy iOS */ }
-/* raleway-regular - latin */
-@font-face {
-  font-family: 'Raleway';
+  font-family: 'Droid Sans';
   font-style: normal;
   font-weight: 400;
-  src: url("./assets/fonts/raleway/raleway-v11-latin-regular.eot");
+  src: url("./assets/fonts/droidsans/droid-sans-v6-latin-regular.eot");
   /* IE9 Compat Modes */
-  src: local("Raleway"), local("Raleway-Regular"), url("./assets/fonts/raleway/raleway-v11-latin-regular.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/raleway/raleway-v11-latin-regular.woff2") format("woff2"), url("./assets/fonts/raleway/raleway-v11-latin-regular.woff") format("woff"), url("./assets/fonts/raleway/raleway-v11-latin-regular.ttf") format("truetype"), url("./assets/fonts/raleway/raleway-v11-latin-regular.svg#Raleway") format("svg");
+  src: local("Droid Sans"), local("DroidSans"), url("./assets/fonts/droidsans/droid-sans-v6-latin-regular.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/droidsans/droid-sans-v6-latin-regular.woff2") format("woff2"), url("./assets/fonts/droidsans/droid-sans-v6-latin-regular.woff") format("woff"), url("./assets/fonts/droidsans/droid-sans-v6-latin-regular.ttf") format("truetype"), url("./assets/fonts/droidsans/droid-sans-v6-latin-regular.svg#DroidSans") format("svg");
   /* Legacy iOS */ }
-/* raleway-500 - latin */
+/* droid-sans-700 - latin */
 @font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 500;
-  src: url("./assets/fonts/raleway/raleway-v11-latin-500.eot");
-  /* IE9 Compat Modes */
-  src: local("Raleway Medium"), local("Raleway-Medium"), url("./assets/fonts/raleway/raleway-v11-latin-500.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/raleway/raleway-v11-latin-500.woff2") format("woff2"), url("./assets/fonts/raleway/raleway-v11-latin-500.woff") format("woff"), url("./assets/fonts/raleway/raleway-v11-latin-500.ttf") format("truetype"), url("./assets/fonts/raleway/raleway-v11-latin-500.svg#Raleway") format("svg");
-  /* Legacy iOS */ }
-/* raleway-600 - latin */
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 600;
-  src: url("./assets/fonts/raleway/raleway-v11-latin-600.eot");
-  /* IE9 Compat Modes */
-  src: local("Raleway SemiBold"), local("Raleway-SemiBold"), url("./assets/fonts/raleway/raleway-v11-latin-600.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/raleway/raleway-v11-latin-600.woff2") format("woff2"), url("./assets/fonts/raleway/raleway-v11-latin-600.woff") format("woff"), url("./assets/fonts/raleway/raleway-v11-latin-600.ttf") format("truetype"), url("./assets/fonts/raleway/raleway-v11-latin-600.svg#Raleway") format("svg");
-  /* Legacy iOS */ }
-/* raleway-700 - latin */
-@font-face {
-  font-family: 'Raleway';
+  font-family: 'Droid Sans';
   font-style: normal;
   font-weight: 700;
-  src: url("./assets/fonts/raleway/raleway-v11-latin-700.eot");
+  src: url("./assets/fonts/droidsans/droid-sans-v6-latin-700.eot");
   /* IE9 Compat Modes */
-  src: local("Raleway Bold"), local("Raleway-Bold"), url("./assets/fonts/raleway/raleway-v11-latin-700.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/raleway/raleway-v11-latin-700.woff2") format("woff2"), url("./assets/fonts/raleway/raleway-v11-latin-700.woff") format("woff"), url("./assets/fonts/raleway/raleway-v11-latin-700.ttf") format("truetype"), url("./assets/fonts/raleway/raleway-v11-latin-700.svg#Raleway") format("svg");
+  src: local("Droid Sans Bold"), local("DroidSans-Bold"), url("./assets/fonts/droidsans/droid-sans-v6-latin-700.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/droidsans/droid-sans-v6-latin-700.woff2") format("woff2"), url("./assets/fonts/droidsans/droid-sans-v6-latin-700.woff") format("woff"), url("./assets/fonts/droidsans/droid-sans-v6-latin-700.ttf") format("truetype"), url("./assets/fonts/droidsans/droid-sans-v6-latin-700.svg#DroidSans") format("svg");
   /* Legacy iOS */ }
 /* open-sans-300 - latin */
 @font-face {
@@ -2843,7 +2808,7 @@ Default valid namespaces are xs, sm, md, lg. The xs namespace is default and use
 /* Headings
 ========================================================================== */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", "Helvetica Neue", "Segoe UI", "Verdana", sans-serif;
+  font-family: "Droid Sans", "Helvetica Neue", "Segoe UI", "Verdana", sans-serif;
   font-weight: 500; }
 
 h1, h2, h3 {
@@ -3038,7 +3003,7 @@ Markup:
 button {
   background-color: #444e7f;
   border-radius: .2rem;
-  font-family: "Raleway", "Helvetica Neue", "Segoe UI", "Verdana", sans-serif;
+  font-family: "Droid Sans", "Helvetica Neue", "Segoe UI", "Verdana", sans-serif;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
@@ -4076,7 +4041,7 @@ nav ul {
 .modal-header {
   padding: 24px 32px;
   font-size: 1.08rem;
-  font-family: "Raleway", "Helvetica Neue", "Segoe UI", "Verdana", sans-serif;
+  font-family: "Droid Sans", "Helvetica Neue", "Segoe UI", "Verdana", sans-serif;
   font-weight: bold;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
   .modal-header:empty {
