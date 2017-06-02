@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: Portfolio Page template
+ * Template Name: Portfolio template
  * 
  * @package Wordpress
  * @subpackage The_Leader
@@ -11,19 +11,17 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<?php
-			while ( have_posts() ) : the_post();
+		<?php
+		$loop = new WP_Query(array('post_type' => 'portfolio','post_per_page' => 12));
+		if($loop->have_posts()):
+
+			while ( $loop->have_posts() ) : $loop->the_post();
 
 				get_template_part( 'template-parts/content', 'page' );
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
 			endwhile; // End of the loop.
+		endif;
 			?>
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
