@@ -21,6 +21,8 @@
 - [ ] Create a new function which will show estimated time reading.
 - [ ] truncate_by_words function with parameter get_excerpt, number_of_chars, suffix for expert limitation (can contain HTML tags).
 - [ ] Remove function the_leader_posted_on() from content.php and create separate functions that shows 'posted on', 'author name' and 'author image (only URL)' respectively.
+- [ ] Create two funtions that displays the date (and time) a post was published and last modified respectively (format: 2015-02-05T08:00:00+08:00 )
+- [ ] Create function that displays the width and height in array of featured image of current post.
 
 
 ### For Designer
