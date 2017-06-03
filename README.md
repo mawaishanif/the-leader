@@ -1,6 +1,6 @@
 # The Leader!
 
-### Extending your TODOs
+### For Developer
 
 - [x] Add featured image in index pages.
 - [x] Add page template portfolio custom post type.
@@ -21,3 +21,8 @@
 - [ ] Create a new function which will show estimated time reading.
 - [ ] truncate_by_words function with parameter get_excerpt, number_of_chars, suffix for expert limitation (can contain HTML tags).
 - [ ] Remove function the_leader_posted_on() from content.php and create separate functions that shows 'posted on', 'author name' and 'author image (only URL)' respectively.
+
+
+### For Designe
+
+- [ ] Add schema.org markups to blog
