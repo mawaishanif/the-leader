@@ -23,6 +23,6 @@
 - [ ] Remove function the_leader_posted_on() from content.php and create separate functions that shows 'posted on', 'author name' and 'author image (only URL)' respectively.
 
 
-### For Designe
+### For Designer
 
 - [ ] Add schema.org markups to blog
