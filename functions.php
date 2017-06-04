@@ -229,6 +229,11 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Load Author Custom Profile Image File.
  */
+require get_template_directory() . '/inc/inject-framework.php';
+
+/**
+ * Load Author Custom Profile Image File.
+ */
 require get_template_directory() . '/inc/class-author-image.php';
 
 new Author_Image_Class;

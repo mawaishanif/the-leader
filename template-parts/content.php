@@ -15,7 +15,18 @@
 		the_title( '<h2 class="post-title">', '</h2>' );
 	?>
 	</header><!-- .post-header -->
-
+	<h4>I am checking some data here</h4>
+	<?php 
+	/**
+	 * Available keys for this array are:
+	 * date_published 
+	 * date_modifed 
+	 * posted_time 
+	 * author_name 
+	 * author_image
+	 **/
+	$post_meta = post_data(); 
+	?>
 	<div class="post-content">
 		<?php
 			
