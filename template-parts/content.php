@@ -15,29 +15,20 @@
 		the_title( '<h2 class="post-title">', '</h2>' );
 	?>
 	</header><!-- .post-header -->
-	<h4>I am checking some data here</h4>
-	<?php 
-	/**
-	 * Available keys for this array are:
-	 * date_published 
-	 * date_modifed 
-	 * posted_time 
-	 * author_name 
-	 * author_image
-	 **/
-	$post_meta = post_data(); 
-	?>
 	<div class="post-content">
 		<?php
 			
 			the_post_thumbnail('the_leader_column');
 			echo the_post_thumbnail_url( 'the_leader_column' );
 
-			the_excerpt( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'the_leader' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
+			// the_excerpt( sprintf(
+			// 	/* translators: %s: Name of current post. */
+			// 	wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'the_leader' ), array( 'span' => array( 'class' => array() ) ) ),
+			// 	the_title( '<span class="screen-reader-text">"', '"</span>', false )
+			// ) );
+			echo '<p>This is before displaying excerpt function</p>';
+			echo get_the_excerpt();
+			echo '<p>This is after displaying excerpt function</p>';
 
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the_leader' ),
