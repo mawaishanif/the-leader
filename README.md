@@ -10,7 +10,7 @@
 - [x] Implemets logo api.
 - [x] Add post format support for all post formats except Status, Aside, Image.
 - [ ] Change the avatar size(50x50) when it is uploaded.
-- [ ] When the avatar feature is added it should come with default image not with empty one.
+- [x] When the avatar feature is added it should come with default image not with empty one.
 - [ ] Remove the social urls from index pages.  And show them all on single pages at the end of post.
 - [ ] Add excerpt limit and add it to customization.
 - [ ] Show search bar in header.
@@ -20,7 +20,7 @@
 - [ ] Show all categories and all tags on bottom of single post page.
 - [ ] Create a new function which will show estimated time reading.
 - [ ] truncate_by_words function with parameter get_excerpt, number_of_chars, suffix for expert limitation (can contain HTML tags).
-- [ ] Create a function userPost that will return a array like this:<br>
+- [x] Create a function userPost that will return a array like this:<br>
   userPost["dataPublished"]----------  returns date of published in ugly format i.e 2015-02-05T08:00:00+08:00<br>
   userPost["datamodified"]-----------  returns date of modified in ugly format i.e 2015-02-05T08:00:00+08:00<br>
   userPost["featuredImage"]---------- returns post's featured image URL<br>
