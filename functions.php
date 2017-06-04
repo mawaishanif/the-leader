@@ -147,7 +147,7 @@ function the_leader_scripts() {
 
 	wp_enqueue_script( 'the_leader-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 	
-	wp_enqueue_script( 'the_leader-all-Scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array(), '20171215', true );
+	wp_enqueue_script( 'the_leader-all-Scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array('jquery'), '20171215', true );
 	/**
 	 * Adding script for live reload for styling purposes.
 	 * @todo This script should be removed when shipping out the theme

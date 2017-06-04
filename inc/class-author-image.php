@@ -83,15 +83,15 @@ function my_custom_avatar( $avatar, $id_or_email, $size, $default, $alt ) {
 
 		$image = get_user_option( 'the_leader_author_profile_image', $id_or_email );
 		// echo is_string( (string) $image);
-		echo '<p>Before</p>';
-		is_string('23');
-		echo '<p>After</p>';
+		// echo '<p>Before</p>';
+		// is_string('23');
+		// echo '<p>After</p>';
 		if (is_string( (string) $image)) {
-				echo 'if conditional is working';
+				// echo 'if conditional is working';
 				$url = $image;
 			}
 			else{
-				echo 'else conditional is working';
+				// echo 'else conditional is working';
 				$url = wp_get_attachment_url( $image );
 			}
 		return "<img alt='{$alt}' src='{$url}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}' />";
