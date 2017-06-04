@@ -19,7 +19,13 @@
 		<?php
 			
 			the_post_thumbnail('the_leader_column');
-			echo the_post_thumbnail_url( 'the_leader_column' );
+ 			/**
+ 			 * This is image data function which need image Id and the image size using the thumb name.
+ 			 * First Parameter is thumbnail ID and second if thumb name.
+ 			 * And funtions reture the array with index 0 for Image URL, index 1 for width and index 2 for height.
+ 			 **/ 
+
+			$image_data = image_data( get_post_thumbnail_id(), 'the_leader_column' );
 
 			the_excerpt( sprintf(
 				/* translators: %s: Name of current post. */

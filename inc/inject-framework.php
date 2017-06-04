@@ -14,13 +14,19 @@
  * @param none
  * @return array
  */
+
+function image_data($image_id, $image_thumb_name){
+	return wp_get_attachment_image_src( $image_id, $image_thumb_name );
+}
+
 function post_data(){
+
 	return [
 	'date_published' =>  esc_html( get_the_date( 'c' ) ),
 	'date_modifed' => esc_html( get_the_modified_date('c') ),
 	'posted_time' => esc_html( get_the_time()),
 	'author_name' => esc_html( get_the_author() ),
-	'author_image' => get_avatar(get_the_author_meta('ID'))
+	'author_image' => get_avatar(get_the_author_meta('ID')), 
 	];
 }
 
