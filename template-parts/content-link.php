@@ -1,4 +1,4 @@
-<article style="background: blue;">
+<article>
 	<?php 
 	echo '<p>Time of this Post </p>';
 	echo esc_html( human_time_diff(get_the_time('U'), current_time('timestamp') ) ) . 'ago';

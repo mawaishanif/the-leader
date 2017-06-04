@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded",function(){
 	console.clear();
 
 	// fade out when clicks on external link - smooth animation :)
-	$('a.external').click(function(e) {
+	jQuery('a.external').click(function(e) {
 		e.preventDefault();
-		var link = $(this).attr('href');
-		$('body').fadeOut('50', function() {
+		var link = jQuery(this).attr('href');
+		jQuery('body').fadeOut('50', function() {
 			window.location.href = link; 
 		});
 	});
