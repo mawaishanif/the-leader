@@ -5,8 +5,9 @@ jQuery(function($){
       addImgLink = $('#choose_image_button'),
       delImgLink = $( '#delete_image_button'),
       imgContainer = $(".avatar"),
-      imgIdInput = $( '#user_avatar' );
-
+      imgIdInput = $( '#user_avatar' ),
+      // This url object is made possible by the wp_localize_script.
+      templateUrl = url.theme_url;
 
   // ADD IMAGE LINK
   addImgLink.on( 'click', function( event ){
@@ -58,10 +59,9 @@ jQuery(function($){
   
   // DELETE IMAGE LINK
   delImgLink.on( 'click', function( event ){
-    console.log("I am working");
     event.preventDefault();
     // Clear out the preview image
-    imgContainer.attr('src', 'https://cdn4.iconfinder.com/data/icons/gray-user-management/512/rounded-512.png');
+    imgContainer.attr('src', templateUrl + '/assets/images/default-avatar.png');
 
     // Un-hide the add image link
     addImgLink.removeClass( 'hidden' );
@@ -69,8 +69,8 @@ jQuery(function($){
     // Hide the delete image link
     delImgLink.addClass( 'hidden' );
 
-    // Delete the image id from the hidden input
-    imgIdInput.val( '' );
+    // Add the default image for the user.
+    imgIdInput.val( templateUrl + '/assets/images/default-avatar.png' );
 
   });
 

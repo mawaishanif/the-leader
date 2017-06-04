@@ -44,29 +44,33 @@ class Author_Image_Class
 	}
  
 function the_leader_user_profile_update($user_id) {
- 		$imageId = filter_input( INPUT_POST, 'user_avatar', FILTER_VALIDATE_INT );	
+ 		$imageId = filter_input( INPUT_POST, 'user_avatar');	
 		update_user_meta( $user_id, 'the_leader_author_profile_image', $imageId );
 }
 function base_profile_image_admin_enqueue_scripts() {
 
 		wp_enqueue_media();
-		wp_enqueue_script( 
-			'the_leader_user_profile_image_script', 
-			get_template_directory_uri() . '/assets/js/the-leader-custom-profile-script.js', 
-			array( 'jquery' ), 
-			1.00,
-			True
-		);
+		wp_enqueue_script( 'the_leader_user_profile_image_script', get_template_directory_uri() . '/assets/js/the-leader-custom-profile-script.js', array( 'jquery' ), 1.00, True );
+		wp_localize_script( 'the_leader_user_profile_image_script', 'url', array('theme_url' => get_template_directory_uri()) );
 
 	}
 
 function my_custom_avatar( $avatar, $id_or_email, $size, $default, $alt ) {
-		if (isset($id_or_email->comment_author_email)) {
-			$user = get_user_by( 'email', $id_or_email->comment_author_email );
-			$imageId = get_user_option( 'the_leader_author_profile_image', $user->ID );
-			$url = wp_get_attachment_url( $imageId );
+		
+		// This if statment if for getting avatar right for comments
+		if ( isset( $id_or_email->comment_author_email ) ) {
 
-			if ($imageId) {
+			$user = get_user_by( 'email', $id_or_email->comment_author_email );
+			$image = get_user_option( 'the_leader_author_profile_image', $user->ID );
+
+			if (is_string($image)) {
+				$url = $image;
+			}
+			else{
+				$url = wp_get_attachment_url( $image );
+			}
+
+			if ($image) {
 				return "<img alt='{$alt}' src='{$url}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}' />";
 			}
 			else
@@ -77,8 +81,19 @@ function my_custom_avatar( $avatar, $id_or_email, $size, $default, $alt ) {
 			}
 		}
 
-		$imageId = get_user_option( 'the_leader_author_profile_image', $id_or_email );
-		$url = wp_get_attachment_url( $imageId );
+		$image = get_user_option( 'the_leader_author_profile_image', $id_or_email );
+		// echo is_string( (string) $image);
+		echo '<p>Before</p>';
+		is_string('23');
+		echo '<p>After</p>';
+		if (is_string( (string) $image)) {
+				echo 'if conditional is working';
+				$url = $image;
+			}
+			else{
+				echo 'else conditional is working';
+				$url = wp_get_attachment_url( $image );
+			}
 		return "<img alt='{$alt}' src='{$url}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}' />";
 	}
 
@@ -87,7 +102,7 @@ function checkingSomething(){
 	<p class="description">
 		<button type="button" id="choose_image_button" class="button">Choose Image</button>
 		<button style="color:red" type="button" id="delete_image_button" class="button hidden">Delete Image</button>
-		<input type="hidden" value="https://google.com/imagenumber1" name="user_avatar" id="user_avatar">
+		<input type="hidden" value="<?php echo get_template_directory_uri() . '/assets/images/default-avatar.png'; ?>" name="user_avatar" id="user_avatar">
 		<br> This picture will be used as Avatar through out this website.
 	</p>
 
