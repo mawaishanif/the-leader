@@ -47,5 +47,15 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+<div class="video-background">
+    <div class="video-foreground">
+      <iframe src="https://www.youtube.com/embed/DnnRbm4F0zc?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ&vq=large" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
 
+<div id="vidtop-content">
+<div class="vid-info">
+	
+  </div>
+</div>
 	<div id="content" class="site-content">
