@@ -19,6 +19,13 @@ document.addEventListener("DOMContentLoaded",function(){
 		}
 	}
 	setInterval(menuController, 100);
+	jQuery('.showsearch').click(function() {
+		jQuery('#searchbar').toggleClass('display_search');
+	});
+
+	jQuery('.close_search').click(function() {
+		jQuery('#searchbar').toggleClass('display_search');
+	});
 
 	jQuery('#menu-trigger').on("click",function(e){
 		e.preventDefault();
