@@ -24,14 +24,13 @@ function post_data(){
 	];
 }
 
-function new_excerpt_more( $more ) {
-	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';
+
+function the_leader_excerpt_more( $more ) {
+	return '...';
 }
-add_filter( 'excerpt_more', 'new_excerpt_more' );
+add_filter( 'excerpt_more', 'the_leader_excerpt_more' );
 
-
-
-function trimmed_excerpt( $post_excerpt, $post){
-	return $post_excerpt . '<p>Lets see</p>';
+function the_leader_custom_excerpt_length( $length ) {
+    return 160;
 }
-apply_filters( 'get_the_excerpt', 'trimmed_excerpt', 5 );
+add_filter( 'excerpt_length', 'the_leader_custom_excerpt_length', 999 );
