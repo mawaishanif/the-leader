@@ -15,6 +15,31 @@
 		the_title( '<h2 class="post-title">', '</h2>' );
 	?>
 	</header><!-- .post-header -->
+	<?php 
+	/**
+	 * Available keys for this array are:
+	 * date_published 
+	 * date_modifed 
+	 * posted_time 
+	 * author_name 
+	 * author_image
+	 **/
+	$post_meta = post_data(); 
+	?>
+	<p>
+		<?php 
+echo $post_meta["date_published"];
+echo "<br>";
+echo $post_meta["date_modifed"];
+echo "<br>";
+echo $post_meta["posted_time"];
+echo "<br>";
+echo $post_meta["author_name"];
+echo "<br>";
+echo $post_meta["author_image"];
+echo "<br>";
+		?>
+	</p>
 	<div class="post-content">
 		<?php
 			

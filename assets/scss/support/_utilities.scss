@@ -104,7 +104,7 @@ Styleguide 4.0
 	font-style: italic;
 }
 
-.display-block {
+.display-block, .show, .shown {
 	display: block; 
 }
 
@@ -114,7 +114,7 @@ Styleguide 4.0
 .display-inline {
 	display: inline; 
 }
-.display-none {
+.display-none, .hidden {
 	display: none; 
 }
 .extra-letter-spacing{
@@ -305,8 +305,8 @@ a.muted:hover {
 .close				- makes a simple X button 
 .video-container 		- can be used for responsive videos
 
- */
-	
+*/
+
 .close {
 	font-family: 'themify';
 	speak: none;
@@ -365,3 +365,15 @@ a.muted:hover {
 
 
 
+.fade{
+	opacity:0;
+	-webkit-transition:opacity 0.15s linear;
+	-o-transition:opacity 0.15s linear;
+	transition:opacity 0.15s linear
+}
+.fade.in{
+	opacity:1
+}
+.fade.out{
+	opacity:0
+}
