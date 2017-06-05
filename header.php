@@ -37,11 +37,7 @@
 				<div class="brand col-xs-4 col-sm-2 col-md-2 col-lg-2">
 						<?php 
 						if (has_custom_logo()) {
-							$custom_logo_id = get_theme_mod( 'custom_logo' );
-							$logo = wp_get_attachment_image_src( $custom_logo_id , 'the_leader_thumbnail_small' );
-							?> 
-							<img src="<?php echo $logo[0]; ?>" alt="">
-							<?php
+							the_custom_logo();
 						}else{
 						 ?>
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
