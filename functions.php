@@ -61,8 +61,7 @@ function the_leader_setup() {
 	 * Theme support for custom logo.
 	 */
 	add_theme_support( 'custom-logo', array(
-		'height' 	  => 'the_leader_thumbnail_small',
-		'width'       => 'the_leader_thumbnail_small',
+		'width'       => '120',
 		'flex-height' => true,
 		'flex-width'  => true,
 		'header-text' => array( 'site-title', 'site-description' ) 
