@@ -60,13 +60,20 @@ function my_custom_avatar( $avatar, $id_or_email, $size, $default, $alt ) {
 		// This if statment if for getting avatar right for comments
 		if ( isset( $id_or_email->comment_author_email ) ) {
 
-			$user = get_user_by( 'email', $id_or_email->comment_author_email );
-			$image = get_user_option( 'the_leader_author_profile_image', $user->ID );
 
-			if (is_string($image)) {
+			$user = get_user_by( 'email', $id_or_email->comment_author_email );
+			if (empty($user->ID)) {
+				$url = get_avatar_url($id_or_email->comment_author_email);
+				return "<img alt='{$alt}' src='{$url}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}' />";
+			}
+			$image = get_user_option( 'the_leader_author_profile_image', $user->ID );
+			if (!$image) {
+				$image = get_template_directory_uri() . '/assets/images/default-avatar.png';
+			}
+			if (!is_numeric($image)) {
 				$url = $image;
 			}
-			else{
+			else {
 				$url = wp_get_attachment_url( $image );
 			}
 
@@ -82,16 +89,13 @@ function my_custom_avatar( $avatar, $id_or_email, $size, $default, $alt ) {
 		}
 
 		$image = get_user_option( 'the_leader_author_profile_image', $id_or_email );
-		// echo is_string( (string) $image);
-		// echo '<p>Before</p>';
-		// is_string('23');
-		// echo '<p>After</p>';
-		if (is_string( (string) $image)) {
-				// echo 'if conditional is working';
+		if (!$image) {
+			$image = get_template_directory_uri() . '/assets/images/default-avatar.png';
+		}
+		if (!is_numeric($image)) {
 				$url = $image;
 			}
 			else{
-				// echo 'else conditional is working';
 				$url = wp_get_attachment_url( $image );
 			}
 		return "<img alt='{$alt}' src='{$url}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}' />";
