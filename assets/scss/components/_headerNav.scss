@@ -50,8 +50,20 @@
 
 
 
+
+
+
+
+
+
+
+
+//
+$menuLink-border: 8px solid $secondary;
+$menuLink-border-transparent: 8px solid transparent;
 .main-menu-container{
 	.brand a{
+		padding: 0;
 		text-decoration: none;
 		h5{
 			color: $primary;
@@ -63,10 +75,10 @@
 		padding-left: 40px;
 		@media only screen and (max-width: 768px){
 			margin: 0 auto;
-			padding: 25px 30px;
+			padding: 0;
 		}
 		@media only screen and (max-width: 480px){
-			padding: 25px 20px;
+			padding: 0;
 		}
 	}
 }
@@ -111,7 +123,7 @@ nav.main{
 			font-size: 1rem;
 			color: $color-blueishGray;
 			text-decoration: none;
-			border-bottom: 4px solid transparent;
+			border-bottom: $menuLink-border-transparent;
 		}
 		&:hover{
 			background-color: $color-aluminum;
@@ -135,8 +147,7 @@ nav.main{
 		}
 	}
 	li{
-		display: inline-block;
-		margin: 0 auto;
+		display: inline-block; 
 		@media only screen and (max-width: 768px){
 			display: block;
 		}
@@ -147,9 +158,18 @@ nav.main{
 			background-color: $color-silver;
 		}
 		&.menu-item-has-children:not(.on-js){
+			margin: 0 auto -1px;
 			a{
 				&:hover{
-					border-bottom: 4px solid transparent;
+					border-bottom: $menuLink-border-transparent;
+				}
+				&:hover ~ ul{
+					display: block;
+					position: absolute;
+					z-index: 50;
+					width: 100%;
+					left: 0;
+					background-color: $primary;
 				}
 			}
 			&:hover >ul{
@@ -167,16 +187,17 @@ nav.main{
 					}
 					a{
 						&:hover{
-							border-bottom: 4px solid transparent;
+							border-bottom: $menuLink-border-transparent;
+							background-color: darken($primary, 10%);
 						}
 					}
 				}
 				a{
 					color: #fff;
-					border-bottom: 4px solid transparent;
+					border-bottom: $menuLink-border-transparent;
 					&:hover{
 						color: #fff;
-						border-bottom: 4px solid #fff;
+						border-bottom: 5px solid #fff;
 					}
 					&.selected{
 
@@ -186,24 +207,24 @@ nav.main{
 		}
 		a{
 			font-weight: 500;
-			border-bottom: 4px solid transparent;
+			border-bottom: $menuLink-border-transparent;
 			&.selected{
-				border-bottom: 4px solid $color-blueishGray;
+				border-bottom: $menuLink-border;
 			}
 			&:hover{
 				color: $color-black;
-				border-bottom: 4px solid $color-blueishGray;
+				border-bottom: $menuLink-border;
 			}
 			@media only screen and (max-width: 768px){
 				padding: 25px 0px;
 				font-size: 1.1rem;
 				&.selected{
-					border-bottom: 4px solid transparent;
+					border-bottom: $menuLink-border-transparent;
 					background-color: $color-nearblack;
 				}
 				&:hover{
 					background-color: $color-lightgray;
-					border-bottom: 4px solid transparent;
+					border-bottom: $menuLink-border-transparent;
 				}
 			}
 		}
@@ -231,7 +252,7 @@ nav.main{
 	}
 	a{
 		text-decoration: none;
-		border-bottom: 4px solid transparent;
+		border-bottom: $menuLink-border-transparent;
 		&:hover{
 			color: $color-black;
 		}
