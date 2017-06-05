@@ -136,7 +136,7 @@ nav.main{
 	}
 	li{
 		display: inline-block;
-		    margin: 0 auto;
+		margin: 0 auto;
 		@media only screen and (max-width: 768px){
 			display: block;
 		}
@@ -152,16 +152,25 @@ nav.main{
 					border-bottom: 4px solid transparent;
 				}
 			}
-			&:hover ul{
+			&:hover >ul{
 				display: block;
 				position: absolute;
 				z-index: 50;
 				width: 100%;
 				left: 0;
-				background-color: $color-blueishGray;
+				background-color: $primary;
 			}
 			li{
-				position: relative;
+				&.menu-item-has-children:not(.on-js){
+					ul{
+						background-color: darken($primary, 5%);
+					}
+					a{
+						&:hover{
+							border-bottom: 4px solid transparent;
+						}
+					}
+				}
 				a{
 					color: #fff;
 					border-bottom: 4px solid transparent;

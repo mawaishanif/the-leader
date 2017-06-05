@@ -1066,7 +1066,7 @@ ul.unstyled ul {
 a .icon {
   position: relative;
   top: 1px;
-  margin: 0 6px; }
+  margin-left: 8px; }
 
 @font-face {
   font-family: 'themify';
@@ -4240,21 +4240,23 @@ nav.main li {
     background-color: #e0e1e1; }
   nav.main li.menu-item-has-children:not(.on-js) a:hover {
     border-bottom: 4px solid transparent; }
-  nav.main li.menu-item-has-children:not(.on-js):hover ul {
+  nav.main li.menu-item-has-children:not(.on-js):hover > ul {
     display: block;
     position: absolute;
     z-index: 50;
     width: 100%;
     left: 0;
-    background-color: #83969f; }
-  nav.main li.menu-item-has-children:not(.on-js) li {
-    position: relative; }
-    nav.main li.menu-item-has-children:not(.on-js) li a {
+    background-color: #444e7f; }
+  nav.main li.menu-item-has-children:not(.on-js) li.menu-item-has-children:not(.on-js) ul {
+    background-color: #3b446e; }
+  nav.main li.menu-item-has-children:not(.on-js) li.menu-item-has-children:not(.on-js) a:hover {
+    border-bottom: 4px solid transparent; }
+  nav.main li.menu-item-has-children:not(.on-js) li a {
+    color: #fff;
+    border-bottom: 4px solid transparent; }
+    nav.main li.menu-item-has-children:not(.on-js) li a:hover {
       color: #fff;
-      border-bottom: 4px solid transparent; }
-      nav.main li.menu-item-has-children:not(.on-js) li a:hover {
-        color: #fff;
-        border-bottom: 4px solid #fff; }
+      border-bottom: 4px solid #fff; }
   nav.main li a {
     font-weight: 500;
     border-bottom: 4px solid transparent; }
