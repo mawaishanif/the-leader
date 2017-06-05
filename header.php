@@ -69,8 +69,7 @@
 
 
 		<section class="cover  max-full-width">
-			<div class="background" style="background-image: url('http://localhost/wordpress/wp-content/themes/the-leader/assets/images/bg1.jpg'); background-position-x: 50%;"></div>
-			<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+			<div class="background" style="background-image: url('<?php header_image(); ?>'); background-position-x: 50%;"></div>
 			<div class="introduction">
 				<h1><?php bloginfo( 'name' ); ?></h1>
 				<!-- <h3>For full width use <i>full-width</i> or <i>max-full-width</i> class</h3> -->
