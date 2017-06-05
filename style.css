@@ -4124,7 +4124,8 @@ nav ul {
   transition: transform 325ms ease-out;
   transform: translateY(-180px);
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.08);
-  border-bottom: 1px solid #dadada; }
+  border-bottom: 1px solid #dadada;
+  background-color: #333; }
   #searchbar.display_search {
     transform: translateY(0px); }
   #searchbar button {
@@ -4142,29 +4143,48 @@ nav ul {
     margin: 0; }
   #searchbar .search_input {
     padding: 1rem;
+    color: #fff;
+    background-color: #333;
+    background-image: none;
+    height: 84px;
+    font-size: 1.4rem;
     margin: 0 auto; }
   #searchbar .close_search {
     position: absolute;
-    bottom: -15px;
-    left: 46.5%; }
+    bottom: -26px;
+    left: 46.5%;
+    background-color: #fff;
+    border-radius: 50%; }
+    #searchbar .close_search .icon {
+      font-size: 1.019rem !important;
+      padding: 1.2rem !important; }
 
-.main-menu-container .icon {
-  margin-left: 8px;
-  vertical-align: middle; }
-@media only screen and (max-width: 768px) {
-  .main-menu-container {
-    height: auto; } }
 .main-menu-container .brand a {
+  text-decoration: none;
   display: block;
   max-width: 210px;
   padding-left: 40px; }
   .main-menu-container .brand a h5 {
+    color: #444e7f;
     margin: 0;
     padding: 0; }
   @media only screen and (max-width: 768px) {
     .main-menu-container .brand a {
       margin: 0 auto;
       padding-left: 0px; } }
+
+header.navigation {
+  background-color: #fff; }
+  header.navigation a {
+    font-size: 1rem;
+    display: block;
+    color: #83969f;
+    text-decoration: none;
+    -webkit-transition: all 100ms ease-in;
+    -moz-transition: all 100ms ease-in;
+    -ms-transition: all 100ms ease-in;
+    -o-transition: all 100ms ease-in;
+    transition: all 100ms ease-in; }
 
 nav.main #menu-trigger a {
   display: none; }
@@ -4180,7 +4200,7 @@ nav.main #menu-trigger a {
       display: block;
       font-weight: 500;
       font-size: 1rem;
-      color: #e50c38;
+      color: #83969f;
       text-decoration: none; } }
   nav.main #menu-trigger a:hover {
     background-color: #ece9e9;
@@ -4209,8 +4229,7 @@ nav.main li {
     z-index: 50;
     width: 100%;
     left: 0;
-    background-color: #e50c38;
-    height: 70px; }
+    background-color: #83969f; }
   nav.main li.menu-item-has-children:not(.on-js) li {
     position: relative; }
     nav.main li.menu-item-has-children:not(.on-js) li a {
@@ -4220,26 +4239,17 @@ nav.main li {
         color: #fff;
         border-bottom: 4px solid #fff; }
   nav.main li a {
-    padding: 20px;
-    display: block;
+    padding: 35px 20px;
     font-weight: 500;
-    font-size: 1rem;
-    color: #e50c38;
-    text-decoration: none;
-    -webkit-transition: all 100ms ease-in;
-    -moz-transition: all 100ms ease-in;
-    -ms-transition: all 100ms ease-in;
-    -o-transition: all 100ms ease-in;
-    transition: all 100ms ease-in;
     border-bottom: 4px solid transparent; }
     nav.main li a.selected {
-      border-bottom: 4px solid #e50c38; }
+      border-bottom: 4px solid #83969f; }
     nav.main li a:hover {
-      color: #e50c38;
-      border-bottom: 4px solid #e50c38; }
+      color: #333;
+      border-bottom: 4px solid #83969f; }
     @media only screen and (max-width: 768px) {
       nav.main li a {
-        padding: 20px 0px; }
+        padding: 35px 0px; }
         nav.main li a.selected {
           border-bottom: 0;
           background-color: rgba(229, 12, 56, 0.18); }
@@ -4262,21 +4272,21 @@ nav.main li {
       .search-menu ul.search {
         display: block; } }
   .search-menu li {
-    display: inline-block; }
-  .search-menu a {
     display: block;
-    font-size: 1rem;
-    color: #e50c38 !important;
+    text-align: center;
+    border-left: 1px solid #d4d4d4; }
+  .search-menu a {
+    padding: 35px 20px;
     text-decoration: none; }
     .search-menu a:hover {
-      color: #e50c38;
+      color: #333;
       border-bottom: 0; }
     @media only screen and (max-width: 992px) {
       .search-menu a {
-        padding: 20px 20px;
+        padding: 35px 0px;
         display: block; }
         .search-menu a:hover {
-          color: #e50c38;
+          color: #83969f;
           background-color: rgba(229, 12, 56, 0.11);
           border-bottom: 0; } }
 
