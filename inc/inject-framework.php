@@ -37,6 +37,6 @@ function the_leader_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'the_leader_excerpt_more' );
 
 function the_leader_custom_excerpt_length( $length ) {
-    return 160;
+    return 50;
 }
 add_filter( 'excerpt_length', 'the_leader_custom_excerpt_length', 999 );
