@@ -41,6 +41,7 @@
 		border-radius: 50%;
 		.icon{
 			@extend %close_Icon;
+			border-radius: 50%;
 			font-size: 1.019rem !important;
 			padding: 1.2rem !important;
 		}
@@ -62,7 +63,10 @@
 		padding-left: 40px;
 		@media only screen and (max-width: 768px){
 			margin: 0 auto;
-			padding-left: 0px;
+			padding: 25px 30px;
+		}
+		@media only screen and (max-width: 480px){
+			padding: 25px 20px;
 		}
 	}
 }
@@ -73,8 +77,9 @@
 header.navigation{
 	background-color: $white;
 	a{
-		font-size: 1rem;
+		font-size: 0.860rem;
 		display: block;
+		padding: 35px 40px;
 		color: $color-blueishGray;
 		text-decoration: none;
 		-webkit-transition: all 100ms ease-in;
@@ -82,6 +87,12 @@ header.navigation{
 		-ms-transition: all 100ms ease-in;
 		-o-transition: all 100ms ease-in;
 		transition: all 100ms ease-in;
+		@media only screen and (max-width: 768px){
+			padding: 25px 30px;
+		}
+		@media only screen and (max-width: 480px){
+			padding: 25px 20px;
+		}
 	}
 }
 nav.main{
@@ -94,20 +105,16 @@ nav.main{
 			vertical-align: inherit;
 		}
 		@media only screen and (max-width: 768px){
-			background-color: #f3f1f1;
-			border: 1px solid #adacac;
-			border-left: 0;
-			border-right: 0;
-			padding: 20px 40px;
+			border-left: 1px solid $color-silver;
 			display: block;
 			font-weight: 500;
 			font-size: 1rem;
 			color: $color-blueishGray;
 			text-decoration: none;
+			border-bottom: 4px solid transparent;
 		}
 		&:hover{
-			background-color: darken(#f3f1f1, 3);
-			border-bottom: 1px solid #adacac;
+			background-color: $color-aluminum;
 		}
 	}
 	ul{
@@ -117,21 +124,32 @@ nav.main{
 		display: inline-block;
 		@media only screen and (max-width: 768px){
 			display: none;
+			position: absolute;
+			z-index: 800;
+			width: 100%;
+			left: 0;
+			background-color: $color-aluminum;
+			&#primary-menu {
+				box-shadow: 0px 18px 20px 12px rgba(51, 51, 51, 0.15);
+			}
 		}
 	}
 	li{
 		display: inline-block;
+		    margin: 0 auto;
 		@media only screen and (max-width: 768px){
 			display: block;
 		}
 		ul{
 			display: none;
-			background-color: #f1efef;
+			position: relative;
+			z-index: 801;
+			background-color: $color-silver;
 		}
 		&.menu-item-has-children:not(.on-js){
 			a{
 				&:hover{
-					border-bottom: 0;
+					border-bottom: 4px solid transparent;
 				}
 			}
 			&:hover ul{
@@ -158,7 +176,6 @@ nav.main{
 			}
 		}
 		a{
-			padding: 35px 20px;
 			font-weight: 500;
 			border-bottom: 4px solid transparent;
 			&.selected{
@@ -169,14 +186,15 @@ nav.main{
 				border-bottom: 4px solid $color-blueishGray;
 			}
 			@media only screen and (max-width: 768px){
-				padding: 35px 0px;
+				padding: 25px 0px;
+				font-size: 1.1rem;
 				&.selected{
-					border-bottom: 0;
-					background-color: rgba(229, 12, 56, 0.18);
+					border-bottom: 4px solid transparent;
+					background-color: $color-nearblack;
 				}
 				&:hover{
-					background-color: rgba(229, 12, 56, 0.11);
-					border-bottom: 0;
+					background-color: $color-lightgray;
+					border-bottom: 4px solid transparent;
 				}
 			}
 		}
@@ -200,22 +218,20 @@ nav.main{
 	li{
 		display: block;
 		text-align: center;
-		border-left: 1px solid $color-lightgray;
+		border-left: 1px solid $color-silver;
 	}
 	a{
-		padding: 35px 20px;
 		text-decoration: none;
+		border-bottom: 4px solid transparent;
 		&:hover{
 			color: $color-black;
-			border-bottom: 0;
 		}
 		@media only screen and (max-width: 992px){
 			padding: 35px 0px;
 			display: block;
 			&:hover{
 				color: $color-blueishGray;
-				background-color: rgba(229, 12, 56, 0.11);
-				border-bottom: 0;
+				background-color: $color-aluminum;
 			}
 		}
 	}

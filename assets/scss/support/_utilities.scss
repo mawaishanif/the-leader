@@ -166,13 +166,11 @@ Styleguide 4.0
 
 
 
-.hide-mobile { display: none; 
-}
-@media screen and (min-width: 64em) { 
-	.hide-desktop { display: none; 
-	}
-	.hide-mobile { display: block; 
-	}
+.hide-mobile, .hide-mobile-flex { display: none; }
+@media screen and (min-width: 768px) { 
+	.hide-desktop { display: none; }
+	.hide-mobile { display: block; }
+	.hide-mobile-flex { display: flex; }
 }
 /*
 
