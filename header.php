@@ -38,7 +38,11 @@
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<?php 
 						if (has_custom_logo()) {
-							the_custom_logo();
+							$custom_logo_id = get_theme_mod( 'custom_logo' );
+							$logo = wp_get_attachment_image_src( $custom_logo_id , 'the_leader_thumbnail_small' );
+							?> 
+							<img src="<?php echo $logo[0]; ?>" alt="">
+							<?php
 						}else{
 						 ?>
 							<h5 class="site-title"><?php bloginfo( 'name' ); ?></h5>
