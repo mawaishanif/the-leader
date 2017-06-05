@@ -36,7 +36,15 @@
 			<div class="main-menu-container  row between-sm  between-md  between-lg  middle-xs  middle-sm  middle-md  middle-lg  center-xs center-sm center-md center-lg full-width">
 				<div class="brand col-xs-4 col-sm-2 col-md-2 col-lg-2">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<h5 class="site-title"><?php bloginfo( 'name' ); ?></h5>
+						<?php 
+						if (has_custom_logo()) {
+							the_custom_logo();
+						}else{
+						 ?>
+							<h5 class="site-title"><?php bloginfo( 'name' ); ?></h5>
+						<?php 
+						}
+						 ?>
 					</a>
 				</div>
 				<nav  id="site-navigation" role="navigation" class="main end-md end-lg col-xs-4 col-sm-9 col-md-9 col-lg-9">
