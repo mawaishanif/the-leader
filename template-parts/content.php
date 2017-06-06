@@ -47,7 +47,7 @@ $blurryImageURL = $image_data_Small[0];
 
 
 
-<article <?php post_class('col-lg-4'); ?> itemscope itemtype="https://schema.org/BlogPosting" id="post-<?php the_ID(); ?>">
+<article <?php post_class('col-xs-6 col-sm-5 col-md-4 col-lg-4'); ?> itemscope itemtype="https://schema.org/BlogPosting" id="post-<?php the_ID(); ?>">
 	<a class="post-link align-center" href="<?php echo esc_url( get_permalink() ); ?>">
 		<meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="https://google.com/article"/>
 		
@@ -81,10 +81,13 @@ $blurryImageURL = $image_data_Small[0];
 			<div class="post-time">
 				<time pubdate itemprop="datePublished" datetime="<?php echo $post_meta["date_published"]; ?>" content="<?php echo $post_meta["date_published"]; ?>">
 						<?php echo esc_html( human_time_diff(get_the_time('U'), current_time('timestamp') ) ); ?> ago
+						&nbsp; &bull; &nbsp;
+						3 mins read
+
 				</time>
 			</div>
 			
-			<div class="excerpt-text" itemprop="text">
+			<div class="hide-mobile excerpt-text" itemprop="text">
 				<?php
 				
 
