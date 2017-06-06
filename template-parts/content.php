@@ -84,11 +84,7 @@ $blurryImageURL = $image_data_Small[0];
 				</time>
 			</div>
 			
-
-
 			<div class="excerpt-text" itemprop="text">
-
-		<div class="excerpt-text" itemprop="text">
 				<?php
 				
 				echo '<p> Reading time for this post is <strong> ', leader_calculate_reading_time(get_the_content()), ' minute </strong></p>';
