@@ -95,8 +95,8 @@ function leader_calculate_reading_time($post_id) {
         $readingTime = ceil($wordCount / 300);
 
         if( $readingTime > 1 ){
-        	return $readingTime . ' minutes';
+        	return $readingTime . ' mins';
         }else {
-        	return $readingTime . ' minute';
+        	return $readingTime . ' min';
         }
 }
