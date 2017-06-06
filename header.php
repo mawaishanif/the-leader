@@ -23,7 +23,18 @@
 		<a class="for-screen-readers-text hidden" href="#content"><?php esc_html_e( 'Skip header area and jump to content', 'the_leader' ); ?></a>
 
 
+<?php 
+/**
+ * Create a new header layouts in the layouts folder in theme directory and add file name without extension in
+ * get_template_part() as an argument.
+ * Example: get_template_part('layouts/header-styl1');
+ * @param string
+ * @return string
+ **/
 
+//Insert the actual header style here.
+// get_template_part() 
+?>
 
 
 <!-- 
