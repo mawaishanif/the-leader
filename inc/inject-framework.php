@@ -82,8 +82,10 @@ function check_template_part( $url ){
  * @param string $post_content 
  * @return int
  */
-function leader_calculate_reading_time($post_content) {
+function leader_calculate_reading_time($post_id) {
 		
+		$post_content = get_post($post_id)->post_content;
+
         $stripped_content = strip_shortcodes($post_content);
 
         $stripped_tags_content = strip_tags($stripped_content);
@@ -92,5 +94,9 @@ function leader_calculate_reading_time($post_content) {
 
         $readingTime = ceil($wordCount / 300);
 
-        return $readingTime;
+        if( $readingTime > 1 ){
+        	return $readingTime . ' minutes';
+        }else {
+        	return $readingTime . ' minute';
+        }
 }
