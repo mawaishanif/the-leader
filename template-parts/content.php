@@ -82,17 +82,13 @@ $blurryImageURL = $image_data_Small[0];
 				<time pubdate itemprop="datePublished" datetime="<?php echo $post_meta["date_published"]; ?>" content="<?php echo $post_meta["date_published"]; ?>">
 						<?php echo esc_html( human_time_diff(get_the_time('U'), current_time('timestamp') ) ); ?> ago
 						&nbsp; &bull; &nbsp;
-						3 mins read
+						<i><?php echo leader_calculate_reading_time(get_the_ID()); ?> read</i>
 
 				</time>
 			</div>
 			
 			<div class="hide-mobile excerpt-text" itemprop="text">
-				<?php
-				
-				echo '<p> Reading time for this post is <strong> ',leader_calculate_reading_time(get_the_ID()), '</strong></p>';
-				echo get_the_excerpt();
-					                     ?>
+				<?php echo get_the_excerpt(); ?>
 			</div>
 		</div>
           </a>
