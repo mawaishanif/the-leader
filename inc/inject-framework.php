@@ -76,3 +76,21 @@ function check_template_part( $url ){
 		return False;
 	}
 }
+
+/**
+ * Leader function to calculate reading time for a post.
+ * @param string $post_content 
+ * @return int
+ */
+function leader_calculate_reading_time($post_content) {
+		
+        $stripped_content = strip_shortcodes($post_content);
+
+        $stripped_tags_content = strip_tags($stripped_content);
+
+        $wordCount = str_word_count($stripped_tags_content);
+
+        $readingTime = ceil($wordCount / 300);
+
+        return $readingTime;
+}
