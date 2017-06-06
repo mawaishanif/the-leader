@@ -33,7 +33,7 @@
  **/
 
 //Insert the actual header style here.
-// get_template_part() 
+// get_template_part('layouts/header-style1') ;
 ?>
 
 

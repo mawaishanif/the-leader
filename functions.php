@@ -141,6 +141,7 @@ add_action( 'widgets_init', 'the_leader_widgets_init' );
  * Enqueue scripts and styles.
  */
 function the_leader_scripts() {
+
 	wp_enqueue_style( 'the_leader-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'the_leader-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
