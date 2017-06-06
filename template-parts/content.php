@@ -84,11 +84,7 @@ $blurryImageURL = $image_data_Small[0];
 				</time>
 			</div>
 			
-
-
 			<div class="excerpt-text" itemprop="text">
-
-		<div class="excerpt-text" itemprop="text">
 				<?php
 				
 
