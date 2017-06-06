@@ -50,7 +50,7 @@ add_filter( 'excerpt_more', 'the_leader_excerpt_more' );
  * @return int
  */
 function the_leader_custom_excerpt_length( $length ) {
-    return 25;
+    return 22;
 }
 add_filter( 'excerpt_length', 'the_leader_custom_excerpt_length', 999 );
 

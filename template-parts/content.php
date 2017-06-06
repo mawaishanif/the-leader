@@ -66,35 +66,45 @@ $blurryImageURL = $image_data_Small[0];
 			<meta itemprop="height" content="<?php echo $featuredImage_height; ?>">
 		</div>
 
+		<div class="post-data">
+
+			<header>
+				<?php
+				the_title( '<h1 itemprop="headline" class="post-title">', '</h1>' );
+				?>		
+
+				<meta itemprop="dateModified" content="<?php echo $post_meta["date_modifed"]; ?>"/>
+			</header>
+			
 
 
-		<header>
-			<?php
-			the_title( '<h1 itemprop="headline" class="post-title">', '</h1>' );
-			?>		
-
-			<meta itemprop="dateModified" content="<?php echo $post_meta["date_modifed"]; ?>"/>
-		</header>
-		
+			<div class="post-time">
+				<time pubdate itemprop="datePublished" datetime="<?php echo $post_meta["date_published"]; ?>" content="<?php echo $post_meta["date_published"]; ?>">
+						<?php echo esc_html( human_time_diff(get_the_time('U'), current_time('timestamp') ) ); ?> ago
+				</time>
+			</div>
+			
 
 
-		<div class="post-time">
-			<time pubdate itemprop="datePublished" datetime="<?php echo $post_meta["date_published"]; ?>" content="<?php echo $post_meta["date_published"]; ?>">
-					<?php echo esc_html( human_time_diff(get_the_time('U'), current_time('timestamp') ) ); ?> ago
-			</time>
-		</div>
-		
-
+			<div class="excerpt-text" itemprop="text">
 
 		<div class="excerpt-text" itemprop="text">
 				<?php
-				echo get_the_excerpt();
+				
 
 				wp_link_pages( array(
 				                     'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the_leader' ),
 				                     'after'  => '</div>',
 				                     ) );
+				echo get_the_excerpt();
 				                     ?>
+
+					wp_link_pages( array(
+					                     'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the_leader' ),
+					                     'after'  => '</div>',
+					                     ) );
+					                     ?>
+			</div>
 		</div>
           </a>
 

@@ -494,7 +494,7 @@ template {
 body {
   box-sizing: border-box;
   color: #333;
-  font-family: "OpenSans", "Helvetica Neue", "Segoe UI", "Verdana", sans-serif;
+  font-family: "Droid Sans", "Helvetica Neue", "Segoe UI", "Verdana", sans-serif;
   font-size: 1.14rem;
   line-height: 1.455rem;
   min-height: 100%;
@@ -2809,7 +2809,7 @@ Default valid namespaces are xs, sm, md, lg. The xs namespace is default and use
 /* Headings
 ========================================================================== */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Droid Sans", "Helvetica Neue", "Segoe UI", "Verdana", sans-serif;
+  font-family: "OpenSans", "Helvetica Neue", "Segoe UI", "Verdana", sans-serif;
   font-weight: 500; }
 
 h1, h2, h3 {
@@ -3358,7 +3358,7 @@ Markup:
 
 */
 fieldset {
-  font-family: "OpenSans", "Helvetica Neue", "Segoe UI", "Verdana", sans-serif;
+  font-family: "Droid Sans", "Helvetica Neue", "Segoe UI", "Verdana", sans-serif;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 2rem;
   margin-bottom: 2rem;
@@ -3379,7 +3379,7 @@ textarea,
 select {
   display: block;
   width: 100%;
-  font-family: "OpenSans", "Helvetica Neue", "Segoe UI", "Verdana", sans-serif;
+  font-family: "Droid Sans", "Helvetica Neue", "Segoe UI", "Verdana", sans-serif;
   box-sizing: border-box;
   font-size: 15px;
   height: 40px;
@@ -4024,7 +4024,7 @@ input[type="date"], focus {
 .modal-header {
   padding: 24px 32px;
   font-size: 1.08rem;
-  font-family: "Droid Sans", "Helvetica Neue", "Segoe UI", "Verdana", sans-serif;
+  font-family: "OpenSans", "Helvetica Neue", "Segoe UI", "Verdana", sans-serif;
   font-weight: bold;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
   .modal-header:empty {
@@ -4190,17 +4190,27 @@ main#main {
   padding: 3.5rem 0; }
   .postlist article .progressiveMedia-canvas, .postlist article .progressiveMedia-image.post-image {
     border-radius: 6px 6px 0px 0px; }
+  .postlist article .post-data {
+    padding: 0rem 2rem 2rem; }
   .postlist article .post-link {
     background-color: #fff;
-    margin: 20px;
-    text-decoration: none; }
+    margin: 20px 10px 20px;
+    text-decoration: none;
+    color: #676b72; }
+    .postlist article .post-link:hover .post-title {
+      color: #444e7f; }
   .postlist article .post-title {
-    margin: 0;
+    color: #333;
+    margin: 1.5rem 0rem .5rem;
     padding: 0;
-    font-size: 1.35rem;
-    line-height: 1.8rem; }
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 600; }
+  .postlist article .post-time {
+    color: #a8b2ba;
+    font-size: .72rem; }
   .postlist article .excerpt-text {
-    font-size: 0.80211rem;
+    font-size: 0.8211rem;
     line-height: 180%; }
     .postlist article .excerpt-text p {
       font-size: 0.80211rem;
@@ -4729,7 +4739,7 @@ nav.main {
       text-transform: uppercase;
       white-space: nowrap;
       font-size: .65rem;
-      font-family: "Droid Sans", "Helvetica Neue", "Segoe UI", "Verdana", sans-serif;
+      font-family: "OpenSans", "Helvetica Neue", "Segoe UI", "Verdana", sans-serif;
       line-height: normal; }
       .widget.latestposts .category:hover {
         color: #e1e1e1; }
