@@ -4205,7 +4205,7 @@ main#main {
     color: #676b72;
     border-radius: 6px 6px 0px 0px; }
     .postlist article .post-link:hover {
-      box-shadow: 0px 10px 100px 0px rgba(144, 144, 144, 0.22); }
+      box-shadow: 0px 10px 100px 0px rgba(3, 3, 3, 0.15); }
       .postlist article .post-link:hover .post-title {
         color: #444e7f; }
   .postlist article .post-title {
