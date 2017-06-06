@@ -50,7 +50,7 @@ $blurryImageURL = $image_data_Small[0];
 <article <?php post_class('col-lg-4'); ?> itemscope itemtype="https://schema.org/BlogPosting" id="post-<?php the_ID(); ?>">
 	<a class="post-link align-center" href="<?php echo esc_url( get_permalink() ); ?>">
 		<meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="https://google.com/article"/>
-
+		
 		<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
 			<div class="aspectRatioPlaceholder">
 				<div class="aspectRatioPlaceholder-fill"></div>
@@ -87,7 +87,6 @@ $blurryImageURL = $image_data_Small[0];
 
 
 		<div class="excerpt-text" itemprop="text">
-			<p class="small">
 				<?php
 
 				the_excerpt( sprintf(
@@ -101,7 +100,6 @@ $blurryImageURL = $image_data_Small[0];
 				                     'after'  => '</div>',
 				                     ) );
 				                     ?>
-			</p>
 		</div>
           </a>
 

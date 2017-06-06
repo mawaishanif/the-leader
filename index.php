@@ -20,7 +20,8 @@ get_header(); ?>
 		<?php
 		if ( have_posts() ) : ?>
 
-			<section class="postlist row">
+			<section class="postlist">
+			<div class="row">
 				<?php
 				if ( is_home() && ! is_front_page() ) : ?>
 					<header>
@@ -43,6 +44,7 @@ get_header(); ?>
 				endwhile;
 
 				the_posts_navigation(); ?>
+				</div>
 			</section>
 		<?php
 		else :
