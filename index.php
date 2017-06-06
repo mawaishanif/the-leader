@@ -20,7 +20,7 @@ get_header(); ?>
 		<?php
 		if ( have_posts() ) : ?>
 
-			<section class="postlist">
+			<section class="postlist row">
 				<?php
 				if ( is_home() && ! is_front_page() ) : ?>
 					<header>

@@ -4181,6 +4181,22 @@ figure {
   -webkit-transition: visibility 0s linear 0s,opacity 1s 0s;
   transition: visibility 0s linear 0s,opacity 1s 0s; }
 
+.postlist article .post-title {
+  margin: 0;
+  padding: 0;
+  font-size: 1.35rem;
+  line-height: 1.8rem; }
+.postlist article .excerpt-text p {
+  margin: 0;
+  padding: 0; }
+.postlist article .post-link {
+  text-decoration: none; }
+.postlist article .post-image {
+  background-size: cover;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  max-width: 100%; }
+
 #searchbar {
   z-index: 100;
   top: 0;

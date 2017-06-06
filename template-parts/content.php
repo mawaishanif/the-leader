@@ -47,28 +47,17 @@ $blurryImageURL = $image_data_Small[0];
 
 
 
-<article itemscope itemtype="https://schema.org/BlogPosting" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<a href="<?php echo esc_url( get_permalink() ); ?>">
+<article <?php post_class('col-lg-4'); ?> itemscope itemtype="https://schema.org/BlogPosting" id="post-<?php the_ID(); ?>">
+	<a class="post-link align-center" href="<?php echo esc_url( get_permalink() ); ?>">
 		<meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="https://google.com/article"/>
-		<header>
-			<?php
-			the_title( '<h2 itemprop="headline" class="post-title">', '</h2>' );
-			?>
-
-			<time pubdate itemprop="datePublished" datetime="<?php echo $post_meta["date_published"]; ?>" content="<?php echo $post_meta["date_published"]; ?>">
-				<?php echo esc_html( human_time_diff(get_the_time('U'), current_time('timestamp') ) ); ?> ago
-			</time>
-
-			<meta itemprop="dateModified" content="<?php echo $post_meta["date_modifed"]; ?>"/>
-		</header>
 
 		<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
 			<div class="aspectRatioPlaceholder">
 				<div class="aspectRatioPlaceholder-fill"></div>
-				<div class="progressiveMedia" data-width="<?php echo $featuredImage_width; ?>" data-height="<?php echo $featuredImage_height; ?>">
+				<div class="progressiveMedia" data-width="860" data-height="573">
 					<img class="progressiveMedia-thumbnail" src="<?php echo $blurryImageURL; ?>" />
 					<canvas class="progressiveMedia-canvas"></canvas>
-					<img class="progressiveMedia-image" data-src="<?php echo $featuredImageURL; ?>" />
+					<div class="progressiveMedia-image post-image" data-src="<?php echo $featuredImageURL; ?>"></div>
 				</div>
 			</div>
 
@@ -77,27 +66,51 @@ $blurryImageURL = $image_data_Small[0];
 			<meta itemprop="height" content="<?php echo $featuredImage_height; ?>">
 		</div>
 
-		<div itemprop="text">
+
+
+		<header>
 			<?php
+			the_title( '<h1 itemprop="headline" class="post-title">', '</h1>' );
+			?>		
 
-			the_excerpt( sprintf(
-			                     /* translators: %s: Name of current post. */
-			                     wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'the_leader' ), array( 'span' => array( 'class' => array() ) ) ),
-			                     the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			                     ) );
+			<meta itemprop="dateModified" content="<?php echo $post_meta["date_modifed"]; ?>"/>
+		</header>
+		
 
-			wp_link_pages( array(
-			                     'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the_leader' ),
-			                     'after'  => '</div>',
-			                     ) );
-			                     ?>
+
+		<div class="post-time">
+			<time pubdate itemprop="datePublished" datetime="<?php echo $post_meta["date_published"]; ?>" content="<?php echo $post_meta["date_published"]; ?>">
+					<?php echo esc_html( human_time_diff(get_the_time('U'), current_time('timestamp') ) ); ?> ago
+			</time>
+		</div>
+		
+
+
+		<div class="excerpt-text" itemprop="text">
+			<p class="small">
+				<?php
+
+				the_excerpt( sprintf(
+				                     /* translators: %s: Name of current post. */
+				                     wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'the_leader' ), array( 'span' => array( 'class' => array() ) ) ),
+				                     the_title( '<span class="screen-reader-text">"', '"</span>', false )
+				                     ) );
+
+				wp_link_pages( array(
+				                     'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the_leader' ),
+				                     'after'  => '</div>',
+				                     ) );
+				                     ?>
+			</p>
 		</div>
           </a>
+
+
           <footer>
-               	<div class="post-category"><span itemprop="about"><?php echo $category[0]->cat_name; ?></span></div>
+               	<div class="display-none post-category"><span itemprop="about"><?php echo $category[0]->cat_name; ?></span></div>
                	<div class="display-none"><span itemprop="keywords"><?php echo $tags; ?></span></div>
 
-               	<div itemprop="author" itemscope itemtype="https://schema.org/Person">
+               	<div class="display-none" itemprop="author" itemscope itemtype="https://schema.org/Person">
                		<?php echo $post_meta["author_image"]; ?>
                		<!-- <img itemprop="image" src="" /> -->
                		<span itemprop="name"><?php echo $post_meta["author_name"]; ?></span>
