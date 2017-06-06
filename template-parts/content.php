@@ -91,18 +91,7 @@ $blurryImageURL = $image_data_Small[0];
 				<?php
 				
 				echo '<p> Reading time for this post is <strong> ',leader_calculate_reading_time(get_the_ID()), '</strong></p>';
-
-
-				wp_link_pages( array(
-				                     'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the_leader' ),
-				                     'after'  => '</div>',
-				                     ) );
 				echo get_the_excerpt();
-		
-					wp_link_pages( array(
-					                     'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the_leader' ),
-					                     'after'  => '</div>',
-					                     ) );
 					                     ?>
 			</div>
 		</div>

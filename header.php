@@ -23,12 +23,6 @@
 		<a class="for-screen-readers-text hidden" href="#content"><?php esc_html_e( 'Skip header area and jump to content', 'the_leader' ); ?></a>
 
 
-<?php 
-
-get_template_part('layouts/header-style-broad') ;
-
-?>
-
 		<section class="cover  max-full-width" data-height="90">
 			<div class="background" style="background-image: url('<?php header_image(); ?>'); background-position-x: 50%;"></div>
 			<div class="introduction">
