@@ -101,6 +101,7 @@ function the_leader_setup() {
 			add_image_size('the_leader_sidebar', 400);
 			add_image_size('the_leader_thumbnail', 200);
 			add_image_size('the_leader_thumbnail_small', 50);
+			add_image_size('the_leader_thumbnail_tiny', 20);
 	}
 }
 endif;

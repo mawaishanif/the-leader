@@ -35,12 +35,12 @@ $tags = strip_tags( $tags_list );
  * And funtions reture the array with index 0 for Image URL, index 1 for width and index 2 for height.
  **/ 
 $image_data_Large = image_data( get_post_thumbnail_id(), 'the_leader_single' );
-$featuredImage = $image_data_Large[0];
+$featuredImageURL = $image_data_Large[0];
 $featuredImage_width = $image_data_Large[1];
 $featuredImage_height = $image_data_Large[2];
 
-$image_data_Small = image_data( get_post_thumbnail_id(), 'the_leader_thumbnail_small' );
-$blurryImage = $image_data_Small[0];
+$image_data_Small = image_data( get_post_thumbnail_id(), 'the_leader_thumbnail_tiny' );
+$blurryImageURL = $image_data_Small[0];
 
 ?>
 
@@ -66,13 +66,13 @@ $blurryImage = $image_data_Small[0];
 			<div class="aspectRatioPlaceholder">
 				<div class="aspectRatioPlaceholder-fill"></div>
 				<div class="progressiveMedia" data-width="<?php echo $featuredImage_width; ?>" data-height="<?php echo $featuredImage_height; ?>">
-					<img class="progressiveMedia-thumbnail" src="<?php echo $blurryImage; ?>" />
+					<img class="progressiveMedia-thumbnail" src="<?php echo $blurryImageURL; ?>" />
 					<canvas class="progressiveMedia-canvas"></canvas>
-					<img class="progressiveMedia-image" data-src="<?php echo $featuredImage; ?>" />
+					<img class="progressiveMedia-image" data-src="<?php echo $featuredImageURL; ?>" />
 				</div>
 			</div>
 
-			<meta itemprop="url" content="<?php echo $featuredImage; ?>">
+			<meta itemprop="url" content="<?php echo $featuredImageURL; ?>">
 			<meta itemprop="width" content="<?php echo $featuredImage_width; ?>">
 			<meta itemprop="height" content="<?php echo $featuredImage_height; ?>">
 		</div>
