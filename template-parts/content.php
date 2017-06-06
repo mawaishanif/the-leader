@@ -97,8 +97,7 @@ $blurryImageURL = $image_data_Small[0];
 				                     'after'  => '</div>',
 				                     ) );
 				echo get_the_excerpt();
-				                     ?>
-
+		
 					wp_link_pages( array(
 					                     'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the_leader' ),
 					                     'after'  => '</div>',

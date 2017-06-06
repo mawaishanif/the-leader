@@ -70,13 +70,9 @@ function check_template_part( $url ){
 	$is_template =  array_search($directory_path . $url, $all_templates_used);
 
 	if ($is_template) {
-
 		return True;
-
 	}
 	else {
-
 		return False;
-
 	}
 }

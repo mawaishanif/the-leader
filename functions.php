@@ -144,6 +144,12 @@ function the_leader_scripts() {
 
 	wp_enqueue_style( 'the_leader-style', get_stylesheet_uri() );
 
+	/**
+	 * This is an example demonstrating how the page template part specific styles could be loaded.
+	 **/
+	if (check_template_part('layouts/header-style1')) {
+		// Upload some styles specific to this template part.
+	}
 	wp_enqueue_script( 'the_leader-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'the_leader-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
