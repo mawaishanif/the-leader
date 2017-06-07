@@ -192,7 +192,15 @@
 				</section>
 			</div>
 		</div>
+		<?php 
+		if (is_single()) { ?>
+		<header class="blog-info full-width single-page-header">
+		<?php }  else{ ?>
 		<header class="blog-info full-width">
+		<?php 
+		}
+		?>
+		
 			<div class="title">
 				<?php 
 				if (has_custom_logo()) {
@@ -234,11 +242,13 @@
 		<?php 
 		if (is_single()) {
 			get_template_part( 'layouts/cover', 'single' );
+		
 		}  else{
 			get_template_part( 'layouts/cover', 'blog' );
 		}
-		?>
 
+		?>
+		
 
 
 

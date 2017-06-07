@@ -50,7 +50,7 @@ add_filter( 'excerpt_more', 'the_leader_excerpt_more' );
  * @return int
  */
 function the_leader_custom_excerpt_length( $length ) {
-    return 22;
+	return 22;
 }
 add_filter( 'excerpt_length', 'the_leader_custom_excerpt_length', 999 );
 
@@ -83,20 +83,20 @@ function check_template_part( $url ){
  * @return int
  */
 function leader_calculate_reading_time($post_id) {
-		
-		$post_content = get_post($post_id)->post_content;
+	
+	$post_content = get_post($post_id)->post_content;
 
-        $stripped_content = strip_shortcodes($post_content);
+	$stripped_content = strip_shortcodes($post_content);
 
-        $stripped_tags_content = strip_tags($stripped_content);
+	$stripped_tags_content = strip_tags($stripped_content);
 
-        $wordCount = str_word_count($stripped_tags_content);
+	$wordCount = str_word_count($stripped_tags_content);
 
-        $readingTime = ceil($wordCount / 300);
+	$readingTime = ceil($wordCount / 300);
 
-        if( $readingTime > 1 ){
-        	return $readingTime . ' mins';
-        }else {
-        	return $readingTime . ' min';
-        }
+	if( $readingTime > 1 ){
+		return $readingTime . ' mins read';
+	}else {
+		return $readingTime . ' min read';
+	}
 }

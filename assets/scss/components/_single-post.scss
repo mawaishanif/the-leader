@@ -1,0 +1,40 @@
+ section.single.post-cover{
+ 	margin: 5em 0em 2rem; 
+ 	.post-category{
+ 		color: $color-blueishlightGray;
+ 		font-size: .8rem;
+ 		.cat-icon{
+ 			font-size: 1.8rem;
+ 		}
+ 		a{
+ 			text-transform: uppercase;
+ 			padding: 0px 8px; 
+ 			text-decoration: none;
+ 			font-size: 0.70211rem;
+ 			line-height: 180%;
+ 			&:hover{
+ 				font-weight: 600;
+ 				color: $link--hover;
+ 			}
+ 		}
+ 	}
+ 	.post-title{
+ 		margin-top: 1rem;
+ 		margin-bottom: 0rem;
+ 	}
+ 	.post-time{
+ 		font-size: .8rem;
+ 		color: $color-blueishlightGray;
+ 	}
+ 	.post-thumbnail{
+ 		margin: 2rem 0;
+ 	}
+ 	.cover-image{
+ 		background-size: cover;
+ 		-webkit-transform: translate3d(0, 0, 0);
+ 		transform: translate3d(0, 0, 0);
+ 		max-width: 100%;
+ 		width: 100%;
+ 		height: 100%;
+ 	}
+ }

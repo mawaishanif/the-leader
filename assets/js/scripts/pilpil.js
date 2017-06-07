@@ -6,7 +6,7 @@
  */
  ;(function() {
  	'use strict';
- 	
+
 
 	// set progressive image loading
 	var progressiveMedias = document.querySelectorAll('.progressiveMedia');
@@ -48,7 +48,7 @@
 			// context.drawImage(img, 0, 0);
 			// draw canvas
 			var canvasImage = new CanvasImage(canvas, img);
-			canvasImage.blur(2);
+			canvasImage.blur(1.5);
 
 			// load canvas visible
 			progressiveMedia.classList.add('is-canvasLoaded');
@@ -88,20 +88,20 @@
 					return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
 				}
 				jQuery(window).scroll(function(){
-    					// This is then function used to detect if the element is scrolled into view
-    					if(elementScrolled($self)) {
-    						$notAlreadyLoaded = ($self.css('backgroundImage') == $imageSrc_inCSS);
-    						if (!$notAlreadyLoaded) {
-    							var imageOriginal = new Image();
-    							imageOriginal.src = $imageSrc;
+						// This is then function used to detect if the element is scrolled into view
+						if(elementScrolled($self)) {
+							$notAlreadyLoaded = ($self.css('backgroundImage') == $imageSrc_inCSS);
+							if (!$notAlreadyLoaded) {
+								var imageOriginal = new Image();
+								imageOriginal.src = $imageSrc;
 
-    							imageOriginal.onload = function () {
-    								$self.css({"background-image":'url("'+ imageOriginal.src +'")'})
-    								$self.parent().addClass('is-imageLoaded');
-    							}
-    						}
-    					}
-    				});
+								imageOriginal.onload = function () {
+									$self.css({"background-image":'url("'+ imageOriginal.src +'")'})
+									$self.parent().addClass('is-imageLoaded');
+								}
+							}
+						}
+					});
 			}
 		});
 	});
@@ -123,7 +123,7 @@ CanvasImage.prototype = {
 	blur:function(e) {
 		this.context.globalAlpha = 0.5;
 		for(var t = -e; t <= e; t += 2) {
-			for(var n = -e; n <= e; n += 2) {
+			for(var n = -e; n <= e; n += 1) {
 				this.context.drawImage(this.element, n, t);
 				var blob = n >= 0 && t >= 0 && this.context.drawImage(this.element, -(n -1), -(t-1));
 			}

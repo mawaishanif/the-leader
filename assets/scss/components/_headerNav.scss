@@ -160,7 +160,6 @@ header.blog-info{
 			}
 		}
 		h2{
-			font-family: "Varela Round", Arial,Sans-Serif;
 			font-size: 1.6rem;
 			font-weight: 600;
 			margin: 0;
@@ -184,9 +183,6 @@ nav.main{
 			position: relative;
 			display: inline-block;
 			margin: 0 10px;
-			&:hover ul {
-				display: block;
-			}
 		}
 		a{
 			font-size: .88rem;
@@ -195,23 +191,11 @@ nav.main{
 			padding: 3px 12px 15px;
 			cursor: pointer;
 			text-transform: uppercase;
-			color: #d9d9d9;
+			color: $color-gray;
 			font-weight: 500;
-
-			&:hover{
-				color: #fff;
-			}
-			span.icon{
-				font-size: 10px;
-				margin-left: 6px;
-				vertical-align: 1px;
-				display: inline-block;
-			}
 		}
 		&.primary_nav {
 			a{
-				color: $color-gray;
-				font-weight: bold;
 				padding: 2px 14px;
 				border: 1px solid $color-gray;
 				border-radius: 34px;
@@ -219,6 +203,12 @@ nav.main{
 				&:hover{
 					border: 1px solid $white;
 					color: $white;
+				}
+				span.icon{
+					font-size: 10px;
+					margin-left: 6px;
+					vertical-align: 1px;
+					display: inline-block;
 				}
 			}
 			li:last-child{
@@ -251,6 +241,28 @@ nav.main{
 			right: -63px;
 			top: 2px;
 			vertical-align: 0;
+		}
+	}
+}
+header.single-page-header{
+	padding: 30px 10px 0px;
+	position: relative;
+	nav.main ul.primary_nav {
+		a{
+			color: $color-midgray;
+			border: 1px solid $color-gray;
+			&:hover{
+				border: 1px solid $black;
+				color: $black;
+			}
+		}
+	}
+	nav.main ul.secondary-nav {
+		span.icon{
+			color: $color-midgray;
+			&:hover{
+				color: $black;
+			}
 		}
 	}
 }
