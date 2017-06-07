@@ -48,7 +48,7 @@ $blurryImageURL = $image_data_Small[0];
 
 
 <article <?php post_class('col-xs-6 col-sm-5 col-md-4 col-lg-4'); ?> itemscope itemtype="https://schema.org/BlogPosting" id="post-<?php the_ID(); ?>">
-	<a class="post-link align-center" href="<?php echo esc_url( get_permalink() ); ?>">
+	<a class="post-link align-center external-link" href="<?php echo esc_url( get_permalink() ); ?>">
 		<meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="https://google.com/article"/>
 		
 		<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
