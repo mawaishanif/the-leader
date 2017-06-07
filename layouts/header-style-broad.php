@@ -27,7 +27,7 @@
 		</div>
 		<nav  id="site-navigation" role="navigation" class="main end-md end-lg col-xs-4 col-sm-9 col-md-9 col-lg-9">
 			<div id="menu-trigger"> <a href="#" class="menu-heading">MENU <span class="icon ti-menu"></span></a> </div>
-			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu', 'depth' => 3 ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu', 'depth' => 2 ) ); ?>
 		</nav>
 		<div class="search-menu col-xs-4 col-sm-1 col-md-1 col-lg-1">
 			<ul class="align-right search">
