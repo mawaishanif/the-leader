@@ -95,12 +95,15 @@ section.cover{
 
 
 
-.overlay.show {
+.drawer-overlay.show {
 	position: fixed;
+	top: 0;
 	left: 0;
+	right: 0;
+	bottom: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.48);
+	background-color: rgba(0, 0, 0, 0.58);
 	z-index: 1000;
 	max-width: 100%;
 	cursor: pointer;
@@ -129,9 +132,10 @@ section.cover{
 	.icon.closedrawer {
 		@extend %close_Icon;
 		top: 22px;
-		right: 24px;
+		right: 34px;
 		padding: 1rem !important;
 		border-radius: 50%;
+		background-color: $color-silver;
 	}
 }
 
@@ -144,10 +148,12 @@ header.blog-info{
 	top: 0px;
 	.title {
 		float: left;
+		width: 100px;
+		margin-top: -15px;
 		a{
 			text-decoration: none;
 			display: block;
-			color: #d9d9d9;
+			color: $primary;
 			padding: 6px;
 			&:hover{
 				color: #fff;

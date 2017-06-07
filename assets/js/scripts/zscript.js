@@ -2,6 +2,45 @@ document.addEventListener("DOMContentLoaded",function(){
 	"use strict";
 	console.clear();
 
+
+function disableBodyScroll(){
+	var $html = jQuery('html');
+	var windowWidth = window.innerWidth;
+
+	if (!windowWidth)
+	{
+		var documentElementRect = document.documentElement.getBoundingClientRect();
+		windowWidth = documentElementRect.right - Math.abs(documentElementRect.left);
+	}
+
+	var isOverflowing = document.body.clientWidth < windowWidth;
+
+
+    	// measuring Scrollbar
+    	var $body = jQuery('body');
+    	var scrollDiv = document.createElement('div');
+    	scrollDiv.className = 'scrollbar-measure';
+
+    	$body.append(scrollDiv);
+    	var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+    	$body[0].removeChild(scrollDiv);
+
+
+	// disabling BodyScroll
+	$html.css('overflow', 'hidden');
+	$body.css('overflow', 'hidden');
+	if (isOverflowing) {$html.css('padding-right', scrollbarWidth);$body.css('padding-right', scrollbarWidth);}
+}
+
+
+
+function enableBodyScroll() {
+	// enabling BodyScroll
+	jQuery('html').css({ 'overflow': '', 'padding-right': '' });
+	jQuery('body').css({ 'overflow': '', 'padding-right': '' });
+}
+
+
 	// fade out when clicks on external link - smooth animation :)
 	jQuery('a.external').click(function(e) {
 		e.preventDefault();
@@ -20,7 +59,6 @@ document.addEventListener("DOMContentLoaded",function(){
 
 /*
 
-	jQuery('.menu-item-has-children').children('a').append('<span class="icon ti-angle-down">')
 	jQuery('.menu-item-has-children').click(function(e) {
 		e.preventDefault();
 	});
@@ -68,6 +106,7 @@ document.addEventListener("DOMContentLoaded",function(){
 
 
 
+	jQuery('.menu-item-has-children').children('a').append('<span class="icon ti-angle-down">')
 
 	jQuery('.showsearch').click(function() {
 		jQuery('#searchbar').toggleClass('display_search');
@@ -78,25 +117,28 @@ document.addEventListener("DOMContentLoaded",function(){
 	});
 
 	jQuery('.showdrawer').click(function() { 
+		disableBodyScroll();
 		jQuery('.main_drawer').toggleClass('show');
-		jQuery('.overlay').toggleClass('show');
+		jQuery('.drawer-overlay').toggleClass('show');
 	});
 
 	jQuery('.closedrawer').click(function() {
+		enableBodyScroll();
 		jQuery('.main_drawer').toggleClass('show');
-		jQuery('.overlay').toggleClass('show');
+		jQuery('.drawer-overlay').toggleClass('show');
 	});
 
-	jQuery(".overlay").click(function() {
-		jQuery('.overlay').toggleClass('show');
+	jQuery(".drawer-overlay").click(function() {
+		enableBodyScroll();
+		jQuery('.drawer-overlay').toggleClass('show');
 		jQuery('.main_drawer').toggleClass('show');
 	});
 
-	jQuery(".drawer li.has-submenu > a").on("click",function(e){
+	jQuery(".drawer li.menu-item-has-children > a").on("click",function(e){
 		e.preventDefault();
 		var triggerer = jQuery(this).parent();
-		jQuery("a span", triggerer ).toggleClass("ti-angle-down");
-		jQuery("a span", triggerer ).toggleClass("ti-angle-up");
-		jQuery(".submenu", triggerer ).slideToggle();
+		jQuery("a .icon", triggerer ).toggleClass("ti-angle-down");
+		jQuery("a .icon", triggerer ).toggleClass("ti-angle-up");
+		jQuery(".sub-menu", triggerer ).slideToggle();
 	});
 });

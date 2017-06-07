@@ -80,12 +80,6 @@
 			$imageSrc_inCSS = 'url("'+ $imageSrc +'")',
 			$notAlreadyLoaded;
 
-			if ($self.css('backgroundImage') == $imageSrc_inCSS) {
-				$notAlreadyLoaded = true;
-			}else{
-				$notAlreadyLoaded = false;
-			}
-
 			if (!$imageSrc=="") {
 				function elementScrolled(elem){
 					var docViewTop = jQuery(window).scrollTop();
@@ -98,8 +92,13 @@
     					if(elementScrolled($self)) {
     						$notAlreadyLoaded = ($self.css('backgroundImage') == $imageSrc_inCSS);
     						if (!$notAlreadyLoaded) {
-    							$self.css({"background-image":'url("'+ $imageSrc +'")'})
-    							$self.parent().addClass('is-imageLoaded');
+    							var imageOriginal = new Image();
+    							imageOriginal.src = $imageSrc;
+
+    							imageOriginal.onload = function () {
+    								$self.css({"background-image":'url("'+ imageOriginal.src +'")'})
+    								$self.parent().addClass('is-imageLoaded');
+    							}
     						}
     					}
     				});

@@ -22,7 +22,6 @@
 	<div id="page" class="site">
 		<a class="for-screen-readers-text hidden" href="#content"><?php esc_html_e( 'Skip header area and jump to content', 'the_leader' ); ?></a>
 
-
 		<section class="cover  max-full-width" data-height="90">
 			<div class="background" style="background-image: url('<?php header_image(); ?>'); background-position-x: 50%;"></div>
 			<div class="introduction">
@@ -57,37 +56,23 @@
 				<span class="close_search"><span class="icon ti-close"></span></span>
 			</div>
 		<div class="drawer">
+			<div class="drawer-overlay"></div>
 			<div class="main_drawer position-fix">
 				<span class="icon closedrawer position-abs ti-close"></span>
 				<section class="widget blog_info">
-					<a href=""><h2>Hello</h2></a>
+					<a href=""><h3><?php bloginfo( 'name' ); ?></h3></a>
+					<?php 
+					$description = get_bloginfo( 'description', 'display' );
+					if ( $description || is_customize_preview() ) : ?>
 					<hr>
-					<p>Awesomlyy is a non-profit, multi-author &amp; personal blog theme for the WordPress platform. Featuring a minimal, responsive, content-focused design and single-column layout. Available on ThemeForest.</p>
+					<p class="site-description"><?php echo $description;  ?></p>
+					<?php
+					endif; ?>
 				</section>
 				<section class="widget navigation">
-					<ul class="menu">
-						<li> <a href="#" title="Home">Home</a> </li>
-						<li> <a href="#" title="About">About</a> </li>
-						<li class="has-submenu" > <a href="#" title="Services">Services <span class="icon ti-angle-down"></span></a>
-							<ul class="submenu">
-								<li> <a href="#" title="Home">Free home delivery</a> </li>
-								<li> <a href="#" title="About">89% off - Flat</a> </li>
-								<li> <a href="#" title="Sign Up">No extra taxes</a> </li>
-								<li> <a href="#" title="Contact">Contact</a> </li>
-								<li> <a href="#" title="Careers">Careers</a> </li>
-							</ul>
-						</li>
-						<li> <a href="#" title="Contact">Contact</a> </li>
-						<li class="has-submenu"> <a href="#" title="Careers">Careers <span class="icon ti-angle-down"></span></a>
-							<ul class="submenu">
-								<li> <a href="#" title="Home">Free home delivery</a> </li>
-								<li> <a href="#" title="About">89% off - Flat</a> </li>
-								<li> <a href="#" title="Sign Up">No extra taxes</a> </li>
-								<li> <a href="#" title="Contact">Contact</a> </li>
-								<li> <a href="#" title="Careers">Careers</a> </li>
-							</ul>
-						</li>
-					</ul>
+					<h5>Navigation</h5>
+					<hr>
+					<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu', 'depth' => 3 ) ); ?>
 				</section>
 				<section class="widget latestposts">
 					<article class="post">
@@ -225,9 +210,17 @@
 		</div>
 		<header class="blog-info full-width">
 			<div class="title">
-				<a href="#0">
-					<h2>Hello</h2>
-				</a>
+				<?php 
+					if (has_custom_logo()) {
+						the_custom_logo();
+					}else{
+						?>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<h5 class="site-title"><?php bloginfo( 'name' ); ?></h5>
+						</a>
+						<?php 
+					}
+				?>
 			</div>
 			<nav role="navigation" class="main">
 				<div class="menu-main-container">
