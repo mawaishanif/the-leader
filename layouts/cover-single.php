@@ -14,6 +14,17 @@ $blurryImageURL = $image_data_Small[0];
 
 ?>
 <section class="single align-center post-cover">
+	<?php 
+		edit_post_link(
+			sprintf(
+				/* translators: %s: Name of current post */
+				esc_html__( 'Edit %s', 'the_leader' ),
+				the_title( '<span class="screen-reader-text">"', '"</span>', false )
+			),
+			'<span class="edit-link button">',
+			'</span>'
+		);
+	 ?>
 	<div class="post-category">
 		<span class="display-block icon cat-icon ti-bookmark"></span>
 		<?php the_category('&bull;'); ?>

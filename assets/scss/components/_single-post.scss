@@ -1,5 +1,12 @@
  section.single.post-cover{
  	margin: 5em 0em 2rem; 
+ 	.edit-link{
+ 		margin: 0 0 1em;
+ 		.post-edit-link{
+ 			text-decoration: none;
+ 			color: $white;
+ 		}
+ 	}
  	.post-category{
  		color: $color-blueishlightGray;
  		font-size: .8rem;
@@ -8,7 +15,7 @@
  		}
  		a{
  			text-transform: uppercase;
- 			padding: 0px 8px; 
+ 			padding: 0px 8px;
  			text-decoration: none;
  			font-size: 0.70211rem;
  			line-height: 180%;

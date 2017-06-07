@@ -4441,6 +4441,11 @@ header.single-page-header {
 
 section.single.post-cover {
   margin: 5em 0em 2rem; }
+  section.single.post-cover .edit-link {
+    margin: 0 0 1em; }
+    section.single.post-cover .edit-link .post-edit-link {
+      text-decoration: none;
+      color: #fff; }
   section.single.post-cover .post-category {
     color: #a8b2ba;
     font-size: .8rem; }
