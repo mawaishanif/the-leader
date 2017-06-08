@@ -13,6 +13,8 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php
+		// This functions returns the post count for any archive.
+		taxonomy_post_count();
 		if ( have_posts() ) : ?>
 			<section class="postlist">
 			<div class="row">
