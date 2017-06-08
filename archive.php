@@ -14,7 +14,8 @@ get_header(); ?>
 
 		<?php
 		if ( have_posts() ) : ?>
-
+			<section class="postlist">
+			<div class="row">
 			<header class="page-header">
 				<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
@@ -42,7 +43,8 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
-
+			</div>
+			</section>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

@@ -12,9 +12,9 @@ $secondary-light:  lighten($secondary, 8%) !default;
 $secondary-dark:  darken($secondary, 8%) !default;
 
 
-$link:          #4084D1 !default;
+$link:          #60aaff !default;
 $link--visited: #9140D4 !default;
-$link--hover:   darken($link, 10%) !default;
+$link--hover:   darken($link, 15%) !default;
 $link--active:  $link--hover !default;
 
 

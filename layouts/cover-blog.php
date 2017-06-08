@@ -7,7 +7,7 @@
 
 ?>
 
-<section class="cover  max-full-width" data-height="90">
+<section class="blog-cover  max-full-width" data-height="90">
 	<div class="background" style="background-image: url('<?php header_image(); ?>'); background-position-x: 50%;"></div>
 	<div class="introduction">
 		<h1><?php bloginfo( 'name' ); ?></h1>

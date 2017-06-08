@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('single-post-article'); ?>>
 
 	<div class="post-content">
 		<?php
@@ -20,15 +20,15 @@
 			) );
 		?>
 	</div><!-- .post-content -->
-
+	<hr>
 	<footer class="post-footer">
-	<div class="row">
+	<div class="row align-center">
 		<?php
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
 			
-			$categories_list = get_the_category_list( esc_html__( ', ', 'the_leader' ) );
+			$categories_list = get_the_category_list( esc_html__( ' ', 'the_leader' ) );
 			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'the_leader' ) );
 
 
@@ -36,12 +36,12 @@
 			if (( $categories_list && the_leader_categorized_blog() ) && $tags_list) {?>
 				<div class="col-lg-6">  
 				<?php
-					printf( '<div class="cat-links">' . esc_html__( 'Posted in: %1$s', 'the_leader' ) . '</div>', $categories_list ); // WPCS: XSS OK.
+					printf( '<div class="cat-links">' . __( '<span class="display-block heading">Posted in: </span>%1$s', 'the_leader' ) . '</div>', $categories_list ); // WPCS: XSS OK.
 				?>
 				</div>
 				<div class="col-lg-6"> 
 				<?php
-					printf( '<div class="tags-links">' . esc_html__( 'Tagged: %1$s', 'the_leader' ) . '</div>', $tags_list ); // WPCS: XSS OK.
+					printf( '<div class="tags-links">' . __( '<span class="display-block heading">Tagged in: </span>%1$s ', 'the_leader' ) . '</div>', $tags_list ); // WPCS: XSS OK.
 				?>
 				</div>
 			<?php

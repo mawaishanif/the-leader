@@ -243,7 +243,10 @@
 		if (is_single()) {
 			get_template_part( 'layouts/cover', 'single' );
 		
-		}  else{
+		}  elseif(is_archive()){
+			get_template_part( 'layouts/cover', 'archive' );
+		
+		}else{
 			get_template_part( 'layouts/cover', 'blog' );
 		}
 
