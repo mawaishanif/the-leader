@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area archive">
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -17,13 +17,13 @@ get_header(); ?>
 		taxonomy_post_count();
 		if ( have_posts() ) : ?>
 			<section class="postlist">
-			<div class="row">
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
+			<header class="page-header align-center">
+			<?php
+				the_archive_title( '<h5 class="category page-title">Found <span class="huge label focus"> 7 </span> posts in "', '"</h5>' );
+			?>
 			</header><!-- .page-header -->
+			<hr>
+			<div class="row">
 
 			<?php
 			/* Start the Loop */
