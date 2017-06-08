@@ -25,15 +25,14 @@ if ( post_password_required() ) {
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) : ?>
-		<h2 class="comments-title">
+		<h3 class="comments-title align-center">
 			<?php
 				printf( // WPCS: XSS OK.
-					esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'the_leader' ) ),
-					number_format_i18n( get_comments_number() ),
-					'<span>' . get_the_title() . '</span>'
+					__( _nx( '<span class="medium label color-white badge bg-secondary">1</span> Comment', '<span class="label badge secondary">%1$s</span> Comments;', get_comments_number(), 'comments title', 'the_leader' ) ),
+					number_format_i18n( get_comments_number() )
 				);
 			?>
-		</h2><!-- .comments-title -->
+		</h3><!-- .comments-title -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
@@ -50,7 +49,6 @@ if ( post_password_required() ) {
 		<ol class="comment-list">
 
 			<?php
-
 				wp_list_comments( 'type=comment&callback=mytheme_comment&style=li');
 			?>
 		</ol><!-- .comment-list -->

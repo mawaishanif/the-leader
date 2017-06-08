@@ -241,13 +241,13 @@
 
 		<?php 
 		if (is_single()) {
-			get_template_part( 'layouts/cover', 'single' );
-		
-		}  elseif(is_archive()){
-			get_template_part( 'layouts/cover', 'archive' );
-		
+			get_template_part( 'layouts/covers/cover', 'single' );
+		} elseif(is_archive()){
+			get_template_part( 'layouts/covers/cover', 'archive' );
+		} elseif(is_404()){
+			get_template_part( 'layouts/covers/cover', '404' );
 		}else{
-			get_template_part( 'layouts/cover', 'blog' );
+			get_template_part( 'layouts/covers/cover', 'blog' );
 		}
 
 		?>

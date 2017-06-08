@@ -18,7 +18,7 @@ get_header(); ?>
 			<header class="page-header align-center">
 
 				<?php
-				$posts_count = taxonomy_post_count();
+				$posts_count = post_count();
 				if($posts_count > 1){
 					$word = "posts";
 				}else{

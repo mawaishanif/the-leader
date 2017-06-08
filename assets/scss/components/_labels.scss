@@ -26,11 +26,21 @@
 }
 
 // Badges
-.label.badge {
+.badge {
     text-align: center;
     border-radius: 64px;
     padding: 0 6px;
     line-height: 18px;
+    &.huge{
+        padding: 0 16px;
+    }
+    &.medium{
+        line-height: 30px;
+        padding: 0px 9px;
+    }
+    &.large{
+        padding: 0 16px;
+    }
 }
 
 // Tag

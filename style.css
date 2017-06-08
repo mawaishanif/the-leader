@@ -1,23 +1,5 @@
 @charset "UTF-8";
 /* SOCIAL */
-.color-primary {
-  color: #B64036; }
-
-.color-secondary {
-  color: #240C26; }
-
-.bg-primary {
-  background-color: #B64036; }
-
-.bg-secondary {
-  background-color: #240C26; }
-
-.color-text {
-  color: #333; }
-
-.color-white {
-  color: #fff; }
-
 /* raleway-200 - latin */
 /* droid-sans-regular - latin */
 @font-face {
@@ -1057,11 +1039,12 @@ ul ul, ol ul {
 ol ol ul, ol ul ul, ul ol ul, ul ul ul {
   list-style-type: square; }
 
-ul.unstyled {
+ul.unstyled, .widget ul {
   margin-left: 0; }
 
-ul.unstyled,
-ul.unstyled ul {
+ul.unstyled, .widget ul,
+ul.unstyled ul,
+.widget ul ul {
   list-style: none; }
 
 a .icon {
@@ -2820,7 +2803,7 @@ h4, h5, h6 {
 
 h1 {
   font-size: 48px;
-  font-size: 3rem;
+  font-size: 2.5rem;
   line-height: 52px;
   line-height: 3.25rem;
   margin-top: 6.5rem;
@@ -2828,7 +2811,7 @@ h1 {
 
 h2 {
   font-size: 27px;
-  font-size: 2.6875rem;
+  font-size: 2.3875rem;
   line-height: 39px;
   line-height: 2.4375rem;
   margin-top: 4.0625rem;
@@ -2836,7 +2819,7 @@ h2 {
 
 h3 {
   font-size: 22px;
-  font-size: 2.375rem;
+  font-size: 2.175rem;
   line-height: 26px;
   line-height: 1.625rem;
   margin-top: 3.25rem;
@@ -2844,7 +2827,7 @@ h3 {
 
 h4 {
   font-size: 19.2px;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   line-height: 26px;
   line-height: 1.625rem;
   margin-top: 2.4375rem;
@@ -2852,7 +2835,7 @@ h4 {
 
 h5 {
   font-size: 16px;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 26px;
   line-height: 1.625rem;
   margin-top: 4.0625rem;
@@ -2860,7 +2843,7 @@ h5 {
 
 h6 {
   font-size: 16px;
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 26px;
   line-height: 1.625rem;
   margin-top: 2.4375rem;
@@ -2884,7 +2867,7 @@ h6 {
 @media screen and (min-width: 37em) {
   h1 {
     font-size: 56px;
-    font-size: 3.5rem;
+    font-size: 2.65rem;
     line-height: 80px;
     line-height: 4rem;
     letter-spacing: -.025em;
@@ -2893,7 +2876,7 @@ h6 {
 
   h2 {
     font-size: 27px;
-    font-size: 3.2875rem;
+    font-size: 2.475rem;
     line-height: 48px;
     line-height: 3.900000000000001rem;
     margin-top: 4rem;
@@ -2901,7 +2884,7 @@ h6 {
 
   h3 {
     font-size: 22px;
-    font-size: 3.0075rem;
+    font-size: 2.2075rem;
     line-height: 32px;
     line-height: 3.6rem;
     margin-top: 3.2rem;
@@ -2909,7 +2892,7 @@ h6 {
 
   h4 {
     font-size: 19.2px;
-    font-size: 2.8rem;
+    font-size: 1.98rem;
     line-height: 32px;
     line-height: 3.2rem;
     margin-top: 2.400000000000001rem;
@@ -2925,7 +2908,7 @@ h6 {
 
   h6 {
     font-size: 16px;
-    font-size: 1rem;
+    font-size: 1.4rem;
     line-height: 32px;
     line-height: 1.6rem;
     margin-top: 2.400000000000001rem;
@@ -3209,11 +3192,18 @@ button.inverted {
   background: none;
   border-color: #bdbdbd; }
 
-.label.badge {
+.badge {
   text-align: center;
   border-radius: 64px;
   padding: 0 6px;
   line-height: 18px; }
+  .badge.huge {
+    padding: 0 16px; }
+  .badge.medium {
+    line-height: 30px;
+    padding: 0px 9px; }
+  .badge.large {
+    padding: 0 16px; }
 
 .label.tag {
   padding: 0;
@@ -4723,9 +4713,7 @@ article.single-post-article footer .tags-links a:before {
   .widget.blog_info h3 {
     margin-top: 1rem; }
   .widget .widget-title {
-    font-family: Montserrat,Arial,Sans-Serif;
-    font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: normal;
     margin-bottom: 25px;
     text-transform: uppercase;
@@ -4931,6 +4919,9 @@ header.page-header {
     margin: 0; }
     header.page-header .category.page-title .label {
       margin-top: -8px; }
+
+.comments-area .comments-title > .badge {
+  margin-top: -4px; }
 
 /*
 
@@ -5262,3 +5253,21 @@ a.muted:hover {
 
 .fade.out {
   opacity: 0; }
+
+.color-primary {
+  color: #B64036; }
+
+.color-secondary {
+  color: #240C26; }
+
+.bg-primary {
+  background-color: #B64036; }
+
+.bg-secondary {
+  background-color: #240C26; }
+
+.color-text {
+  color: #333; }
+
+.color-white {
+  color: #fff; }
