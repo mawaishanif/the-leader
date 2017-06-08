@@ -25,6 +25,6 @@
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
-		<?php the_leader_entry_footer(); ?>
+		<!-- <?php the_leader_entry_footer(); ?> -->
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
