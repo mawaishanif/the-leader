@@ -22,22 +22,6 @@
 	<div id="page" class="site">
 		<a class="for-screen-readers-text hidden" href="#content"><?php esc_html_e( 'Skip header area and jump to content', 'the_leader' ); ?></a>
 
-		<section class="cover  max-full-width" data-height="90">
-			<div class="background" style="background-image: url('<?php header_image(); ?>'); background-position-x: 50%;"></div>
-			<div class="introduction">
-				<h1><?php bloginfo( 'name' ); ?></h1>
-				<!-- <h3>For full width use <i>full-width</i> or <i>max-full-width</i> class</h3> -->
-				<?php 
-				$description = get_bloginfo( 'description', 'display' );
-				if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description;  ?></p>
-				<?php
-				endif; ?>
-			</div>
-		</section>	
-
-
-
 
 
 
@@ -45,16 +29,16 @@
 
 
 		<div id="searchbar" class="full-width position-abs">
-				<form action="/" method="get" class="full-width " accept-charset="utf-8">
-					<label class="textfield full-width row">
-						<input type="search" class="search_input col-lg-10 col-md-10 col-sm-10 col-xs-12 " name="searchbar" value="" placeholder="What are you looking for?">
-						<div class="hide-mobile-flex submitBtn col-lg-2 col-md-2 col-sm-2 col-xs-2">
-							<button>Submit</button>
-						</div>
-					</label>
-				</form>
-				<span class="close_search"><span class="icon ti-close"></span></span>
-			</div>
+			<form action="/" method="get" class="full-width " accept-charset="utf-8">
+				<label class="textfield full-width row">
+					<input type="search" class="search_input col-lg-10 col-md-10 col-sm-10 col-xs-12 " name="searchbar" value="" placeholder="What are you looking for?">
+					<div class="hide-mobile-flex submitBtn col-lg-2 col-md-2 col-sm-2 col-xs-2">
+						<button>Submit</button>
+					</div>
+				</label>
+			</form>
+			<span class="close_search"><span class="icon ti-close"></span></span>
+		</div>
 		<div class="drawer">
 			<div class="drawer-overlay"></div>
 			<div class="main_drawer position-fix">
@@ -208,18 +192,26 @@
 				</section>
 			</div>
 		</div>
+		<?php 
+		if (is_single()) { ?>
+		<header class="blog-info full-width single-page-header">
+		<?php }  else{ ?>
 		<header class="blog-info full-width">
+		<?php 
+		}
+		?>
+		
 			<div class="title">
 				<?php 
-					if (has_custom_logo()) {
-						the_custom_logo();
-					}else{
-						?>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<h5 class="site-title"><?php bloginfo( 'name' ); ?></h5>
-						</a>
-						<?php 
-					}
+				if (has_custom_logo()) {
+					the_custom_logo();
+				}else{
+					?>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<h5 class="site-title"><?php bloginfo( 'name' ); ?></h5>
+					</a>
+					<?php 
+				}
 				?>
 			</div>
 			<nav role="navigation" class="main">
@@ -247,55 +239,16 @@
 
 
 
+		<?php 
+		if (is_single()) {
+			get_template_part( 'layouts/cover', 'single' );
+		
+		}  else{
+			get_template_part( 'layouts/cover', 'blog' );
+		}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		?>
+		
 
 
 
