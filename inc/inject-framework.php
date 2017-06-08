@@ -101,8 +101,7 @@ function leader_calculate_reading_time($post_id) {
 	}
 }
 
-function taxonomy_post_count()
+function post_count()
 {
-	$term = get_term( get_queried_object()->term_id);
-	return $term->count;
+	return $GLOBALS['wp_query']->post_count;
 }
