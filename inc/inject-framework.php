@@ -100,3 +100,9 @@ function leader_calculate_reading_time($post_id) {
 		return $readingTime . ' min read';
 	}
 }
+
+function taxonomy_post_count()
+{
+	$term = get_term( get_queried_object()->term_id);
+	return $term->count;
+}
