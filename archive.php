@@ -36,8 +36,8 @@ get_header(); ?>
 				get_template_part( 'template-parts/content', get_post_format() );
 
 			endwhile;
-
-			the_posts_navigation();
+			// This shows the page links, for next pages
+				page_links();
 
 		else :
 
