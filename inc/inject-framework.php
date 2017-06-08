@@ -105,3 +105,13 @@ function post_count()
 {
 	return $GLOBALS['wp_query']->post_count;
 }
+
+function page_links()
+{
+	$args = array(
+		'type' =>  'list',
+		'prev_text' => __('Previous Posts Page', 'the-leader'),
+		'next_text' => __('Next Posts Page', 'the-leader'),
+	);
+	echo paginate_links($args);
+}

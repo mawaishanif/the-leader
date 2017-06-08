@@ -44,7 +44,10 @@ get_header();
 
 				endwhile;
 
-				the_posts_navigation(); ?>
+				page_links();
+
+				?>
+
 				</div>
 			</section>
 		<?php
