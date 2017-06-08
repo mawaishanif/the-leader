@@ -1,4 +1,4 @@
-<? 
+<?php 
 /**
  *
  * Cover of BLOG - Template

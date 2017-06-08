@@ -51,11 +51,11 @@
 				<div class="col-lg-12">  
 					<?php
 						if ( $categories_list && the_leader_categorized_blog() ) {
-							printf( '<div class="cat-links">' . esc_html__( 'Posted in: %1$s', 'the_leader' ) . '</div>', $categories_list ); // WPCS: XSS OK.
+							printf( '<div class="cat-links">' . __( '<span class="display-block heading">Posted in: </span>%1$s', 'the_leader' ) . '</div>', $categories_list ); // WPCS: XSS OK.
 						}
 
 						if ( $tags_list ) {
-							printf( '<div class="tags-links">' . esc_html__( 'Tagged: %1$s', 'the_leader' ) . '</div>', $tags_list ); // WPCS: XSS OK.
+							printf( '<div class="tags-links">' . __( '<span class="display-block heading">Tagged in: </span>%1$s ', 'the_leader' ) . '</div>', $tags_list ); // WPCS: XSS OK.
 						}
 					?>
 				</div>

@@ -4328,6 +4328,94 @@ header.single-page-header {
     header.single-page-header nav.main ul.secondary-nav span.icon:hover {
       color: #333; }
 
+section.blog-cover, section.archive-cover {
+  position: relative;
+  display: table;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background: #101010; }
+  section.blog-cover .background, section.archive-cover .background {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: .3;
+    max-width: 100%;
+    background-size: cover; }
+  section.blog-cover .introduction, section.archive-cover .introduction {
+    position: relative;
+    z-index: 4;
+    color: white;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle; }
+    section.blog-cover .introduction h1, section.blog-cover .introduction h2, section.blog-cover .introduction h3, section.blog-cover .introduction h4, section.archive-cover .introduction h1, section.archive-cover .introduction h2, section.archive-cover .introduction h3, section.archive-cover .introduction h4 {
+      margin: 0 auto; }
+    section.blog-cover .introduction h1, section.blog-cover .introduction h2, section.blog-cover .introduction h3, section.blog-cover .introduction h4, section.blog-cover .introduction p, section.archive-cover .introduction h1, section.archive-cover .introduction h2, section.archive-cover .introduction h3, section.archive-cover .introduction h4, section.archive-cover .introduction p {
+      text-shadow: 1px 0px 10px #000000; }
+
+section.single.post-cover {
+  margin: 5em 0em 2rem; }
+  section.single.post-cover .edit-link {
+    margin: 0 0 1em; }
+    section.single.post-cover .edit-link .post-edit-link {
+      text-decoration: none;
+      color: #fff; }
+  section.single.post-cover .post-category {
+    color: #a8b2ba;
+    font-size: .8rem; }
+    section.single.post-cover .post-category .cat-icon {
+      font-size: 1.8rem; }
+    section.single.post-cover .post-category a {
+      text-transform: uppercase;
+      padding: 0px 8px;
+      text-decoration: none;
+      font-size: 0.70211rem;
+      line-height: 180%; }
+      section.single.post-cover .post-category a:hover {
+        font-weight: 600;
+        color: #1481ff; }
+  section.single.post-cover .post-title {
+    margin-top: 1rem;
+    margin-bottom: 0rem; }
+  section.single.post-cover .post-time {
+    font-size: .8rem;
+    color: #a8b2ba; }
+  section.single.post-cover .post-thumbnail {
+    margin: 2rem 0; }
+  section.single.post-cover .cover-image {
+    background-size: cover;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    max-width: 100%;
+    width: 100%;
+    height: 100%; }
+
+section.archive-cover {
+  height: 65vh;
+  min-height: 450px; }
+  section.archive-cover .background {
+    opacity: .2; }
+  section.archive-cover .introduction .category-title {
+    padding: 0.6rem 1.4rem;
+    font-size: 1.349rem;
+    border-radius: 4px;
+    color: #fff;
+    text-shadow: none; }
+  section.archive-cover .introduction .tag-title {
+    padding: 0.9rem 2.4rem;
+    border-bottom: 1px solid #fff; }
+    section.archive-cover .introduction .tag-title:before {
+      content: "#";
+      color: #a8b2ba; }
+  section.archive-cover .introduction .archive-title {
+    padding: 0.6rem 1.4rem;
+    border-radius: 4px;
+    background-color: #1c86f2; }
+
 .drawer-overlay.show {
   position: fixed;
   top: 0;
@@ -4832,100 +4920,12 @@ article.single-post-article footer .tags-links a:before {
   margin-top: 0;
   padding-top: 0; }
 
-section.blog-cover {
-  position: relative;
-  display: table;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  background: #101010; }
-  section.blog-cover .background {
-    position: absolute;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    opacity: .3;
-    max-width: 100%;
-    background-size: cover; }
-  section.blog-cover .introduction {
-    position: relative;
-    z-index: 4;
-    color: white;
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle; }
-    section.blog-cover .introduction h1, section.blog-cover .introduction h2, section.blog-cover .introduction h3, section.blog-cover .introduction h4 {
-      margin: 0 auto; }
-    section.blog-cover .introduction h1, section.blog-cover .introduction h2, section.blog-cover .introduction h3, section.blog-cover .introduction h4, section.blog-cover .introduction p {
-      text-shadow: 1px 0px 10px #000000; }
-
-section.single.post-cover {
-  margin: 5em 0em 2rem; }
-  section.single.post-cover .edit-link {
-    margin: 0 0 1em; }
-    section.single.post-cover .edit-link .post-edit-link {
-      text-decoration: none;
-      color: #fff; }
-  section.single.post-cover .post-category {
-    color: #a8b2ba;
-    font-size: .8rem; }
-    section.single.post-cover .post-category .cat-icon {
-      font-size: 1.8rem; }
-    section.single.post-cover .post-category a {
-      text-transform: uppercase;
-      padding: 0px 8px;
-      text-decoration: none;
-      font-size: 0.70211rem;
-      line-height: 180%; }
-      section.single.post-cover .post-category a:hover {
-        font-weight: 600;
-        color: #1481ff; }
-  section.single.post-cover .post-title {
-    margin-top: 1rem;
-    margin-bottom: 0rem; }
-  section.single.post-cover .post-time {
-    font-size: .8rem;
-    color: #a8b2ba; }
-  section.single.post-cover .post-thumbnail {
-    margin: 2rem 0; }
-  section.single.post-cover .cover-image {
-    background-size: cover;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    max-width: 100%;
-    width: 100%;
-    height: 100%; }
-
-section.archive-cover {
-  position: relative;
-  display: table;
-  overflow: hidden;
-  width: 100%;
-  height: 65vh;
-  background: #101010; }
-  section.archive-cover .background {
-    position: absolute;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    opacity: .3;
-    max-width: 100%;
-    background-size: cover; }
-  section.archive-cover .introduction {
-    position: relative;
-    z-index: 4;
-    color: white;
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle; }
-    section.archive-cover .introduction h1, section.archive-cover .introduction h2, section.archive-cover .introduction h3, section.archive-cover .introduction h4 {
-      margin: 0 auto; }
-    section.archive-cover .introduction h1, section.archive-cover .introduction h2, section.archive-cover .introduction h3, section.archive-cover .introduction h4, section.archive-cover .introduction p {
-      text-shadow: 1px 0px 10px #000000; }
+header.page-header {
+  padding: 3.5rem 0.2rem 0rem; }
+  header.page-header .category.page-title {
+    margin: 0; }
+    header.page-header .category.page-title .label {
+      margin-top: -8px; }
 
 /*
 
