@@ -1,3 +1,11 @@
+.content-area.archive{
+	.posts-count-divider{
+		margin-top: 1rem;
+	}
+	.row{
+		padding-top: 0;
+	}
+}
 header.page-header{
 	padding: 3.5rem 0.2rem 0rem;
 	.category.page-title{
@@ -6,4 +14,5 @@ header.page-header{
 			margin-top: -8px;
 		}
 	}
+
 }

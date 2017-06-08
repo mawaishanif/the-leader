@@ -4920,6 +4920,11 @@ article.single-post-article footer .tags-links a:before {
   margin-top: 0;
   padding-top: 0; }
 
+.content-area.archive .posts-count-divider {
+  margin-top: 1rem; }
+.content-area.archive .row {
+  padding-top: 0; }
+
 header.page-header {
   padding: 3.5rem 0.2rem 0rem; }
   header.page-header .category.page-title {
