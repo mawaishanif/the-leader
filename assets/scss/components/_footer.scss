@@ -15,13 +15,11 @@
 			background: $secondary;
 			position: absolute;			
 		}
-		nav.social{
-			li{
-				@media (min-width: 800px) {
-					float: none;
-					display: inline-block;
-					text-align: center;
-				}
+		section.widget, li, ul{
+			@media (max-width: 800px) {
+				float: none;
+				display: inline-block;
+				text-align: center;
 			}
 		}
 	}

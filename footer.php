@@ -14,15 +14,15 @@
 </div><!-- #content -->    
 
 <footer id="colophon" class="site-footer bg-secondary color-white" role="contentinfo">
-	<div class="row with-gutter middle-sm middle-md middle-lg align-c-xs align-c-sm align-c-md">
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 last-xs first-sm first-md first-lg">
-			<div class="site-info small f-left">
+	<div class="row with-gutter middle-lg align-c-xs align-c-sm align-c-md">
+		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 last-xs first-sm first-md first-lg">
+			<div class="site-info small">
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'the_leader' ) ); ?>" class="display-inlineBlock"><?php printf( esc_html__( 'Proudly powered by %s', 'the_leader' ), 'WordPress' ); ?></a>
 				&nbsp; &bull; &nbsp; 
 				<?php printf( esc_html__( '"%1$s" by %2$s', 'the_leader' ), 'The Leader - Arena of creativity for authors', '<a href="https://injectthemes.com/" rel="designer" class="display-inlineBlock">Inject Themes</a>' ); ?>
 			</div>
 		</div><!-- .site-info -->
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 			<div class="site-socials">
 				<section class="widget social f-right">
 					<nav class="social">
