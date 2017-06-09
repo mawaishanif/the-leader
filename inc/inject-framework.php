@@ -104,11 +104,17 @@ function post_count() {
 	return $GLOBALS['wp_query']->post_count;
 }
 
+/**
+ * Function which returns the page pagination links for default post types
+ *
+ * @return list of pages with links
+ */
 function page_links() {
 	$args = array(
-		'type' =>  'list',
-		'prev_text' => __('Previous Posts Page', 'the-leader' ),
-		'next_text' => __('Next Posts Page', 'the-leader' ),
+		'type' => 'list',
+		'total' => max( 1, get_query_var( 'paged' ) ) + 3,
+		'prev_text' => __( 'Previous Posts Page', 'the-leader' ),
+		'next_text' => __( 'Next Posts Page', 'the-leader' ),
 	);
-	echo paginate_links($args );
+	return paginate_links( $args );
 }
