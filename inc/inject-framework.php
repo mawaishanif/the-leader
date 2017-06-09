@@ -1,11 +1,10 @@
-<?php 
-
+<?php
 /**
  * Custom functions for theme.
  *
  * These functions will be used in different files. And add functinality to the theme.
  * Added to avoid bulk in functions.php file.
- *
+ * @package the-leader
  */
 
 /**
@@ -101,17 +100,15 @@ function leader_calculate_reading_time($post_id) {
 	}
 }
 
-function post_count()
-{
+function post_count() {
 	return $GLOBALS['wp_query']->post_count;
 }
 
-function page_links()
-{
+function page_links() {
 	$args = array(
 		'type' =>  'list',
-		'prev_text' => __('Previous Posts Page', 'the-leader'),
-		'next_text' => __('Next Posts Page', 'the-leader'),
+		'prev_text' => __('Previous Posts Page', 'the-leader' ),
+		'next_text' => __('Next Posts Page', 'the-leader' ),
 	);
-	echo paginate_links($args);
+	echo paginate_links($args );
 }

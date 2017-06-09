@@ -9,8 +9,8 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area archive">
-		<main id="main" class="site-main" role="main">
+ <div id="primary" class="content-area archive">
+ <main id="main" class="site-main" role="main">
 
 		<?php
 
@@ -36,7 +36,7 @@ get_header(); ?>
 				get_template_part( 'template-parts/content', get_post_format() );
 
 			endwhile;
-			// This shows the page links, for next pages
+			// This shows the page links, for next pages.
 				page_links();
 
 		else :
