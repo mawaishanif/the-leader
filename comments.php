@@ -50,7 +50,7 @@ if ( post_password_required() ) {
 		<ol class="comment-list">
 
 			<?php
-				wp_list_comments( 'type=comment&callback=mytheme_comment&style=li');
+				wp_list_comments( 'type=comment&callback=mytheme_comment&style=div');
 			?>
 		</ol><!-- .comment-list -->
 

@@ -242,15 +242,8 @@ new Author_Image_Class;
 new Leader_Portfolio;
 
 function mytheme_comment($comment, $args, $depth) {
-	echo '<pre>', var_dump($args), '</pre>';
-	/*
-    if ( 'div' === $args['style'] ) {
-        $tag       = 'div';
-        $add_below = 'comment';
-    } else {
-        $tag       = 'li';
-        $add_below = 'div-comment';
-    }
+
+    $tag       = $args['style'];
     ?>
     <<?php echo $tag ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() . 'ajkda' ?>">
     <?php if ( 'div' != $args['style'] ) : ?>
@@ -275,12 +268,12 @@ function mytheme_comment($comment, $args, $depth) {
     <?php comment_text(); ?>
 
     <div class="reply">
-        <?php comment_reply_link( array_merge( $args, array( 'add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+        <?php comment_reply_link( array_merge( $args, array( 'add_below' => 'comment', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
     </div>
     <?php if ( 'div' != $args['style'] ) : ?>
     </div>
     <?php endif; ?>
-    <?php
+    <?php 
 }
 /**
  * Customizing the comments form data for custom leader comments markup.
