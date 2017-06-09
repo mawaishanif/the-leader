@@ -242,6 +242,8 @@ new Author_Image_Class;
 new Leader_Portfolio;
 
 function mytheme_comment($comment, $args, $depth) {
+	echo '<pre>', var_dump($args), '</pre>';
+	/*
     if ( 'div' === $args['style'] ) {
         $tag       = 'div';
         $add_below = 'comment';
@@ -265,7 +267,7 @@ function mytheme_comment($comment, $args, $depth) {
 
     <div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
         <?php
-        /* translators: 1: date, 2: time */
+
         printf( __('%1$s at %2$s'), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)' ), '  ', '' );
         ?>
     </div>
