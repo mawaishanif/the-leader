@@ -9,6 +9,7 @@
 
 get_header(); ?>
 
+
 <div id="primary" class="content-area archive">
 	<main id="main" class="site-main" role="main">
 
@@ -19,12 +20,12 @@ get_header(); ?>
 
 				<?php
 				$posts_count = post_count();
-				if($posts_count > 1){
-					$word = "posts";
-				}else{
-					$word = "post";
+				if ( $posts_count > 1 ) {
+					$word = 'posts';
+				} else {
+					$word = 'post';
 				}
-				the_archive_title( '<h5 class="category medium page-title">Found <span class="medium label focus"> '. $posts_count .' </span> '. $word .' in "', '"</h5>' );
+				the_archive_title( '<h5 class="category medium page-title">Found <span class="medium label focus"> ' . $posts_count . ' </span> ' . $word . ' in "', '"</h5>' );
 				?>
 			</header><!-- .page-header -->
 			<hr class="posts-count-divider">
@@ -34,13 +35,12 @@ get_header(); ?>
 				/* Start the Loop */
 				while ( have_posts() ) : the_post();
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-			
+					/*
+					 * Include the Post-Format-specific template for the content.
+					 * If you want to override this in a child theme, then include a file
+					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+					 */
+					get_template_part( 'template-parts/content', get_post_format() );
 			endwhile;
 
 				page_links();
