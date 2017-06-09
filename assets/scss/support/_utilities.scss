@@ -375,3 +375,16 @@ a.muted:hover {
 .fade.out{
 	opacity:0
 }
+
+
+
+
+// some Classes for colors
+.color-primary{color: $primary;}
+.color-secondary{color: $secondary;}
+
+.bg-primary{background-color: $primary;}
+.bg-secondary{background-color: $secondary;}
+
+.color-text{color: $color-text;}
+.color-white{color: $white;}

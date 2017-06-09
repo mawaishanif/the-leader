@@ -34,12 +34,12 @@
 
 
 			if (( $categories_list && the_leader_categorized_blog() ) && $tags_list) {?>
-				<div class="col-lg-6">  
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">  
 				<?php
 					printf( '<div class="cat-links">' . __( '<span class="display-block heading">Posted in: </span>%1$s', 'the_leader' ) . '</div>', $categories_list ); // WPCS: XSS OK.
 				?>
 				</div>
-				<div class="col-lg-6"> 
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"> 
 				<?php
 					printf( '<div class="tags-links">' . __( '<span class="display-block heading">Tagged in: </span>%1$s ', 'the_leader' ) . '</div>', $tags_list ); // WPCS: XSS OK.
 				?>
@@ -48,7 +48,7 @@
 
 			
 			} elseif (( $categories_list && the_leader_categorized_blog() ) || $tags_list) { ?>
-				<div class="col-lg-12">  
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">  
 					<?php
 						if ( $categories_list && the_leader_categorized_blog() ) {
 							printf( '<div class="cat-links">' . __( '<span class="display-block heading">Posted in: </span>%1$s', 'the_leader' ) . '</div>', $categories_list ); // WPCS: XSS OK.
@@ -66,14 +66,5 @@
 		?>
 		
 	</div>
-
-	<?php
-	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<div class="comments-link">';
-		/* translators: %s: post title */
-		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'the_leader' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
-		echo '</div>';
-	}
-	?>
 	</footer><!-- .post-footer -->
 </article><!-- #post-## -->

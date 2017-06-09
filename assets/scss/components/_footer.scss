@@ -1,0 +1,26 @@
+#colophon{
+	padding: 1.5rem 1rem;
+	.site-info{
+		a{
+			text-decoration: none;
+		}
+	}
+	.site-socials{
+		.widget {
+			padding: 0;
+		}
+		.widget.social:after{
+			color: blue;
+			margin: 0; 
+			background: $secondary;
+			position: absolute;			
+		}
+		section.widget, li, ul{
+			@media (max-width: 800px) {
+				float: none;
+				display: inline-block;
+				text-align: center;
+			}
+		}
+	}
+}

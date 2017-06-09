@@ -1,23 +1,5 @@
 @charset "UTF-8";
 /* SOCIAL */
-.color-primary {
-  color: #B64036; }
-
-.color-secondary {
-  color: #240C26; }
-
-.bg-primary {
-  background-color: #B64036; }
-
-.bg-secondary {
-  background-color: #240C26; }
-
-.color-text {
-  color: #333; }
-
-.color-white {
-  color: #fff; }
-
 /* raleway-200 - latin */
 /* droid-sans-regular - latin */
 @font-face {
@@ -1057,11 +1039,12 @@ ul ul, ol ul {
 ol ol ul, ol ul ul, ul ol ul, ul ul ul {
   list-style-type: square; }
 
-ul.unstyled {
+ul.unstyled, .widget ul {
   margin-left: 0; }
 
-ul.unstyled,
-ul.unstyled ul {
+ul.unstyled, .widget ul,
+ul.unstyled ul,
+.widget ul ul {
   list-style: none; }
 
 a .icon {
@@ -2232,11 +2215,11 @@ Default valid namespaces are xs, sm, md, lg. The xs namespace is default and use
   margin-left: -0.6rem;
   margin-right: -0.6rem; }
 
-.row.with-gutter > .col-xs, .row.with-gutter > .col-sm, .row.with-gutter > .col-md, .row.with-gutter > .col-lg, .row.with-gutter > .col-xs-1, .row.with-gutter > .col-xs-2, .row.with-gutter > .col-xs-3, .row.with-gutter > .col-xs-4, .row.with-gutter > .col-xs-5, .row.with-gutter > .col-xs-6, .row.with-gutter > .col-xs-7, .row.with-gutter > .col-xs-8, .row.with-gutter > .col-xs-9, .row.with-gutter > .col-xs-10, .row.with-gutter > .col-xs-11, .row.with-gutter > .col-xs-12, .row.with-gutter > .col-sm-1, .row.with-gutter > .col-sm-2, .row.with-gutter > .col-sm-3, .row.with-gutter > .col-sm-4, .row.with-gutter > .col-sm-5, .row.with-gutter > .col-sm-6, .row.with-gutter > .col-sm-7, .row.with-gutter > .col-sm-8, .row.with-gutter > .col-sm-9, .row.with-gutter > .col-sm-10, .row.with-gutter > .col-sm-11, .row.with-gutter > .col-sm-12, .row.with-gutter > .col-md-1, .row.with-gutter > .col-md-2, .row.with-gutter > .col-md-3, .row.with-gutter > .col-md-4, .row.with-gutter > .col-md-5, .row.with-gutter > .col-md-6, .row.with-gutter > .col-md-7, .row.with-gutter > .col-md-8, .row.with-gutter > .col-md-9, .row.with-gutter > .col-md-10, .row.with-gutter > .col-md-11, .row.with-gutter > .col-md-12, .row.with-gutter > .col-lg-1, .row.with-gutter > .col-lg-2, .row.with-gutter > .col-lg-3, .row.with-gutter > .col-lg-4, .row.with-gutter > .col-lg-5, .row.with-gutter > .col-lg-6, .row.with-gutter > .col-lg-7, .row.with-gutter > .col-lg-8, .row.with-gutter > .col-lg-9, .row.with-gutter > .col-lg-10, .row.with-gutter > .col-lg-11, .row.with-gutter > .col-lg-12 {
+.row.with-gutter > .col-xs, .row.with-gutter > .col-sm, .row.with-gutter > .col-md, .row.with-gutter > .col-lg, .row.with-gutter > .col-hg, .row.with-gutter > .col-xs-1, .row.with-gutter > .col-xs-2, .row.with-gutter > .col-xs-3, .row.with-gutter > .col-xs-4, .row.with-gutter > .col-xs-5, .row.with-gutter > .col-xs-6, .row.with-gutter > .col-xs-7, .row.with-gutter > .col-xs-8, .row.with-gutter > .col-xs-9, .row.with-gutter > .col-xs-10, .row.with-gutter > .col-xs-11, .row.with-gutter > .col-xs-12, .row.with-gutter > .col-sm-1, .row.with-gutter > .col-sm-2, .row.with-gutter > .col-sm-3, .row.with-gutter > .col-sm-4, .row.with-gutter > .col-sm-5, .row.with-gutter > .col-sm-6, .row.with-gutter > .col-sm-7, .row.with-gutter > .col-sm-8, .row.with-gutter > .col-sm-9, .row.with-gutter > .col-sm-10, .row.with-gutter > .col-sm-11, .row.with-gutter > .col-sm-12, .row.with-gutter > .col-md-1, .row.with-gutter > .col-md-2, .row.with-gutter > .col-md-3, .row.with-gutter > .col-md-4, .row.with-gutter > .col-md-5, .row.with-gutter > .col-md-6, .row.with-gutter > .col-md-7, .row.with-gutter > .col-md-8, .row.with-gutter > .col-md-9, .row.with-gutter > .col-md-10, .row.with-gutter > .col-md-11, .row.with-gutter > .col-md-12, .row.with-gutter > .col-lg-1, .row.with-gutter > .col-lg-2, .row.with-gutter > .col-lg-3, .row.with-gutter > .col-lg-4, .row.with-gutter > .col-lg-5, .row.with-gutter > .col-lg-6, .row.with-gutter > .col-lg-7, .row.with-gutter > .col-lg-8, .row.with-gutter > .col-lg-9, .row.with-gutter > .col-lg-10, .row.with-gutter > .col-lg-11, .row.with-gutter > .col-lg-12, .row.with-gutter > .col-hg-1, .row.with-gutter > .col-hg-2, .row.with-gutter > .col-hg-3, .row.with-gutter > .col-hg-4, .row.with-gutter > .col-hg-5, .row.with-gutter > .col-hg-6, .row.with-gutter > .col-hg-7, .row.with-gutter > .col-hg-8, .row.with-gutter > .col-hg-9, .row.with-gutter > .col-hg-10, .row.with-gutter > .col-hg-11, .row.with-gutter > .col-hg-12 {
   padding-left: 0.6rem;
   padding-right: 0.6rem; }
 
-.col-xs, .col-sm, .col-md, .col-lg, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+.col-xs, .col-sm, .col-md, .col-lg, .col-hg, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-hg-1, .col-hg-2, .col-hg-3, .col-hg-4, .col-hg-5, .col-hg-6, .col-hg-7, .col-hg-8, .col-hg-9, .col-hg-10, .col-hg-11, .col-hg-12 {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -2244,7 +2227,7 @@ Default valid namespaces are xs, sm, md, lg. The xs namespace is default and use
   flex-shrink: 0;
   min-height: 1px; }
 
-.col-xs, .col-sm, .col-md, .col-lg {
+.col-xs, .col-sm, .col-md, .col-lg, .col-hg {
   flex-grow: 1;
   flex-basis: 0;
   max-width: 100%; }
@@ -2349,20 +2332,17 @@ Default valid namespaces are xs, sm, md, lg. The xs namespace is default and use
 .start-xs {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
-  justify-content: flex-start;
-  text-align: start; }
+  justify-content: flex-start; }
 
 .center-xs {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
-  text-align: center; }
+  justify-content: center; }
 
 .end-xs {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
-  justify-content: flex-end;
-  text-align: end; }
+  justify-content: flex-end; }
 
 .top-xs {
   -webkit-box-align: start;
@@ -2398,7 +2378,16 @@ Default valid namespaces are xs, sm, md, lg. The xs namespace is default and use
   -ms-flex-order: 1;
   order: 1; }
 
-@media only screen and (min-width: 37em) {
+.align-l-xs {
+  text-align: left; }
+
+.align-r-xs {
+  text-align: right; }
+
+.align-c-xs {
+  text-align: center; }
+
+@media only screen and (min-width: 550px) {
   .col-sm-1 {
     flex-basis: 8.33333%;
     max-width: 8.33333%; }
@@ -2486,20 +2475,17 @@ Default valid namespaces are xs, sm, md, lg. The xs namespace is default and use
   .start-sm {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
-    justify-content: flex-start;
-    text-align: start; }
+    justify-content: flex-start; }
 
   .center-sm {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
-    text-align: center; }
+    justify-content: center; }
 
   .end-sm {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
-    justify-content: flex-end;
-    text-align: end; }
+    justify-content: flex-end; }
 
   .top-sm {
     -webkit-box-align: start;
@@ -2533,8 +2519,17 @@ Default valid namespaces are xs, sm, md, lg. The xs namespace is default and use
   .last-sm {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
-    order: 1; } }
-@media only screen and (min-width: 982px) {
+    order: 1; }
+
+  .align-l-sm {
+    text-align: left; }
+
+  .align-r-sm {
+    text-align: right; }
+
+  .align-c-sm {
+    text-align: center; } }
+@media only screen and (min-width: 800px) {
   .col-md-1 {
     flex-basis: 8.33333%;
     max-width: 8.33333%; }
@@ -2622,20 +2617,17 @@ Default valid namespaces are xs, sm, md, lg. The xs namespace is default and use
   .start-md {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
-    justify-content: flex-start;
-    text-align: start; }
+    justify-content: flex-start; }
 
   .center-md {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
-    text-align: center; }
+    justify-content: center; }
 
   .end-md {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
-    justify-content: flex-end;
-    text-align: end; }
+    justify-content: flex-end; }
 
   .top-md {
     -webkit-box-align: start;
@@ -2669,8 +2661,17 @@ Default valid namespaces are xs, sm, md, lg. The xs namespace is default and use
   .last-md {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
-    order: 1; } }
-@media only screen and (min-width: 1200px) {
+    order: 1; }
+
+  .align-l-md {
+    text-align: left; }
+
+  .align-r-md {
+    text-align: right; }
+
+  .align-c-md {
+    text-align: center; } }
+@media only screen and (min-width: 1000px) {
   .col-lg-1 {
     flex-basis: 8.33333%;
     max-width: 8.33333%; }
@@ -2758,20 +2759,17 @@ Default valid namespaces are xs, sm, md, lg. The xs namespace is default and use
   .start-lg {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
-    justify-content: flex-start;
-    text-align: start; }
+    justify-content: flex-start; }
 
   .center-lg {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
-    text-align: center; }
+    justify-content: center; }
 
   .end-lg {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
-    justify-content: flex-end;
-    text-align: end; }
+    justify-content: flex-end; }
 
   .top-lg {
     -webkit-box-align: start;
@@ -2805,7 +2803,158 @@ Default valid namespaces are xs, sm, md, lg. The xs namespace is default and use
   .last-lg {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
-    order: 1; } }
+    order: 1; }
+
+  .align-l-lg {
+    text-align: left; }
+
+  .align-r-lg {
+    text-align: right; }
+
+  .align-c-lg {
+    text-align: center; } }
+@media only screen and (min-width: 1300px) {
+  .col-hg-1 {
+    flex-basis: 8.33333%;
+    max-width: 8.33333%; }
+
+  .col-hg-2 {
+    flex-basis: 16.66667%;
+    max-width: 16.66667%; }
+
+  .col-hg-3 {
+    flex-basis: 25%;
+    max-width: 25%; }
+
+  .col-hg-4 {
+    flex-basis: 33.33333%;
+    max-width: 33.33333%; }
+
+  .col-hg-5 {
+    flex-basis: 41.66667%;
+    max-width: 41.66667%; }
+
+  .col-hg-6 {
+    flex-basis: 50%;
+    max-width: 50%; }
+
+  .col-hg-7 {
+    flex-basis: 58.33333%;
+    max-width: 58.33333%; }
+
+  .col-hg-8 {
+    flex-basis: 66.66667%;
+    max-width: 66.66667%; }
+
+  .col-hg-9 {
+    flex-basis: 75%;
+    max-width: 75%; }
+
+  .col-hg-10 {
+    flex-basis: 83.33333%;
+    max-width: 83.33333%; }
+
+  .col-hg-11 {
+    flex-basis: 91.66667%;
+    max-width: 91.66667%; }
+
+  .col-hg-12 {
+    flex-basis: 100%;
+    max-width: 100%; }
+
+  .off-hg-1 {
+    margin-left: 8.33333%; }
+
+  .off-hg-2 {
+    margin-left: 16.66667%; }
+
+  .off-hg-3 {
+    margin-left: 25%; }
+
+  .off-hg-4 {
+    margin-left: 33.33333%; }
+
+  .off-hg-5 {
+    margin-left: 41.66667%; }
+
+  .off-hg-6 {
+    margin-left: 50%; }
+
+  .off-hg-7 {
+    margin-left: 58.33333%; }
+
+  .off-hg-8 {
+    margin-left: 66.66667%; }
+
+  .off-hg-9 {
+    margin-left: 75%; }
+
+  .off-hg-10 {
+    margin-left: 83.33333%; }
+
+  .off-hg-11 {
+    margin-left: 91.66667%; }
+
+  .off-hg-reset {
+    margin-left: 0; }
+
+  .start-hg {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+
+  .center-hg {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+
+  .end-hg {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+
+  .top-hg {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+
+  .middle-hg {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+
+  .bottom-hg {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end; }
+
+  .around-hg {
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+
+  .between-hg {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+
+  .first-hg {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1; }
+
+  .last-hg {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1; }
+
+  .align-l-hg {
+    text-align: left; }
+
+  .align-r-hg {
+    text-align: right; }
+
+  .align-c-hg {
+    text-align: center; } }
 /* Headings
 ========================================================================== */
 h1, h2, h3, h4, h5, h6 {
@@ -2820,7 +2969,7 @@ h4, h5, h6 {
 
 h1 {
   font-size: 48px;
-  font-size: 3rem;
+  font-size: 2.5rem;
   line-height: 52px;
   line-height: 3.25rem;
   margin-top: 6.5rem;
@@ -2828,7 +2977,7 @@ h1 {
 
 h2 {
   font-size: 27px;
-  font-size: 2.6875rem;
+  font-size: 2.3875rem;
   line-height: 39px;
   line-height: 2.4375rem;
   margin-top: 4.0625rem;
@@ -2836,7 +2985,7 @@ h2 {
 
 h3 {
   font-size: 22px;
-  font-size: 2.375rem;
+  font-size: 2.175rem;
   line-height: 26px;
   line-height: 1.625rem;
   margin-top: 3.25rem;
@@ -2844,7 +2993,7 @@ h3 {
 
 h4 {
   font-size: 19.2px;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   line-height: 26px;
   line-height: 1.625rem;
   margin-top: 2.4375rem;
@@ -2852,7 +3001,7 @@ h4 {
 
 h5 {
   font-size: 16px;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 26px;
   line-height: 1.625rem;
   margin-top: 4.0625rem;
@@ -2860,7 +3009,7 @@ h5 {
 
 h6 {
   font-size: 16px;
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 26px;
   line-height: 1.625rem;
   margin-top: 2.4375rem;
@@ -2878,13 +3027,12 @@ h5 + h6 {
   margin-top: -0.8125rem; }
 
 h6 {
-  font-weight: 400;
-  font-style: italic; }
+  font-weight: 400; }
 
 @media screen and (min-width: 37em) {
   h1 {
     font-size: 56px;
-    font-size: 3.5rem;
+    font-size: 2.65rem;
     line-height: 80px;
     line-height: 4rem;
     letter-spacing: -.025em;
@@ -2893,7 +3041,7 @@ h6 {
 
   h2 {
     font-size: 27px;
-    font-size: 3.2875rem;
+    font-size: 2.475rem;
     line-height: 48px;
     line-height: 3.900000000000001rem;
     margin-top: 4rem;
@@ -2901,7 +3049,7 @@ h6 {
 
   h3 {
     font-size: 22px;
-    font-size: 3.0075rem;
+    font-size: 2.2075rem;
     line-height: 32px;
     line-height: 3.6rem;
     margin-top: 3.2rem;
@@ -2909,7 +3057,7 @@ h6 {
 
   h4 {
     font-size: 19.2px;
-    font-size: 2.8rem;
+    font-size: 1.98rem;
     line-height: 32px;
     line-height: 3.2rem;
     margin-top: 2.400000000000001rem;
@@ -2925,7 +3073,7 @@ h6 {
 
   h6 {
     font-size: 16px;
-    font-size: 1rem;
+    font-size: 1.4rem;
     line-height: 32px;
     line-height: 1.6rem;
     margin-top: 2.400000000000001rem;
@@ -3003,15 +3151,16 @@ Markup:
 [type=submit],
 button {
   background-color: #B64036;
-  border-radius: .2rem;
+  border-radius: .13rem;
   font-family: "Droid Sans", "Helvetica Neue", "Segoe UI", "Verdana", sans-serif;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
   display: inline-block;
   font-size: 1rem;
-  line-height: 2.6rem;
+  line-height: 2.3rem;
   max-width: 100%;
+  height: auto;
   transition-property: all;
   transition-duration: 200ms;
   margin: 0 auto;
@@ -3062,6 +3211,10 @@ button {
   .huge[type=submit],
   button.huge {
     line-height: 220%; }
+  .button.medium-btn, .medium-btn[type=button],
+  .medium-btn[type=submit],
+  button.medium-btn {
+    padding: 0.3rem 1.8rem; }
   .button.large-btn, .large-btn[type=button],
   .large-btn[type=submit],
   button.large-btn {
@@ -3112,41 +3265,41 @@ button.block {
 .secondary[type=submit],
 button.secondary {
   color: #fff;
-  background-color: #240C26; }
+  background-color: #242526; }
   .button.secondary:hover, .secondary[type=button]:hover,
   .secondary[type=submit]:hover,
   button.secondary:hover, .button.secondary:focus, .secondary[type=button]:focus,
   .secondary[type=submit]:focus,
   button.secondary:focus {
-    background-color: #240C26;
+    background-color: #242526;
     color: #fff;
     opacity: .7; }
   .button.secondary:active, .secondary[type=button]:active,
   .secondary[type=submit]:active,
   button.secondary:active {
-    background-color: black;
+    background-color: #0b0c0c;
     color: #fff; }
   .button.secondary.outline, .secondary.outline[type=button],
   .secondary.outline[type=submit],
   button.secondary.outline {
     background: transparent;
-    color: #240C26;
-    border-color: #240C26; }
+    color: #242526;
+    border-color: #242526; }
     .button.secondary.outline:focus, .secondary.outline[type=button]:focus,
     .secondary.outline[type=submit]:focus,
     button.secondary.outline:focus, .button.secondary.outline:hover, .secondary.outline[type=button]:hover,
     .secondary.outline[type=submit]:hover,
     button.secondary.outline:hover {
-      border-color: #240c26;
+      border-color: #242526;
       background-color: transparent;
-      color: #240C26;
+      color: #242526;
       opacity: .7; }
     .button.secondary.outline:active, .secondary.outline[type=button]:active,
     .secondary.outline[type=submit]:active,
     button.secondary.outline:active {
-      border-color: #240C26;
+      border-color: #242526;
       background-color: transparent;
-      color: black; }
+      color: #0b0c0c; }
 
 .button.inverted, .inverted[type=button],
 .inverted[type=submit],
@@ -3209,11 +3362,18 @@ button.inverted {
   background: none;
   border-color: #bdbdbd; }
 
-.label.badge {
+.badge {
   text-align: center;
   border-radius: 64px;
   padding: 0 6px;
   line-height: 18px; }
+  .badge.huge {
+    padding: 0 16px; }
+  .badge.medium {
+    line-height: 30px;
+    padding: 0px 9px; }
+  .badge.large {
+    padding: 0 16px; }
 
 .label.tag {
   padding: 0;
@@ -3363,6 +3523,9 @@ fieldset {
   padding: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem; }
+  @media (max-width: 37em) {
+    fieldset {
+      padding: 2rem 0.3rem; } }
 
 legend {
   font-weight: bold;
@@ -3373,6 +3536,9 @@ legend {
   top: 2px;
   position: relative;
   line-height: 0; }
+  @media (max-width: 37em) {
+    legend {
+      text-align: center; } }
 
 input,
 textarea,
@@ -3664,10 +3830,11 @@ select[multiple] {
 
 .req {
   position: relative;
-  top: 1px;
+  top: -6px;
   font-weight: bold;
   color: #f03c69;
-  font-size: 110%; }
+  font-size: 12px;
+  padding-left: 2px; }
 
 .desc {
   color: rgba(31, 31, 31, 0.5);
@@ -4499,17 +4666,20 @@ section.archive-cover {
       padding: 1.2rem !important; }
 
 article.single-post-article footer .cat-links, article.single-post-article footer .tags-links {
+  margin: 1rem 0;
   font-size: .9rem; }
   article.single-post-article footer .cat-links a, article.single-post-article footer .tags-links a {
     padding: 4px 2px 4px 12px;
-    text-decoration: none; }
+    text-decoration: none;
+    display: inline-block; }
   article.single-post-article footer .cat-links .heading, article.single-post-article footer .tags-links .heading {
     margin-bottom: 12px;
     font-weight: bold; }
 article.single-post-article footer .cat-links a {
   padding: .6rem 1.2rem;
   background-color: #efeff0;
-  border-radius: 4px; }
+  border-radius: 4px;
+  margin: 4px auto; }
   article.single-post-article footer .cat-links a:hover {
     background-color: #dededf; }
 article.single-post-article footer .tags-links .heading {
@@ -4723,9 +4893,7 @@ article.single-post-article footer .tags-links a:before {
   .widget.blog_info h3 {
     margin-top: 1rem; }
   .widget .widget-title {
-    font-family: Montserrat,Arial,Sans-Serif;
-    font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: normal;
     margin-bottom: 25px;
     text-transform: uppercase;
@@ -4920,12 +5088,45 @@ article.single-post-article footer .tags-links a:before {
   margin-top: 0;
   padding-top: 0; }
 
+.content-area.archive .posts-count-divider {
+  margin-top: 1rem; }
+.content-area.archive .row {
+  padding-top: 0; }
+
 header.page-header {
   padding: 3.5rem 0.2rem 0rem; }
   header.page-header .category.page-title {
     margin: 0; }
     header.page-header .category.page-title .label {
       margin-top: -8px; }
+
+.comments-area .comments-title > .badge {
+  margin-top: -5px; }
+
+.comment-respond .comment-reply-title {
+  padding-bottom: 0;
+  margin-bottom: 0; }
+.comment-respond .comment-notes {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding: 4px 12px; }
+
+#colophon {
+  padding: 1.5rem 1rem; }
+  #colophon .site-info a {
+    text-decoration: none; }
+  #colophon .site-socials .widget {
+    padding: 0; }
+  #colophon .site-socials .widget.social:after {
+    color: blue;
+    margin: 0;
+    background: #242526;
+    position: absolute; }
+  @media (max-width: 800px) {
+    #colophon .site-socials section.widget, #colophon .site-socials li, #colophon .site-socials ul {
+      float: none;
+      display: inline-block;
+      text-align: center; } }
 
 /*
 
@@ -5257,3 +5458,21 @@ a.muted:hover {
 
 .fade.out {
   opacity: 0; }
+
+.color-primary {
+  color: #B64036; }
+
+.color-secondary {
+  color: #242526; }
+
+.bg-primary {
+  background-color: #B64036; }
+
+.bg-secondary {
+  background-color: #242526; }
+
+.color-text {
+  color: #333; }
+
+.color-white {
+  color: #fff; }

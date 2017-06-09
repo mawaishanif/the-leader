@@ -165,28 +165,28 @@ function the_leader_scripts() {
 add_action( 'wp_enqueue_scripts', 'the_leader_scripts' );
 
 function the_leader_user_contactmethods($contact){
-	$contact['twitter'] = 'Twitter URL';
-	$contact['twitter_handle'] = 'Twitter Screename/ID (Excluding @)';
-	$contact['facebook'] = 'Facebook URL';
-	$contact['github'] = 'GitHub URL';
-	$contact['youtube'] = 'Youtube URL';
-	$contact['dribbble'] = 'Dribbble URL';
-	$contact['google-plus'] = 'Google Plus URL';
-	$contact['instagram'] = 'Instagram URL';
-	$contact['linkedin'] = 'LinkedIn URL';
-	$contact['pinterest'] = 'Pinterest URL';
-	$contact['skype'] = 'Skype URL';
-	$contact['tumblr'] = 'Tumblr URL';
-	$contact['flickr'] = 'Flickr URL';
-	$contact['reddit'] = 'Reddit URL';
-	$contact['stack-overflow'] = 'Stack Overflow URL';
-	$contact['twitch'] = 'Twitch URL';
-	$contact['vine'] = 'Vine URL';
-	$contact['vk'] = 'VK URL';
-	$contact['vimeo'] = 'Vimeo URL';
-	$contact['weibo'] = 'Weibo URL';
-	$contact['soundcloud'] = 'Soundcloud URL';
-	$contact['slideshare'] = 'SlideShare URL';
+	$contact['twitter'] 		= 'Twitter URL';
+	$contact['twitter_handle'] 	= 'Twitter Screename/ID (Excluding @)';
+	$contact['facebook'] 		= 'Facebook URL';
+	$contact['github'] 		= 'GitHub URL';
+	$contact['youtube'] 		= 'Youtube URL';
+	$contact['dribbble'] 		= 'Dribbble URL';
+	$contact['google-plus'] 		= 'Google Plus URL';
+	$contact['instagram'] 		= 'Instagram URL';
+	$contact['linkedin'] 		= 'LinkedIn URL';
+	$contact['pinterest'] 		= 'Pinterest URL';
+	$contact['skype'] 			= 'Skype URL';
+	$contact['tumblr'] 		= 'Tumblr URL';
+	$contact['flickr'] 			= 'Flickr URL';
+	$contact['reddit'] 			= 'Reddit URL';
+	$contact['stack-overflow'] 	= 'Stack Overflow URL';
+	$contact['twitch']			 = 'Twitch URL';
+	$contact['vine'] 			= 'Vine URL';
+	$contact['vk'] 			= 'VK URL';
+	$contact['vimeo'] 			= 'Vimeo URL';
+	$contact['weibo'] 			= 'Weibo URL';
+	$contact['soundcloud'] 		= 'Soundcloud URL';
+	$contact['slideshare'] 		= 'SlideShare URL';
 	return $contact;
 }
 add_filter('user_contactmethods', 'the_leader_user_contactmethods', 10, 1);
@@ -292,23 +292,23 @@ function leader_comment_form()
 	$post_id = get_the_ID();
 	$user = wp_get_current_user();
 	$user_identity = $user->exists() ? $user->display_name : '';
-	$required_text = sprintf( ' ' . __('Required fields are marked %s'), '<span class="required">*</span>' );
-
+	$required_text = sprintf( ' ' . __('Required fields are marked %s'), '<span class="req">*</span>' );
 	$fields = array(
-		'author' => '<p class="comment-form-awais">' . '<label for="author">' . __( 'Name' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .
-        '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
+		'author' => '<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><div class="form-item input-name">' . '<label for="author">' . __( 'Name' )  . ( $req ? '<span class="req">*</span> </label>' : '</label>' ) .
+        '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div></div>',
 
-    	'email'  => '<p class="comment-form-email"><label for="email">' . __( 'Email' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .
-        '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>',
+    	'email'  => '<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><div class="form-item input-email"><label for="email">' . __( 'Email' )  . ( $req ? '<span class="req">*</span> </label>' : '</label>' ) .
+        '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div></div>',
 
-    	'url'    => '<p class="comment-form-url"><label for="url">' . __( 'Website' ) . '</label>' .
-        '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>'
+    	'url'    => '<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><div class="form-item input-url"><label for="url">' . __( 'Website' ) . '</label>' .
+        '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div></div>'
 
 	);
 	$comments_args = array(
 
 		'fields'               => $fields,
-		'comment_field'        => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p>',
+		'comment_field'        => '
+    <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12"><div class="form-item input-comment"><label for="comment">' . _x( 'Your Comment', 'noun' ) . '<span class="req">*</span></label> <textarea id="comment" name="comment" cols="45" rows="6" maxlength="65525" aria-required="true" required="required"></textarea></div></div>',
 		/** This filter is documented in wp-includes/link-template.php */
 		'must_log_in'          => '<p class="must-log-in">' . sprintf(
 		                              /* translators: %s: login URL */
@@ -325,24 +325,24 @@ function leader_comment_form()
 		                              $user_identity,
 		                              wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) )
 		                          ) . '</p>',
-		'comment_notes_before' => '<p class="comment-notes"><span id="email-notes">' . __( 'Your email address will not be published.' ) . '</span>'. ( $req ? $required_text : '' ) . '</p>',
+		'comment_notes_before' => '<fieldset><legend>LEAVE A REPLY BELOW</legend><div class="row with-gutter"><p class="full-width comment-notes align-left small"><span id="email-notes">' . __( 'Your email address will not be published.' ) . '</span><br>'. ( $req ? $required_text : '' ) . '</p>',
 		'comment_notes_after'  => '',
 		'action'               => site_url( '/wp-comments-post.php' ),
 		'id_form'              => 'commentform',
 		'id_submit'            => 'submit',
-		'class_form'           => 'comment-form',
+		'class_form'           => 'comment-form form',
 		'class_submit'         => 'submit',
 		'name_submit'          => 'submit',
-		'title_reply'          => __( 'Leave a Reply' ),
-		'title_reply_to'       => __( 'Leave a Reply to %s' ),
-		'title_reply_before'   => '<h3 id="reply-title" class="comment-reply-title">',
-		'title_reply_after'    => '</h3>',
+		'title_reply'          => __( '' ),
+		'title_reply_to'       => __( '' ),
+		'title_reply_before'   => '',
+		'title_reply_after'    => '',
 		'cancel_reply_before'  => ' <small>',
 		'cancel_reply_after'   => '</small>',
 		'cancel_reply_link'    => __( 'Cancel reply' ),
 		'label_submit'         => __( 'Post Comment' ),
-		'submit_button'        => '<input name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s" />',
-		'submit_field'         => '<p class="form-submit">%1$s %2$s</p>',
+		'submit_button'        => '<input name="%1$s" type="submit" id="%2$s" class="%3$s medium-btn" value="%4$s" />',
+		'submit_field'         => '<div class="col-lg-12 col-xs-12 col-sm-12 col-md-12"><div class="form-item  submit-btn">%1$s %2$s</div></div></fieldset>',
 		'format'               => 'xhtml',
 	);
 

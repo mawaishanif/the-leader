@@ -1,0 +1,18 @@
+   .comments-area{
+   	.comments-title{
+   		&>.badge{
+   			margin-top: -5px;
+   		}
+   	}
+   }
+   .comment-respond{
+   	.comment-reply-title{
+   		padding-bottom: 0;
+   		margin-bottom: 0;
+   	}
+   	.comment-notes{
+   		margin-top: 0;
+   		margin-bottom: 1rem;
+   		padding: 4px 12px;
+   	}
+   }
