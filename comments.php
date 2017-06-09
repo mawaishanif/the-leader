@@ -20,7 +20,8 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="center-lg comments-area row">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
 
 	<?php
 	// You can start editing here -- including this comment!
@@ -28,7 +29,7 @@ if ( post_password_required() ) {
 		<h3 class="comments-title align-center">
 			<?php
 				printf( // WPCS: XSS OK.
-					__( _nx( '<span class="medium label color-white badge bg-secondary">1</span> Comment', '<span class="label badge secondary">%1$s</span> Comments;', get_comments_number(), 'comments title', 'the_leader' ) ),
+					__( _nx( '<span class="medium label color-white badge bg-secondary">1</span> Comment', '<span class="medium label color-white badge bg-secondary">%1$s</span> Comments', get_comments_number(), 'comments title', 'the_leader' ) ),
 					number_format_i18n( get_comments_number() )
 				);
 			?>
@@ -65,8 +66,24 @@ if ( post_password_required() ) {
 		</nav><!-- #comment-nav-below -->
 		<?php
 		endif; // Check for comment navigation.
-
 	endif; // Check for have_comments().
+	if ( !have_comments() ) : ?>
+		<h4 class="comments-title align-center">
+			<?php
+				printf( // WPCS: XSS OK.
+					__('No comments yet')
+				);
+			?>
+			<small class="medium">
+			<?php
+				printf( // WPCS: XSS OK.
+					__('Be the first one to reply!')
+				);
+			?>
+			</small>
+		</h4><!-- .comments-title -->
+		<?php
+	endif; // Check for ! have_comments().
 
 
 	// If comments are closed and there are comments, let's leave a little note, shall we?
@@ -78,5 +95,5 @@ if ( post_password_required() ) {
 	// Call comment form function here.
 	leader_comment_form();
 	?>
-
+</div>
 </div><!-- #comments -->

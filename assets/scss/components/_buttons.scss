@@ -15,15 +15,16 @@ Markup:
 
 .button {
 	background-color: $primary;
-	border-radius: .2rem;
+	border-radius: .13rem;
 	font-family: $base-font;
 	box-sizing: border-box;
 	color: $white;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 1rem;
-	line-height: 2.6rem;
+	line-height: 2.3rem;
 	max-width: 100%;
+	height: auto;
 	transition-property: all;
 	transition-duration: 200ms;
 	margin: 0 auto;
@@ -62,6 +63,9 @@ Markup:
 	}
 	&.small, &.large, &.huge{
 		line-height: 220%;
+	}
+	&.medium-btn{
+		padding: .3rem 1.8rem
 	}
 	&.large-btn{
 		padding: .7rem 1.8rem

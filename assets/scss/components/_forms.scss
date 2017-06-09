@@ -76,6 +76,9 @@ fieldset {
 	padding: 2rem;
 	margin-bottom: 2rem;
 	margin-top: 2rem;
+	@media (max-width: 37em) {
+		padding: 2rem 0.3rem;
+	}
 }
 
 legend {
@@ -87,6 +90,9 @@ legend {
 	top: 2px;
 	position: relative;
 	line-height: 0; 
+	@media (max-width: 37em) {
+		text-align: center;
+	}
 }
 
 input,
@@ -413,10 +419,11 @@ select[multiple] {
 
 .req {
 	position: relative;
-	top: 1px;
+	top: -6px;
 	font-weight: bold;
 	color: #f03c69;
-	font-size: 110%; 
+	font-size: 12px;
+	padding-left: 2px;
 }
 
 .desc {
