@@ -43,7 +43,7 @@ $blurryImageURL = $image_data_Small[0];
 	<div class="post-thumbnail">
 		<div class="aspectRatioPlaceholder">
 			<div class="aspectRatioPlaceholder-fill"></div>
-			<div class="progressiveMedia" data-width="<?php echo $featuredImage_width; ?>" data-height="<?php echo $featuredImage_height; ?>">
+			<div class="progressiveMedia" data-width="<?php echo $featuredImage_width; ?>" data-height="550">
 				<img class="progressiveMedia-thumbnail" src="<?php echo $blurryImageURL; ?>" />
 				<canvas class="progressiveMedia-canvas"></canvas>
 				<div class="progressiveMedia-image cover-image" data-src="<?php echo $featuredImageURL; ?>"></div>

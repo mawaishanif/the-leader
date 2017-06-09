@@ -20,6 +20,7 @@
 	form{
 		padding: 0;
 		margin: 0;
+		box-shadow: 0px 9px 20px 0px rgba(87, 87, 87, 0.46);
 	}
 	label.textfield{
 		padding: 1rem 1rem 3rem;
@@ -40,6 +41,7 @@
 		left: 46.5%;
 		background-color: $white;
 		border-radius: 50%;
+		box-shadow: 0px 9px 20px 0px rgba(87, 87, 87, 0.46);
 		.icon{
 			@extend %close_Icon;
 			border-radius: 50%;

@@ -53,6 +53,7 @@
 					<?php
 					endif; ?>
 				</section>
+				<?php get_sidebar(); ?>
 				<section class="widget navigation">
 					<h5>Navigation</h5>
 					<hr>

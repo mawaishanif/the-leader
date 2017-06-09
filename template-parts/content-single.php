@@ -64,7 +64,24 @@
 			} 
 		} 
 		?>
-		
+		<ul class="icons pull-right alignright" grid="col md-50 lg-50">
+			<li><?php esc_html_e('Share', 'murda'); ?>: </li>
+			<li class="twitter">
+			<a href="http://twitter.com/share?text=<?php echo urlencode(html_entity_decode(get_the_title(), ENT_COMPAT, 'UTF-8')); ?>&amp;url=<?php the_permalink(); ?>" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"><i class="icon ti-twitter"></i></a>
+			</li>
+			<li class="facebook">
+			<a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" ><i class="icon ti-facebook"></i></a>
+			</li>
+			<li class="gplus">
+			<a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" ><i class="icon ti-google"></i></a>
+			</li>
+			<li class="rss">
+			<a href="<?php the_permalink(); ?>/feed"><i class="icon ti-rss"></i></a>
+			</li>
+			<li class="mail">
+			<a href="mailto:?body=<?php the_permalink(); ?>"><i class="icon ti-email"></i></a>
+			</li>
+		</ul>
 	</div>
 	</footer><!-- .post-footer -->
 </article><!-- #post-## -->
