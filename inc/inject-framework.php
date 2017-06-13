@@ -8,6 +8,8 @@
  * @package the-leader
  */
 
+
+
 /**
  * Retrive the data for image used in wordpress loop
  *
@@ -18,6 +20,7 @@
 function image_data( $image_id, $image_thumb_name ) {
 	return wp_get_attachment_image_src( $image_id, $image_thumb_name );
 }
+
 
 
 /**
@@ -36,6 +39,8 @@ function post_data() {
 	];
 }
 
+
+
 /**
  * Appends at the end of excerpt
  *
@@ -47,6 +52,8 @@ function the_leader_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'the_leader_excerpt_more' );
 
+
+
 /**
  * Adds a length limit to excerpt
  *
@@ -57,6 +64,8 @@ function the_leader_custom_excerpt_length( $length ) {
 	return 22;
 }
 add_filter( 'excerpt_length', 'the_leader_custom_excerpt_length', 999 );
+
+
 
 /**
  * Checks weather a template part file is being used on a page or not
@@ -80,6 +89,8 @@ function check_template_part( $url ) {
 		return false;
 	}
 }
+
+
 
 /**
  * Leader function to calculate reading time for a post.
@@ -106,6 +117,7 @@ function leader_calculate_reading_time( $post_id ) {
 	}
 }
 
+
 /**
  * Count the number of posts for a taxonomy or archive page.
  *
@@ -114,6 +126,7 @@ function leader_calculate_reading_time( $post_id ) {
 function post_count() {
 	return $GLOBALS['wp_query']->post_count;
 }
+
 
 /**
  * Function which returns the page pagination links for default post types

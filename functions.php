@@ -8,102 +8,105 @@
  */
 
 if ( ! function_exists( 'the_leader_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
-function the_leader_setup() {
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on The Leader, use a find and replace
-	 * to change 'the_leader' to the name of your theme in all the template files.
-	 */
-	load_theme_textdomain( 'the_leader', get_template_directory() . '/languages' );
-
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
-
-	/*
-	 * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-	 * provide it for us.
-	 */
-	add_theme_support( 'title-tag' );
-
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
-	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+	 * Note that this function is hooked into the after_setup_theme hook, which
+	 * runs before the init hook. The init hook is too late for some features, such
+	 * as indicating support for post thumbnails.
 	 */
-	add_theme_support( 'post-thumbnails' );
+	function the_leader_setup() {
+		/*
+		 * Make theme available for translation.
+		 * Translations can be filed in the /languages/ directory.
+		 * If you're building a theme based on The Leader, use a find and replace
+		 * to change 'the_leader' to the name of your theme in all the template files.
+		 */
+		load_theme_textdomain( 'the_leader', get_template_directory() . '/languages' );
 
-	// This First nav menu would be the primary menu in the header of every page.
-	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', 'the_leader' ),
-	) );
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support( 'automatic-feed-links' );
 
-	// Second nav menu for footer of the web pages.
-	register_nav_menus( array(
-		'menu-2' => esc_html__( 'Footer Menu', 'the_leader' ),
-	) );
+		/*
+		 * Let WordPress manage the document title.
+		 * By adding theme support, we declare that this theme does not use a
+		 * hard-coded <title> tag in the document head, and expect WordPress to
+		 * provide it for us.
+		 */
+		add_theme_support( 'title-tag' );
 
-	/*
-	 * Theme support for post formats.
-	 */
-	add_theme_support( 'post-formats', array('gallery','link','quote' ,'video') );
+		/*
+		 * Enable support for Post Thumbnails on posts and pages.
+		 *
+		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+		 */
+		add_theme_support( 'post-thumbnails' );
 
-	/*
-	 * Theme support for custom logo.
-	 */
-	add_theme_support( 'custom-logo', array(
-		'width'       => '120',
-		'flex-height' => true,
-		'flex-width'  => true,
-		'header-text' => array( 'site-title', 'site-description' ) 
-	));
+		// This First nav menu would be the primary menu in the header of every page.
+		register_nav_menus( array(
+			'menu-1' => esc_html__( 'Primary', 'the_leader' ),
+		) );
 
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
-	add_theme_support( 'html5', array(
-      'search-form',
-      'comment-form',
-      'comment-list',
-      'gallery',
-      'caption',
-      ) );
+		// Second nav menu for footer of the web pages.
+		register_nav_menus( array(
+			'menu-2' => esc_html__( 'Footer Menu', 'the_leader' ),
+		) );
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'the_leader_custom_background_args', array(
-      'default-color' => 'ffffff',
-      'default-image' => '',
-      ) ) );
+		/*
+		 * Theme support for post formats.
+		 */
+		add_theme_support( 'post-formats', array( 'gallery', 'link', 'quote', 'video' ) );
 
-	// Add theme support for selective refresh for widgets.
-	add_theme_support( 'customize-selective-refresh-widgets' );
+		/*
+		 * Theme support for custom logo.
+		 */
+		add_theme_support( 'custom-logo', array(
+			'width'       => '120',
+			'flex-height' => true,
+			'flex-width'  => true,
+			'header-text' => array( 'site-title', 'site-description' ),
+		));
 
-	// Adding theme support for different image sizes.
+		/*
+		 * Switch default core markup for search form, comment form, and comments
+		 * to output valid HTML5.
+		 */
+		add_theme_support( 'html5',
+			array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+				)
+		);
 
-		if ( function_exists('add_image_size' ) ) {
+		// Set up the WordPress core custom background feature.
+		add_theme_support( 'custom-background', apply_filters( 'the_leader_custom_background_args',
+			array(
+				'default-color' => 'ffffff',
+				'default-image' => '',
+			)
+		) );
 
-			add_image_size('the_leader_background_large', 1920);
-			add_image_size('the_leader_background', 1680);
-			add_image_size('the_leader_background_small', 1240);
-			add_image_size('the_leader_single', 860);
-			add_image_size('the_leader_opengraph', 680);
-			add_image_size('the_leader_column', 500);
-			add_image_size('the_leader_sidebar', 400);
-			add_image_size('the_leader_thumbnail', 200);
-			add_image_size('the_leader_thumbnail_small', 50);
-			add_image_size('the_leader_thumbnail_tiny', 20);
+		// Add theme support for selective refresh for widgets.
+		add_theme_support( 'customize-selective-refresh-widgets' );
+
+		// Adding theme support for different image sizes.
+		if ( function_exists( 'add_image_size' ) ) {
+
+			add_image_size( 'the_leader_background_large', 1920 );
+			add_image_size( 'the_leader_background', 1680 );
+			add_image_size( 'the_leader_background_small', 1240 );
+			add_image_size( 'the_leader_single', 860 );
+			add_image_size( 'the_leader_opengraph', 680 );
+			add_image_size( 'the_leader_column', 500 );
+			add_image_size( 'the_leader_sidebar', 400 );
+			add_image_size( 'the_leader_thumbnail', 200 );
+			add_image_size( 'the_leader_thumbnail_small', 50 );
+			add_image_size( 'the_leader_thumbnail_tiny', 20 );
+		}
 	}
-}
 endif;
 add_action( 'after_setup_theme', 'the_leader_setup' );
 
@@ -125,14 +128,15 @@ add_action( 'after_setup_theme', 'the_leader_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function the_leader_widgets_init() {
-	register_sidebar( array(
-	    'name'          => esc_html__( 'Sidebar', 'the_leader' ),
-	    'id'            => 'sidebar-1',
-	    'description'   => esc_html__( 'Add widgets here.', 'the_leader' ),
-	    'before_widget' => '<section id="%1$s" class="widget %2$s">',
-	    'after_widget'  => '</section>',
-	    'before_title'  => '<h2 class="widget-title">',
-	    'after_title'   => '</h2>',
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Sidebar', 'the_leader' ),
+			'id'            => 'sidebar-1',
+			'description'   => esc_html__( 'Add widgets here.', 'the_leader' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
 	) );
 }
 add_action( 'widgets_init', 'the_leader_widgets_init' );
@@ -147,15 +151,16 @@ function the_leader_scripts() {
 	wp_enqueue_script( 'the_leader-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'the_leader-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-	
-	wp_enqueue_script( 'the_leader-all-Scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array('jquery'), '20171215', true );
+
+	wp_enqueue_script( 'the_leader-all-Scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array( 'jquery' ), '20171215', true );
 	/**
 	 * Adding script for live reload for styling purposes.
+	 *
 	 * @todo This script should be removed when shipping out the theme
-	 **/
-	wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true);
+	 */
+	wp_register_script( 'livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true );
 
-	wp_enqueue_script('livereload');
+	wp_enqueue_script( 'livereload' );
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -163,8 +168,13 @@ function the_leader_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'the_leader_scripts' );
-
-function the_leader_user_contactmethods($contact){
+/**
+ * Function to increase user profiles found in user profile section in admin pages.
+ *
+ * @param  array $contact Already present user contact methods.
+ * @return array          Returns the contact array with new ways added.
+ */
+function the_leader_user_contactmethods( $contact ) {
 	$contact['twitter'] 		= 'Twitter URL';
 	$contact['twitter_handle'] 	= 'Twitter Screename/ID (Excluding @)';
 	$contact['facebook'] 		= 'Facebook URL';
@@ -189,12 +199,17 @@ function the_leader_user_contactmethods($contact){
 	$contact['slideshare'] 		= 'SlideShare URL';
 	return $contact;
 }
-add_filter('user_contactmethods', 'the_leader_user_contactmethods', 10, 1);
+add_filter( 'user_contactmethods', 'the_leader_user_contactmethods', 10, 1 );
 
 add_action( 'after_setup_theme', 'woocommerce_support' );
 
+/**
+ * Added theme support for woocommerce plugin in the-leader theme.
+ *
+ * @return void
+ */
 function woocommerce_support() {
-	add_theme_support( 'woocommerce' ); 
+	add_theme_support( 'woocommerce' );
 }
 
 /**
@@ -240,14 +255,24 @@ require get_template_directory() . '/inc/class-author-image.php';
 new Author_Image_Class;
 
 new Leader_Portfolio;
+/**
+ * Function modifies the comment list template for the-leader theme.
+ *
+ * @param  string $comment 	Comment Text.
+ * @param  array  $args    	Array of data specifed by user to change data.
+ * @param  int    $depth   	Depth of comment nest.
+ * @return void
+ */
+function leader_comments( $comment, $args, $depth ) {
+	$tag = $args['style'];
+	?>
 
-function mytheme_comment($comment, $args, $depth) {
+	<<?php echo $tag ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>">
 
-    $tag       = $args['style'];
-    ?>
-    <<?php echo $tag ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() . 'ajkda' ?>">
     <?php if ( 'div' != $args['style'] ) : ?>
-        <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
+
+    	<div id="div-comment-<?php comment_ID() ?>" class="comment-body">
+
     <?php endif; ?>
     <div class="comment-author vcard">
         <?php if ( $args['avatar_size'] != 0 ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
@@ -273,7 +298,7 @@ function mytheme_comment($comment, $args, $depth) {
     <?php if ( 'div' != $args['style'] ) : ?>
     </div>
     <?php endif; ?>
-    <?php 
+    <?php
 }
 /**
  * Customizing the comments form data for custom leader comments markup.
@@ -342,4 +367,28 @@ function leader_comment_form()
 	);
 
 	comment_form($comments_args);
+}
+/*
+*
+* ===========================================================
+*  			THE LEADER ADMIN PAGE
+* ===========================================================
+ */
+
+/** 
+ * Adds the leader theme options page to wordpress admin menu.
+ *
+ * @return void
+ */
+function the_leader_admin_page() {
+	add_menu_page(
+		__( 'The Leader Theme Options', 'the-leader' ), 'Leader Options', 'manage_options', 'leader-theme-options', 'dashicons-admin-customizer', 'leader_render_admin_theme_page', 61
+	);
+}
+
+add_action( 'admin_menu', 'the_leader_admin_page' );
+function leader_render_admin_theme_page() {
+	?>
+	<h1>Leader theme options</h1>
+	<?php
 }
