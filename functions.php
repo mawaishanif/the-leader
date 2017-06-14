@@ -381,9 +381,7 @@ function the_leader_admin_page() {
 add_action( 'admin_menu', 'the_leader_admin_page' );
 
 function leader_render_admin_theme_page() {
-	?>
-	<h1>Leader theme options</h1>
-	<?php
+	get_template_part( 'template-parts/admin/theme-options');	
 }
 
 function leader_theme_options_files($hook) {
