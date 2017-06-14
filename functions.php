@@ -381,7 +381,7 @@ function the_leader_admin_page() {
 add_action( 'admin_menu', 'the_leader_admin_page' );
 
 function leader_render_admin_theme_page() {
-	get_template_part( 'template-parts/admin/theme-options');	
+		get_template_part( 'template-parts/admin/theme-options');	
 }
 
 function leader_theme_options_files($hook) {
@@ -390,7 +390,7 @@ function leader_theme_options_files($hook) {
     }
 
 
-    wp_enqueue_script( 'leader_theme_options_script', get_template_directory_uri() . '/assets/js/theme-options-script.js', '1.0', true );
+    wp_enqueue_script( 'leader_theme_options_script', get_template_directory_uri() . '/assets/js/theme-options-script.js', array(), '1.0', true );
 
     wp_enqueue_style( 'leader_theme_options_styles', get_template_directory_uri() . '/assets/css/theme-options-styles.css', array(), '1.0', 'all' );
 }
