@@ -213,11 +213,6 @@ function woocommerce_support() {
 }
 
 /**
- * Load Portfolio custom post type file.
- */
-require get_template_directory() . '/inc/class-portfolio.php';
-
-/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
@@ -253,8 +248,6 @@ require get_template_directory() . '/inc/inject-framework.php';
 require get_template_directory() . '/inc/class-author-image.php';
 
 new Author_Image_Class;
-
-new Leader_Portfolio;
 /**
  * Function modifies the comment list template for the-leader theme.
  *
@@ -382,13 +375,25 @@ function leader_comment_form()
  */
 function the_leader_admin_page() {
 	add_menu_page(
-		__( 'The Leader Theme Options', 'the-leader' ), 'Leader Options', 'manage_options', 'leader-theme-options', 'dashicons-admin-customizer', 'leader_render_admin_theme_page', 61
+		__( 'The Leader Theme Options', 'the-leader' ), 'Leader Options', 'manage_options', 'leader-theme-options', 'leader_render_admin_theme_page', 'dashicons-admin-customizer', 61
 	);
 }
-
 add_action( 'admin_menu', 'the_leader_admin_page' );
+
 function leader_render_admin_theme_page() {
 	?>
 	<h1>Leader theme options</h1>
 	<?php
 }
+
+function leader_theme_options_files($hook) {
+    if ( 'toplevel_page_leader-theme-options' != $hook ) {
+        return;
+    }
+
+
+    wp_enqueue_script( 'leader_theme_options_script', get_template_directory_uri() . '/assets/js/theme-options-script.js', '1.0', true );
+
+    wp_enqueue_style( 'leader_theme_options_styles', get_template_directory_uri() . '/assets/css/theme-options-styles.css', array(), '1.0', 'all' );
+}
+add_action( 'admin_enqueue_scripts', 'leader_theme_options_files' );
