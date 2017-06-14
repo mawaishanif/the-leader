@@ -1,4 +1,4 @@
-<main role="main" class="pagewrapper">
+<main role="main" class="the-leader-settings pagewrapper">
 	<div class="row">
 		<div class="col-lg-3">Hey</div>
 		<div class="col-lg-9">
