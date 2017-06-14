@@ -64,7 +64,8 @@
 			} 
 		} 
 		?>
-		<ul class="icons pull-right alignright" grid="col md-50 lg-50">
+		<nav class="socialdark">
+		<ul class="icons unstyled align-right" grid="col md-50 lg-50">
 			<li><?php esc_html_e('Share', 'murda'); ?>: </li>
 			<li class="twitter">
 			<a href="http://twitter.com/share?text=<?php echo urlencode(html_entity_decode(get_the_title(), ENT_COMPAT, 'UTF-8')); ?>&amp;url=<?php the_permalink(); ?>" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"><i class="icon ti-twitter"></i></a>
@@ -82,6 +83,24 @@
 			<a href="mailto:?body=<?php the_permalink(); ?>"><i class="icon ti-email"></i></a>
 			</li>
 		</ul>
+		</nav>
 	</div>
 	</footer><!-- .post-footer -->
 </article><!-- #post-## -->
+
+
+
+<nav class="social">
+	<ul>
+		<li><a href="http://twitter.com/EckoThemes" target="_blank" title="Twitter" class="socialdark twitter"><i class="ti-twitter-alt"></i></a></li>
+		<li><a href="#" target="_blank" title="Facebook" class="socialdark facebook"><i class="ti-facebook"></i></a></li>
+		<li><a href="#" target="_blank" title="Github" class="socialdark github"><i class="ti-github"></i></a></li>
+		<li><a href="#" target="_blank" title="Youtube" class="socialdark youtube"><i class="ti-youtube"></i></a></li>
+		<li><a href="#" target="_blank" title="Dribbble" class="socialdark dribbble"><i class="ti-dribbble"></i></a></li>
+		<li><a href="#" target="_blank" title="Instagram" class="socialdark instagram"><i class="ti-instagram"></i></a></li>
+		<li><a href="#" target="_blank" title="Linkedin" class="socialdark linkedin"><i class="ti-linkedin"></i></a></li>
+		<li><a href="#" target="_blank" title="Pinterest" class="socialdark pinterest"><i class="ti-pinterest"></i></a></li>
+		<li><a href="#" target="_blank" title="Flickr" class="socialdark flickr"><i class="ti-flickr"></i></a></li>
+		<li><a href="#" target="_blank" title="Vimeo" class="socialdark vimeo"><i class="ti-vimeo"></i></a></li>
+	</ul>
+</nav>

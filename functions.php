@@ -15,7 +15,7 @@ if ( ! function_exists( 'the_leader_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function the_leader_setup() {
+function the_leader_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -44,13 +44,13 @@ if ( ! function_exists( 'the_leader_setup' ) ) :
 
 		// This First nav menu would be the primary menu in the header of every page.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'the_leader' ),
-		) );
+		                          'menu-1' => esc_html__( 'Primary', 'the_leader' ),
+		                          ) );
 
 		// Second nav menu for footer of the web pages.
 		register_nav_menus( array(
-			'menu-2' => esc_html__( 'Footer Menu', 'the_leader' ),
-		) );
+		                          'menu-2' => esc_html__( 'Footer Menu', 'the_leader' ),
+		                          ) );
 
 		/*
 		 * Theme support for post formats.
@@ -61,33 +61,33 @@ if ( ! function_exists( 'the_leader_setup' ) ) :
 		 * Theme support for custom logo.
 		 */
 		add_theme_support( 'custom-logo', array(
-			'width'       => '120',
-			'flex-height' => true,
-			'flex-width'  => true,
-			'header-text' => array( 'site-title', 'site-description' ),
-		));
+		                                        'width'       => '120',
+		                                        'flex-height' => true,
+		                                        'flex-width'  => true,
+		                                        'header-text' => array( 'site-title', 'site-description' ),
+		                                        ));
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
 		add_theme_support( 'html5',
-			array(
-				'search-form',
-				'comment-form',
-				'comment-list',
-				'gallery',
-				'caption',
-				)
-		);
+		                  array(
+		                        'search-form',
+		                        'comment-form',
+		                        'comment-list',
+		                        'gallery',
+		                        'caption',
+		                        )
+		                  );
 
 		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'the_leader_custom_background_args',
-			array(
-				'default-color' => 'ffffff',
-				'default-image' => '',
-			)
-		) );
+		                                                      array(
+		                                                            'default-color' => 'ffffff',
+		                                                            'default-image' => '',
+		                                                            )
+		                                                      ) );
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -107,8 +107,8 @@ if ( ! function_exists( 'the_leader_setup' ) ) :
 			add_image_size( 'the_leader_thumbnail_tiny', 20 );
 		}
 	}
-endif;
-add_action( 'after_setup_theme', 'the_leader_setup' );
+	endif;
+	add_action( 'after_setup_theme', 'the_leader_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -129,15 +129,15 @@ add_action( 'after_setup_theme', 'the_leader_content_width', 0 );
  */
 function the_leader_widgets_init() {
 	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Sidebar', 'the_leader' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'the_leader' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-	) );
+	                 array(
+	                       'name'          => esc_html__( 'Sidebar', 'the_leader' ),
+	                       'id'            => 'sidebar-1',
+	                       'description'   => esc_html__( 'Add widgets here.', 'the_leader' ),
+	                       'before_widget' => '<section id="%1$s" class="widget %2$s">',
+	                       'after_widget'  => '</section>',
+	                       'before_title'  => '<h2 class="widget-title">',
+	                       'after_title'   => '</h2>',
+	                       ) );
 }
 add_action( 'widgets_init', 'the_leader_widgets_init' );
 
@@ -262,36 +262,36 @@ function leader_comments( $comment, $args, $depth ) {
 
 	<<?php echo $tag ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>">
 
-    <?php if ( 'div' != $args['style'] ) : ?>
+	<?php if ( 'div' != $args['style'] ) : ?>
 
-    	<div id="div-comment-<?php comment_ID() ?>" class="comment-body">
+		<div id="div-comment-<?php comment_ID() ?>" class="comment-body">
 
-    <?php endif; ?>
-    <div class="comment-author vcard">
-        <?php if ( $args['avatar_size'] != 0 ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
-        <?php printf( __( '<cite class="fn">%s</cite> <span class="says">says:</span>' ), get_comment_author_link() ); ?>
-    </div>
-    <?php if ( $comment->comment_approved == '0' ) : ?>
-         <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></em>
-          <br />
-    <?php endif; ?>
+		<?php endif; ?>
+		<div class="comment-author vcard">
+			<?php if ( $args['avatar_size'] != 0 ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
+			<?php printf( __( '<cite class="fn">%s</cite> <span class="says">says:</span>' ), get_comment_author_link() ); ?>
+		</div>
+		<?php if ( $comment->comment_approved == '0' ) : ?>
+			<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></em>
+			<br />
+		<?php endif; ?>
 
-    <div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
-        <?php
+		<div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
+			<?php
 
-        printf( __('%1$s at %2$s'), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)' ), '  ', '' );
-        ?>
-    </div>
+			printf( __('%1$s at %2$s'), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)' ), '  ', '' );
+			?>
+		</div>
 
-    <?php comment_text(); ?>
+		<?php comment_text(); ?>
 
-    <div class="reply">
-        <?php comment_reply_link( array_merge( $args, array( 'add_below' => 'comment', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-    </div>
-    <?php if ( 'div' != $args['style'] ) : ?>
-    </div>
-    <?php endif; ?>
-    <?php
+		<div class="reply">
+			<?php comment_reply_link( array_merge( $args, array( 'add_below' => 'comment', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+		</div>
+		<?php if ( 'div' != $args['style'] ) : ?>
+		</div>
+	<?php endif; ?>
+	<?php
 }
 /**
  * Customizing the comments form data for custom leader comments markup.
@@ -307,59 +307,59 @@ function leader_comment_form()
 	$user_identity = $user->exists() ? $user->display_name : '';
 	$required_text = sprintf( ' ' . __('Required fields are marked %s'), '<span class="req">*</span>' );
 	$fields = array(
-		'author' => '<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><div class="form-item input-name">' . '<label for="author">' . __( 'Name' )  . ( $req ? '<span class="req">*</span> </label>' : '</label>' ) .
-        '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div></div>',
+	                'author' => '<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><div class="form-item input-name">' . '<label for="author">' . __( 'Name' )  . ( $req ? '<span class="req">*</span> </label>' : '</label>' ) .
+	                '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div></div>',
 
-    	'email'  => '<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><div class="form-item input-email"><label for="email">' . __( 'Email' )  . ( $req ? '<span class="req">*</span> </label>' : '</label>' ) .
-        '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div></div>',
+	                'email'  => '<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><div class="form-item input-email"><label for="email">' . __( 'Email' )  . ( $req ? '<span class="req">*</span> </label>' : '</label>' ) .
+	                '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div></div>',
 
-    	'url'    => '<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><div class="form-item input-url"><label for="url">' . __( 'Website' ) . '</label>' .
-        '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div></div>'
+	                'url'    => '<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><div class="form-item input-url"><label for="url">' . __( 'Website' ) . '</label>' .
+	                '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div></div>'
 
-	);
+	                );
 	$comments_args = array(
 
-		'fields'               => $fields,
-		'comment_field'        => '
-    <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12"><div class="form-item input-comment"><label for="comment">' . _x( 'Your Comment', 'noun' ) . '<span class="req">*</span></label> <textarea id="comment" name="comment" cols="45" rows="6" maxlength="65525" aria-required="true" required="required"></textarea></div></div>',
-		/** This filter is documented in wp-includes/link-template.php */
-		'must_log_in'          => '<p class="must-log-in">' . sprintf(
-		                              /* translators: %s: login URL */
-		                              __( 'You must be <a href="%s">logged in</a> to post a comment.' ),
-		                              wp_login_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) )
-		                          ) . '</p>',
-		/** This filter is documented in wp-includes/link-template.php */
-		'logged_in_as'         => '<p class="logged-in-as">' . sprintf(
-		                              /* translators: 1: edit user link, 2: accessibility text, 3: user name, 4: logout URL */
-		                              __( '<a href="%1$s" aria-label="%2$s">Logged in as %3$s</a>. <a href="%4$s">Log out?</a>' ),
-		                              get_edit_user_link(),
-		                              /* translators: %s: user name */
-		                              esc_attr( sprintf( __( 'Logged in as %s. Edit your profile.' ), $user_identity ) ),
-		                              $user_identity,
-		                              wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) )
-		                          ) . '</p>',
-		'comment_notes_before' => '<fieldset><legend>LEAVE A REPLY BELOW</legend><div class="row with-gutter"><p class="full-width comment-notes align-left small"><span id="email-notes">' . __( 'Your email address will not be published.' ) . '</span><br>'. ( $req ? $required_text : '' ) . '</p>',
-		'comment_notes_after'  => '',
-		'action'               => site_url( '/wp-comments-post.php' ),
-		'id_form'              => 'commentform',
-		'id_submit'            => 'submit',
-		'class_form'           => 'comment-form form',
-		'class_submit'         => 'submit',
-		'name_submit'          => 'submit',
-		'title_reply'          => __( '' ),
-		'title_reply_to'       => __( '' ),
-		'title_reply_before'   => '',
-		'title_reply_after'    => '',
-		'cancel_reply_before'  => ' <small>',
-		'cancel_reply_after'   => '</small>',
-		'cancel_reply_link'    => __( 'Cancel reply' ),
-		'label_submit'         => __( 'Post Comment' ),
-		'submit_button'        => '<input name="%1$s" type="submit" id="%2$s" class="%3$s medium-btn" value="%4$s" />',
-		'submit_field'         => '<div class="col-lg-12 col-xs-12 col-sm-12 col-md-12"><div class="form-item  submit-btn">%1$s %2$s</div></div></fieldset>',
-		'format'               => 'xhtml',
-	);
+	                       'fields'               => $fields,
+	                       'comment_field'        => '
+	                       <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12"><div class="form-item input-comment"><label for="comment">' . _x( 'Your Comment', 'noun' ) . '<span class="req">*</span></label> <textarea id="comment" name="comment" cols="45" rows="6" maxlength="65525" aria-required="true" required="required"></textarea></div></div>',
+	                       /** This filter is documented in wp-includes/link-template.php */
+	                       'must_log_in'          => '<p class="must-log-in">' . sprintf(
+	                                                                                     /* translators: %s: login URL */
+	                                                                                     __( 'You must be <a href="%s">logged in</a> to post a comment.' ),
+	                                                                                     wp_login_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) )
+	                                                                                     ) . '</p>',
+	                       /** This filter is documented in wp-includes/link-template.php */
+	                       'logged_in_as'         => '<p class="logged-in-as">' . sprintf(
+	                                                                                      /* translators: 1: edit user link, 2: accessibility text, 3: user name, 4: logout URL */
+	                                                                                      __( '<a href="%1$s" aria-label="%2$s">Logged in as %3$s</a>. <a href="%4$s">Log out?</a>' ),
+	                                                                                      get_edit_user_link(),
+	                                                                                      /* translators: %s: user name */
+	                                                                                      esc_attr( sprintf( __( 'Logged in as %s. Edit your profile.' ), $user_identity ) ),
+	                                                                                      $user_identity,
+	                                                                                      wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) )
+	                                                                                      ) . '</p>',
+	                       'comment_notes_before' => '<fieldset><legend>LEAVE A REPLY BELOW</legend><div class="row with-gutter"><p class="full-width comment-notes align-left small"><span id="email-notes">' . __( 'Your email address will not be published.' ) . '</span><br>'. ( $req ? $required_text : '' ) . '</p>',
+	                       'comment_notes_after'  => '',
+	                       'action'               => site_url( '/wp-comments-post.php' ),
+	                       'id_form'              => 'commentform',
+	                       'id_submit'            => 'submit',
+	                       'class_form'           => 'comment-form form',
+	                       'class_submit'         => 'submit',
+	                       'name_submit'          => 'submit',
+	                       'title_reply'          => __( '' ),
+	                       'title_reply_to'       => __( '' ),
+	                       'title_reply_before'   => '',
+	                       'title_reply_after'    => '',
+	                       'cancel_reply_before'  => ' <small>',
+	                       'cancel_reply_after'   => '</small>',
+	                       'cancel_reply_link'    => __( 'Cancel reply' ),
+	                       'label_submit'         => __( 'Post Comment' ),
+	                       'submit_button'        => '<input name="%1$s" type="submit" id="%2$s" class="%3$s medium-btn" value="%4$s" />',
+	                       'submit_field'         => '<div class="col-lg-12 col-xs-12 col-sm-12 col-md-12"><div class="form-item  submit-btn">%1$s %2$s</div></div></fieldset>',
+	                       'format'               => 'xhtml',
+	                       );
 
-	comment_form($comments_args);
+comment_form($comments_args);
 }
 /*
 *
@@ -373,25 +373,31 @@ function leader_comment_form()
  *
  * @return void
  */
+// 'template-parts/admin/the-leader-theme-options-page.php',
+
 function the_leader_admin_page() {
 	add_menu_page(
-		__( 'The Leader Theme Options', 'the-leader' ), 'Leader Options', 'manage_options', 'leader-theme-options', 'leader_render_admin_theme_page', 'dashicons-admin-customizer', 61
-	);
+	              __( 'The Leader Theme Options', 'the-leader' ), 
+	              'Leader Options', 
+	              'manage_options', 
+	              'leader-theme-options', 
+	              'leader_render_admin_theme_page', 
+	              'myplugin/images/icon.png', 75 
+	              );
 }
 add_action( 'admin_menu', 'the_leader_admin_page' );
 
 function leader_render_admin_theme_page() {
-		get_template_part( 'template-parts/admin/theme-options');	
+	get_template_part( 'template-parts/admin/the-leader-theme-options-page');
 }
 
 function leader_theme_options_files($hook) {
-    if ( 'toplevel_page_leader-theme-options' != $hook ) {
-        return;
-    }
-
+	if ( 'toplevel_page_leader-theme-options' != $hook ) {
+		return;
+	}
 
     wp_enqueue_script( 'leader_theme_options_script', get_template_directory_uri() . '/assets/js/theme-options-script.js', array(), '1.0', true );
 
-    wp_enqueue_style( 'leader_theme_options_styles', get_template_directory_uri() . '/assets/css/theme-options-styles.css', array(), '1.0', 'all' );
+	wp_enqueue_style( 'leader_theme_options_styles', get_template_directory_uri() . '/assets/css/theme-options-styles.css', array(), '1.0', 'all' );
 }
 add_action( 'admin_enqueue_scripts', 'leader_theme_options_files' );
