@@ -388,7 +388,7 @@ function the_leader_admin_page() {
 add_action( 'admin_menu', 'the_leader_admin_page' );
 
 function leader_render_admin_theme_page() {
-	get_template_part('template-parts/admin/the-leader-theme-options-page.php');
+	get_template_part( 'template-parts/admin/the-leader-theme-options-page');
 }
 
 function leader_theme_options_files($hook) {
