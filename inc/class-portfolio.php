@@ -37,7 +37,7 @@ class Leader_Portfolio
 			'public' 			=> true,
 			'capability_type' 	=> 'post',
 			'rewrite' 			=> array( 'slug' => 'portfolio/items' ),
-			'supports' 			=> array( 'title', 'editor', 'post-formats', 'thumbnail', 'comments', 'excerpt' ),
+			'supports' 			=> array( 'title', 'editor', 'thumbnail', 'comments', 'excerpt' ),
 			'menu_position' 	=> 2,
 			'menu_icon' 		=> 'dashicons-portfolio',
 			'has_archive' 		=> true,

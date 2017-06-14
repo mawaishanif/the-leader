@@ -50,7 +50,7 @@ if ( post_password_required() ) {
 		<ol class="comment-list">
 
 			<?php
-				wp_list_comments( 'type=comment&callback=mytheme_comment&style=li');
+				wp_list_comments( 'type=comment&callback=leader_comments&style=div' );
 			?>
 		</ol><!-- .comment-list -->
 
@@ -67,17 +67,17 @@ if ( post_password_required() ) {
 		<?php
 		endif; // Check for comment navigation.
 	endif; // Check for have_comments().
-	if ( !have_comments() ) : ?>
+	if ( ! have_comments() ) : ?>
 		<h4 class="comments-title align-center">
 			<?php
 				printf( // WPCS: XSS OK.
-					__('No comments yet')
+					__( 'No comments yet' )
 				);
 			?>
 			<small class="medium">
 			<?php
 				printf( // WPCS: XSS OK.
-					__('Be the first one to reply!')
+					__( 'Be the first one to reply!' )
 				);
 			?>
 			</small>
