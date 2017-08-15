@@ -64,7 +64,7 @@ gulp.task('js', function() {
 	         source + 'js/scripts/*.js'
 	         ])
 	.pipe(jshint('./.jshintrc'))
-	.pipe(jshint.reporter('jshint-stylish'))
+	// .pipe(jshint.reporter('jshint-stylish'))
 	.pipe(concat('scripts.min.js'))
 	.pipe(gulp.dest(source + 'js/'))
 	.pipe(livereload());

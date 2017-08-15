@@ -1,4 +1,43 @@
 @charset "UTF-8";
+/*!
+Theme Name: The Leader
+Theme URI: https://injectthemes.com/theleader
+Author: Inject Themes
+Author URI: http://injectthemes.com/
+Description: This is most hackable blog theme you've ever seen.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: the-leader
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Grid
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+# Media Queries
+##########################################
+--------------------------------------------------------------*/
 /* SOCIAL */
 /* raleway-200 - latin */
 /* droid-sans-regular - latin */
@@ -4354,8 +4393,6 @@ figure {
     max-width: 1380px;
     margin: 0 auto;
     padding: 3.5rem 0; }
-  .postlist article .progressiveMedia-canvas, .postlist article .progressiveMedia-image.post-image {
-    border-radius: 6px 6px 0px 0px; }
   .postlist article .post-data {
     padding: 0rem 2rem 2rem; }
     @media (max-width: 520px) {

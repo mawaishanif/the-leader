@@ -1,4 +1,3 @@
-alert('message?: DOMString')
 jQuery('#settingsNav a').click(function(e) {
 	e.preventDefault();
 	var target_section_id = jQuery(this).attr('data-target-section');
